@@ -19,7 +19,7 @@ int main(int argc, char** argv)
     }
 
     /* Dýþ döngü 3 kez, her seferinde iç döngü 2 kez çalýþýr.
-    * Böylece iç döngünün gövdesi toplam 3 × 2 = 6 kez çalýþtýrýlýr. */
+     * Böylece iç döngünün gövdesi toplam 3 × 2 = 6 kez çalýþtýrýlýr. */
 
     return 0;
 }
