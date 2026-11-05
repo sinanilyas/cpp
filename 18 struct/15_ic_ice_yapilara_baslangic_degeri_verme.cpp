@@ -17,10 +17,11 @@ int main(int argc, char** argv)
 {
     setlocale(LC_ALL, "Turkish");
 
-    /* Ýç içe yapýlara baþlangýç deðeri verilirken
-     * içteki yapýnýn deðerleri de küme parantezleri
-     * içerisinde belirtilir. */
-    sinav ogrenci = {{70, 80}, 90};
+    sinav ogrenci;
+
+    // Ýç içe yapýlarýn üyelerine nokta (.) operatörüyle eriþilir.
+    ogrenci.yil_ici = {70, 80};
+    ogrenci.final = 90;
 
     cout << ogrenci.yil_ici.vize1 << endl; // 70
     cout << ogrenci.yil_ici.vize2 << endl; // 80
