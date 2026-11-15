@@ -18,11 +18,13 @@ int main(int argc, char** argv)
 
     for (int i = 1; i <= 10; i++)
     {
+        // %80 ihtimalle if koþulu doðru olur
         if (rand() % 100 < 80)
         {
             cout << i << ". öðrenci geçti." << endl;
             gecenSayisi++;
         }
+        // %20 ihtimalle else bloðu çalýþýr
         else
             cout << i << ". öðrenci kaldý." << endl;
     }
