@@ -16,7 +16,7 @@ int main(int argc, char** argv)
      * çünkü <iostream> bu dosyayı dolaylı olarak dahil edebilir.
      * Ancak buna güvenilmemeli, <cstdlib> her zaman yazılmalıdır. */
 
-    cout << rand() << endl; // Genellikle 41
+    cout << rand() << endl; // Örneğin Windows'ta 41, Linux'ta 1804289383
 
     /* Program tekrar tekrar çalıştırıldığında
      * her seferinde aynı sayı üretilir.

@@ -9,7 +9,9 @@ int main(int argc, char** argv)
     SetConsoleOutputCP(CP_UTF8);
 
     /* srand() aynı tohum değeriyle tekrar çağrılırsa
-     * sayı dizisi baştan başlar ve aynı sayılar yeniden üretilir. */
+     * sayı dizisi baştan başlar ve aynı sayılar yeniden üretilir.
+     * Diğer sistemlerde sayılar farklıdır, ama iki satırda da
+     * aynı sayılar yazdırılır. */
 
     srand(5);
 
@@ -17,7 +19,7 @@ int main(int argc, char** argv)
     {
         cout << rand() << " ";
     }
-    cout << endl; // Genellikle: 54 28693 12255
+    cout << endl; // Windows'ta genellikle: 54 28693 12255
 
     srand(5);
 
@@ -25,7 +27,7 @@ int main(int argc, char** argv)
     {
         cout << rand() << " ";
     }
-    cout << endl; // Genellikle: 54 28693 12255
+    cout << endl; // Windows'ta genellikle: 54 28693 12255
 
     return 0;
 }

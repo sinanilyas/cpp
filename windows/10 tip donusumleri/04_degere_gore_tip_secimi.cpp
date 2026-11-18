@@ -14,7 +14,9 @@ int main(int argc, char** argv)
     // 5 int tipindedir, long long tipine dönüştürülür
     long long s1 = 5;
 
-    // Windows platformlarında 5000000000 long long tipindedir, dönüşüm yapılmaz
+    /* 5000000000 int tipine sığmaz.
+     * long 4 bayt ise (Windows) long tipine de sığmaz, long long tipindedir, dönüşüm yapılmaz.
+     * long 8 bayt ise (Linux, macOS) long tipindedir, long long tipine dönüştürülür. */
     long long s2 = 5000000000;
 
     return 0;

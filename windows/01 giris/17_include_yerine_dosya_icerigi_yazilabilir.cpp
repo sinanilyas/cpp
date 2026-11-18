@@ -3,7 +3,9 @@
    #include direktifi de temel olarak bu işlemi otomatik olarak gerçekleştirir.
    Derleme öncesinde başlık dosyası bulunur ve içeriği bu noktada işlenir.
    Aşağıda önce iostream başlık dosyasının içeriği, ardından da
-   kendi yazdığımız program kodları bulunmaktadır. */
+   kendi yazdığımız program kodları bulunmaktadır.
+   Farklı derleyicilerde bu dosyanın içeriği farklı olabileceği için
+   bu örnek her derleyicide derlenmeyebilir. */
 
 // Standard iostream objects -*- C++ -*-
 

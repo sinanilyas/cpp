@@ -39,14 +39,14 @@ int main(int argc, char** argv)
     cout << altMetin << endl; // Se
 
     // strcat(hedef, kaynak): Kaynak metni hedef metnin sonuna ekler.
-    strcat(metin, " Nasılsın?");
-    cout << metin << endl; // Selam Nasılsın?
+    strcat(metin, " Ali");
+    cout << metin << endl; // Selam Ali
 
     /* strlen, null karakterine kadar olan karakterleri sayar.
      * null karakteri sayılmaz. sizeof ise dizinin eleman sayısını verir. */
     int metinUzunlugu = strlen(metin);
 
-    cout << "'" << metin << "' metninin uzunluğu: " << metinUzunlugu << endl; // 'Selam Nasılsın?' metninin uzunluğu: 15
+    cout << "'" << metin << "' metninin uzunluğu: " << metinUzunlugu << endl; // 'Selam Ali' metninin uzunluğu: 9
     cout << "metin dizisinin eleman sayısı: " << sizeof(metin) << endl;       // metin dizisinin eleman sayısı: 50
 
     // Döngü ile yalnızca metnin karakterlerini ve null karakterini kopyalama
@@ -57,7 +57,7 @@ int main(int argc, char** argv)
         kopya3[i] = metin[i];
     }
 
-    cout << kopya3 << endl; // Selam Nasılsın?
+    cout << kopya3 << endl; // Selam Ali
 
     /* strcpy, strncpy ve strcat dizinin boyutunu denetlemez. Hedef dizide
      * metin ve null karakteri için yeterli yer olmalıdır. Yer yoksa

@@ -14,7 +14,10 @@ int main(int argc, char** argv)
      * yazdırılır ve diziye eklenir, diğer tuşlar yok sayılır. Böylece
      * kullanıcının harf ya da başka bir karakter girmesi engellenir.
      * Enter tuşuna basıldığında ya da dizi dolduğunda okuma biter ve
-     * rakamlardan oluşan metin atoi ile sayıya dönüştürülür. */
+     * rakamlardan oluşan metin atoi ile sayıya dönüştürülür.
+     *
+     * conio.h Linux ve macOS'ta bulunmadığı için bu örnek bu sistemlerde
+     * derlenmez. */
     const int UZUNLUK = 5;
     char rakamlar[UZUNLUK];
     int siraNo = 0;

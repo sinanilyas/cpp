@@ -72,16 +72,8 @@ int main(int argc, char** argv)
     cout << static_cast<bool>(iscntrl('\b')) << endl; // true
     cout << static_cast<bool>(iscntrl('F')) << endl;  // false
 
-    /* Türkçe harfler (Ç, Ğ, İ, Ö, Ş, Ü...) ASCII tablosunun 128-255
-     * aralığındadır ve char tipinde negatif bir sayı olarak saklanabilir.
-     * Bu fonksiyonlara negatif sayı verilmemelidir. Bu nedenle Türkçe
-     * harfler unsigned char tipinde saklanır. Sonuç, programın dil
-     * ayarına göre değişebilir. */
-    unsigned char harf = 'Ğ';
-
-    cout << static_cast<bool>(isalpha(harf)) << endl; // Genellikle true
-    cout << static_cast<bool>(isupper(harf)) << endl; // Genellikle true
-    cout << static_cast<char>(tolower(harf)) << endl; // Genellikle ğ
+    /* Bu fonksiyonlar İngiliz alfabesindeki harflerle doğru çalışır.
+     * Türkçe harflerde (ç, ğ, ı, ö, ş, ü...) farklı sonuçlar oluşabilir. */
 
     return 0;
 }

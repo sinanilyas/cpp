@@ -6,10 +6,10 @@ int main(int argc, char** argv) {
 	SetConsoleCP(CP_UTF8);
 	SetConsoleOutputCP(CP_UTF8);
 	
-	cout << sizeof(short) << endl;     // 64 bit Windows: 2 byte
-	cout << sizeof(int) << endl;       // 64 bit Windows: 4 byte
-	cout << sizeof(long) << endl;      // 64 bit Windows: 4 byte
-	cout << sizeof(long long) << endl; // 64 bit Windows: 8 byte
+	cout << sizeof(short) << endl;     // 2
+	cout << sizeof(int) << endl;       // 4
+	cout << sizeof(long) << endl;      // Windows: 4, Linux ve macOS: 8
+	cout << sizeof(long long) << endl; // 8
 
 	return 0;
 }

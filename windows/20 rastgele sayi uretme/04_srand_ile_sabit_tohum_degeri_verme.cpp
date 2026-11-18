@@ -24,7 +24,8 @@ int main(int argc, char** argv)
 
     /* Tohum değeri 1'den farklı olduğu için srand() kullanılmayan
      * örneklerden farklı sayılar üretilir.
-     * Genellikle: 54, 28693, 12255, 24449, 27660
+     * Windows'ta genellikle: 54, 28693, 12255, 24449, 27660
+     * Diğer sistemlerde sayılar farklıdır.
      *
      * srand(5) yerine srand(1) yazılırsa srand() kullanılmayan
      * örneklerdeki sayıların aynısı üretilir.

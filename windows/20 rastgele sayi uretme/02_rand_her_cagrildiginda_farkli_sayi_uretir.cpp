@@ -16,9 +16,9 @@ int main(int argc, char** argv)
         cout << rand() << endl;
     }
 
-    /* Genellikle sırasıyla 41, 18467, 6334, 26500 ve 19169 yazdırılır.
-     * Program tekrar çalıştırıldığında da aynı sayılar
-     * aynı sırayla üretilir. */
+    /* Windows'ta genellikle sırasıyla 41, 18467, 6334, 26500 ve 19169
+     * yazdırılır. Diğer sistemlerde sayılar farklıdır, ama program tekrar
+     * çalıştırıldığında yine aynı sayılar aynı sırayla üretilir. */
 
     return 0;
 }

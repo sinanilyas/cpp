@@ -23,9 +23,9 @@ int main(int argc, char** argv)
     char ad5[] = "ali";
 
     cout << strcmp(ad1, ad2) << endl; // 0
-    cout << strcmp(ad1, ad3) << endl; // Pozitif bir sayı (genellikle 1): 'i' (105) > 'e' (101)
-    cout << strcmp(ad1, ad4) << endl; // Negatif bir sayı (genellikle -1): 'A' (65) < 'Z' (90)
-    cout << strcmp(ad1, ad5) << endl; // Negatif bir sayı (genellikle -1): 'A' (65) < 'a' (97)
+    cout << strcmp(ad1, ad3) << endl; // Pozitif bir sayı: 'i' (105) > 'e' (101)
+    cout << strcmp(ad1, ad4) << endl; // Negatif bir sayı: 'A' (65) < 'Z' (90)
+    cout << strcmp(ad1, ad5) << endl; // Negatif bir sayı: 'A' (65) < 'a' (97)
 
     // Büyük harfler küçük harflerden önce geldiği için "Ali" ile "ali" aynı değildir.
 

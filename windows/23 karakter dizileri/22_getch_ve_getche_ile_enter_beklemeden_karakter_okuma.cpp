@@ -19,8 +19,9 @@ int main(int argc, char** argv)
      * Bu adlar eskimiş kabul edildiği için bazı derleyiciler uyarı ya da
      * hata verir; bu durumda _getch ve _getche kullanılır.
      *
-     * conio.h standart C++ kütüphanesinin bir parçası değildir. Her
-     * derleyicide ve işletim sisteminde bulunmaz. */
+     * conio.h standart C++ kütüphanesinin bir parçası değildir. Windows'taki
+     * derleyicilerde bulunur. Linux ve macOS'ta bulunmadığı için bu örnek
+     * bu sistemlerde derlenmez. */
 
     cout << "Bir tuşa basınız (ekranda görünmeyecek): ";
     char tus1 = _getch();

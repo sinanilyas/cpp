@@ -30,16 +30,15 @@ int main(int argc, char** argv)
     long sayi5 = atol(metin5);
     cout << "atol(" << metin5 << ")\t: " << sayi5 << endl; // 123456
 
-    /* atof, ondalık ayırıcı olarak programın dil ayarındaki karakteri
-     * kullanır. setlocale ile Türkçe seçildiği için nokta yerine virgül
-     * yazılmalıdır. cout bu ayardan etkilenmez ve noktayla yazdırır. */
-    char metin6[] = "3,14";
+    /* atof, ondalık ayırıcı olarak nokta kullanır. Virgül yazılırsa
+     * dönüştürme virgülde durur. */
+    char metin6[] = "3.14";
     double sayi6 = atof(metin6);
-    cout << "atof(" << metin6 << ")\t: " << sayi6 << endl; // Genellikle 3.14
+    cout << "atof(" << metin6 << ")\t: " << sayi6 << endl; // 3.14
 
-    char metin7[] = "3.14";
+    char metin7[] = "3,14";
     double sayi7 = atof(metin7);
-    cout << "atof(" << metin7 << ")\t: " << sayi7 << endl; // Genellikle 3 (noktada durur)
+    cout << "atof(" << metin7 << ")\t: " << sayi7 << endl; // 3 (virgülde durur)
 
     return 0;
 }

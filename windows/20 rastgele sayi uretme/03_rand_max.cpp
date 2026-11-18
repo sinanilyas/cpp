@@ -12,7 +12,7 @@ int main(int argc, char** argv)
      * bir tamsayı üretir. RAND_MAX, <cstdlib> içinde tanımlı bir sabittir
      * ve rand() ile üretilebilecek en büyük sayıyı verir. */
 
-    cout << RAND_MAX << endl; // Genellikle 32767 veya 2147483647
+    cout << RAND_MAX << endl; // Windows'ta 32767, Linux ve macOS'ta 2147483647
 
     /* RAND_MAX değeri derleyiciye ve işletim sistemine göre değişebilir.
      * C++ standardı en az 32767 olmasını garanti eder. */
