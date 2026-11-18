@@ -26,15 +26,5 @@ int main(int argc, char** argv)
 
     // Ekrana 0 1 4 9 16 yazdýrýlýr.
 
-    /* Eleman sayýsý sabit olmalýdýr. Deðeri program çalýþýrken
-     * belli olan bir deðiþkenle dizi tanýmlanmamalýdýr:
-     *
-     *     int n;
-     *     cin >> n;
-     *     int dizi[n];
-     *
-     * Standart C++ bu kullanýma izin vermez. Bazý derleyiciler
-     * bu kodu derlese de bazýlarý hata verir. */
-
     return 0;
 }
