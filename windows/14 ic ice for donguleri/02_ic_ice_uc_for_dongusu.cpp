@@ -1,14 +1,16 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* İkiden fazla döngü iç içe kullanılabilir.
-     * Bu örnekte 3 katlı, her katında 2 sıra ve
-     * her sırada 4 koltuk bulunan bir sinema salonu gösterilir.
-     * Her dış döngü tekrarında içindeki döngüler tamamlanır. */
+    /* Ä°kiden fazla dÃ¶ngÃ¼ iÃ§ iÃ§e kullanÄ±labilir.
+     * Bu Ã¶rnekte 3 katlÄ±, her katÄ±nda 2 sÄ±ra ve
+     * her sÄ±rada 4 koltuk bulunan bir sinema salonu gÃ¶sterilir.
+     * Her dÄ±ÅŸ dÃ¶ngÃ¼ tekrarÄ±nda iÃ§indeki dÃ¶ngÃ¼ler tamamlanÄ±r. */
 
     for (int kat = 1; kat <= 3; kat++)
     {
@@ -16,7 +18,7 @@ int main(int argc, char** argv)
 
         for (int sira = 1; sira <= 2; sira++)
         {
-            cout << sira << ". Sıra: ";
+            cout << sira << ". SÄ±ra: ";
 
             for (int koltuk = 1; koltuk <= 4; koltuk++)
             {

@@ -1,37 +1,39 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     const int MAX = 6;
     char ad[MAX];
     char soyad[MAX];
 
-    cout << "Adýnýzý giriniz: ";
+    cout << "AdÄ±nÄ±zÄ± giriniz: ";
     cin.get(ad, MAX);
 
-    /* cin.get de Enter karakterini tamponda býrakýr. Hatta metin kýrpýlmýþsa
-     * okunmayan karakterler de tamponda kalýr. cin.ignore(1000, '\n')
+    /* cin.get de Enter karakterini tamponda bÄ±rakÄ±r. Hatta metin kÄ±rpÄ±lmÄ±ÅŸsa
+     * okunmayan karakterler de tamponda kalÄ±r. cin.ignore(1000, '\n')
      * her iki durumda da tampondaki karakterleri Enter karakterine kadar
      * (Enter dahil, en fazla 1000 karakter) atar. cin >> ile okumadan
-     * sonra da ayný satýr kullanýlýr. */
+     * sonra da aynÄ± satÄ±r kullanÄ±lÄ±r. */
     cin.ignore(1000, '\n');
 
-    cout << "Soyadýnýzý giriniz: ";
+    cout << "SoyadÄ±nÄ±zÄ± giriniz: ";
     cin.get(soyad, MAX);
 
     cout << "Ad: " << ad << endl;
     cout << "Soyad: " << soyad << endl;
 
-    /* Ad olarak Abdurrahman, soyad olarak Kaya girildiðinde:
+    /* Ad olarak Abdurrahman, soyad olarak Kaya girildiÄŸinde:
      * Ad: Abdur
      * Soyad: Kaya
      *
-     * cin.ignore satýrý olmasaydý tamponda kalan "rahman\n" karakterlerinden
-     * ilk 5'i soyad dizisine okunurdu. Kullanýcý soyadýný giremeden
-     * Soyad: rahma yazdýrýlýrdý. */
+     * cin.ignore satÄ±rÄ± olmasaydÄ± tamponda kalan "rahman\n" karakterlerinden
+     * ilk 5'i soyad dizisine okunurdu. KullanÄ±cÄ± soyadÄ±nÄ± giremeden
+     * Soyad: rahma yazdÄ±rÄ±lÄ±rdÄ±. */
 
     return 0;
 }

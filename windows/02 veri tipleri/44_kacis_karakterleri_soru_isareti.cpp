@@ -1,13 +1,15 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv) {
-	setlocale(LC_ALL, "Turkish");
+	SetConsoleCP(CP_UTF8);
+	SetConsoleOutputCP(CP_UTF8);
 	
-	/* Ekrana ? yazdýrmak için direkt ? veya \? yazýlýr. */
+	/* Ekrana ? yazdÄ±rmak iÃ§in direkt ? veya \? yazÄ±lÄ±r. */
 	
-	cout << "Nasýlsýn?" << endl;
-	cout << "Nasýlsýn\?" << endl;
+	cout << "NasÄ±lsÄ±n?" << endl;
+	cout << "NasÄ±lsÄ±n\?" << endl;
 	
 	return 0;
 }

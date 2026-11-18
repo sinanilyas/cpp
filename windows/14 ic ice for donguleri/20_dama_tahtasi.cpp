@@ -1,13 +1,15 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* Satır ve sütun numaralarının toplamının tek veya çift
-     * olmasına göre farklı karakterler yazdırılabilir.
-     * Böylece dama tahtasına benzer bir desen oluşturulur. */
+    /* SatÄ±r ve sÃ¼tun numaralarÄ±nÄ±n toplamÄ±nÄ±n tek veya Ã§ift
+     * olmasÄ±na gÃ¶re farklÄ± karakterler yazdÄ±rÄ±labilir.
+     * BÃ¶ylece dama tahtasÄ±na benzer bir desen oluÅŸturulur. */
 
     for (int satir = 1; satir <= 8; satir++)
     {

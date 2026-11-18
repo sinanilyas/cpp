@@ -1,20 +1,22 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     srand(time(0));
 
-    /* rand() % 2 ifadesi yalnızca 0 veya 1 değerini üretir.
-     * Her ikisinin de gelme olasılığı %50'dir.
-     * Bu sayede yazı-tura gibi iki sonuçlu olaylar taklit edilebilir. */
+    /* rand() % 2 ifadesi yalnÄ±zca 0 veya 1 deÄŸerini Ã¼retir.
+     * Her ikisinin de gelme olasÄ±lÄ±ÄŸÄ± %50'dir.
+     * Bu sayede yazÄ±-tura gibi iki sonuÃ§lu olaylar taklit edilebilir. */
 
     if (rand() % 2 == 0)
-        cout << "Yazı" << endl;
+        cout << "YazÄ±" << endl;
     else
         cout << "Tura" << endl;
 

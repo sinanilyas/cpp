@@ -1,17 +1,19 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     for (int i = 0; i < 10; i++)
     {
         cout << ++i << endl;
     }
 
-    /* i deðiþkeni döngü gövdesinde ekrana yazdýrýlmadan önce
-     * artýrýldýðý için ekrana 1, 3, 5, 7 ve 9 yazdýrýlýr. */
+    /* i deÄŸiÅŸkeni dÃ¶ngÃ¼ gÃ¶vdesinde ekrana yazdÄ±rÄ±lmadan Ã¶nce
+     * artÄ±rÄ±ldÄ±ÄŸÄ± iÃ§in ekrana 1, 3, 5, 7 ve 9 yazdÄ±rÄ±lÄ±r. */
 
     return 0;
 }

@@ -1,5 +1,6 @@
 
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 struct yil_ici_notlari
@@ -16,19 +17,20 @@ struct sinav
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     sinav ogrenci = {{70, 80}, 90};
 
-    // Ýçteki yapýnýn bellekte kapladýðý alan.
+    // Ä°Ã§teki yapÄ±nÄ±n bellekte kapladÄ±ÄŸÄ± alan.
     cout << sizeof(yil_ici_notlari) << endl; // 8
     cout << sizeof(ogrenci.yil_ici) << endl; // 8
 
-    // Dýþtaki yapýnýn bellekte kapladýðý alan.
+    // DÄ±ÅŸtaki yapÄ±nÄ±n bellekte kapladÄ±ÄŸÄ± alan.
     cout << sizeof(sinav) << endl;    // 12
     cout << sizeof(ogrenci) << endl;  // 12
 
-    // Yapý üyelerinin bellekte kapladýðý alan.
+    // YapÄ± Ã¼yelerinin bellekte kapladÄ±ÄŸÄ± alan.
     cout << sizeof(ogrenci.yil_ici.vize1) << endl; // 4
     cout << sizeof(ogrenci.yil_ici.vize2) << endl; // 4
     cout << sizeof(ogrenci.final) << endl;         // 4

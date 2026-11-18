@@ -1,17 +1,19 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv) {
-	setlocale(LC_ALL, "Turkish");
+	SetConsoleCP(CP_UTF8);
+	SetConsoleOutputCP(CP_UTF8);
 	
-	// signed (işaretli) değişkenler negatif sayıları saklayabilir
+	// signed (iÅŸaretli) deÄŸiÅŸkenler negatif sayÄ±larÄ± saklayabilir
 	signed short s1 = -7;
 	
-	// unsigned (işaretsiz) değişkenler negatif sayıları saklayamaz
+	// unsigned (iÅŸaretsiz) deÄŸiÅŸkenler negatif sayÄ±larÄ± saklayamaz
 	unsigned short s2 = -7;
 	
-	cout << "Sayı 1: " << s1 << endl;
-	cout << "Sayı 2: " << s2 << endl;
+	cout << "SayÄ± 1: " << s1 << endl;
+	cout << "SayÄ± 2: " << s2 << endl;
 	
 	return 0;
 }

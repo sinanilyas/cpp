@@ -1,14 +1,16 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     double sayi = 0.01;
 
-    // double doðrudan bool tipine dönüþtürülür.
-    if (sayi) cout << "Koþul doðrudur." << endl; // Çalýþýr.
+    // double doÄŸrudan bool tipine dÃ¶nÃ¼ÅŸtÃ¼rÃ¼lÃ¼r.
+    if (sayi) cout << "KoÅŸul doÄŸrudur." << endl; // Ã‡alÄ±ÅŸÄ±r.
 
     return 0;
 }

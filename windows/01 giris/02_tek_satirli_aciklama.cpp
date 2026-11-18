@@ -1,4 +1,4 @@
-int main() { // Satırın buradan sonrası açıklamadır
-	// Açıklamalar derleyici tarafından dikkate alınmaz
+int main() { // SatÄ±rÄ±n buradan sonrasÄ± aÃ§Ä±klamadÄ±r
+	// AÃ§Ä±klamalar derleyici tarafÄ±ndan dikkate alÄ±nmaz
 }
 

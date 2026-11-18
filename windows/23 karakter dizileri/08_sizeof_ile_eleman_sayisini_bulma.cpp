@@ -1,18 +1,20 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     char ad[] = "Ali";
 
-    /* char tipi 1 bayt yer kapladığı için sizeof, karakter dizisinin
-     * eleman sayısını doğrudan verir. Diğer tiplerdeki dizilerde olduğu
-     * gibi bir elemanın boyutuna bölmek gerekmez. */
+    /* char tipi 1 bayt yer kapladÄ±ÄŸÄ± iÃ§in sizeof, karakter dizisinin
+     * eleman sayÄ±sÄ±nÄ± doÄŸrudan verir. DiÄŸer tiplerdeki dizilerde olduÄŸu
+     * gibi bir elemanÄ±n boyutuna bÃ¶lmek gerekmez. */
     cout << sizeof(ad) << endl; // 4 (null karakteri dahil)
 
-    // sizeof metnin uzunluğunu değil, dizinin eleman sayısını verir.
+    // sizeof metnin uzunluÄŸunu deÄŸil, dizinin eleman sayÄ±sÄ±nÄ± verir.
     char sehir[20] = "Sakarya";
 
     cout << sizeof(sehir) << endl; // 20

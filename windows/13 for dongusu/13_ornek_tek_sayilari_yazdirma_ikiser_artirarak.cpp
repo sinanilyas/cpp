@@ -1,20 +1,22 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* Döngü değişkeninin başlangıç değeri değiştirilerek
-     * farklı sayı dizileri oluşturulabilir.
-     * 1'den başlayıp ikişer artırılırsa tek sayılar elde edilir. */
+    /* DÃ¶ngÃ¼ deÄŸiÅŸkeninin baÅŸlangÄ±Ã§ deÄŸeri deÄŸiÅŸtirilerek
+     * farklÄ± sayÄ± dizileri oluÅŸturulabilir.
+     * 1'den baÅŸlayÄ±p ikiÅŸer artÄ±rÄ±lÄ±rsa tek sayÄ±lar elde edilir. */
 
     for (int i = 1; i <= 10; i += 2)
     {
         cout << i << endl;
     }
 
-    // Ekrana sırasıyla 1, 3, 5, 7 ve 9 yazdırılır.
+    // Ekrana sÄ±rasÄ±yla 1, 3, 5, 7 ve 9 yazdÄ±rÄ±lÄ±r.
 
     return 0;
 }

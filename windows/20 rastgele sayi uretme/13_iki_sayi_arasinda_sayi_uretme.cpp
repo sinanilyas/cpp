@@ -1,42 +1,44 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     srand(time(0));
 
     int enKucuk, enBuyuk;
 
-    cout << "Aralığın en küçük değerini giriniz: ";
+    cout << "AralÄ±ÄŸÄ±n en kÃ¼Ã§Ã¼k deÄŸerini giriniz: ";
     cin >> enKucuk;
 
-    cout << "Aralığın en büyük değerini giriniz: ";
+    cout << "AralÄ±ÄŸÄ±n en bÃ¼yÃ¼k deÄŸerini giriniz: ";
     cin >> enBuyuk;
 
-    /* Önceki örneklerdeki yöntem genelleştirilebilir:
-     * Aralıktaki sayı adedi: enBuyuk - enKucuk + 1
-     * rand() % adet ifadesi 0 ile (adet - 1) arasında sayı üretir.
-     * Sonuca enKucuk eklenirse istenen aralık elde edilir.
+    /* Ã–nceki Ã¶rneklerdeki yÃ¶ntem genelleÅŸtirilebilir:
+     * AralÄ±ktaki sayÄ± adedi: enBuyuk - enKucuk + 1
+     * rand() % adet ifadesi 0 ile (adet - 1) arasÄ±nda sayÄ± Ã¼retir.
+     * Sonuca enKucuk eklenirse istenen aralÄ±k elde edilir.
      *
-     * Genel formül: rand() % (max - min + 1) + min
+     * Genel formÃ¼l: rand() % (max - min + 1) + min
      *
-     * Örnekler:
+     * Ã–rnekler:
      *   1-100   : rand() % (100 - 1 + 1) + 1         = rand() % 100 + 1
      *   100-105 : rand() % (105 - 100 + 1) + 100     = rand() % 6 + 100
      *   -10, 10 : rand() % (10 - (-10) + 1) + (-10)  = rand() % 21 - 10
      *
-     * Parantez kullanılmazsa önce rand() % enBuyuk hesaplanır
-     * ve yanlış sonuç elde edilir.
+     * Parantez kullanÄ±lmazsa Ã¶nce rand() % enBuyuk hesaplanÄ±r
+     * ve yanlÄ±ÅŸ sonuÃ§ elde edilir.
      *
-     * Girilen en küçük değer, en büyük değerden büyük olmamalıdır.
+     * Girilen en kÃ¼Ã§Ã¼k deÄŸer, en bÃ¼yÃ¼k deÄŸerden bÃ¼yÃ¼k olmamalÄ±dÄ±r.
      *
-     * rand() en fazla RAND_MAX değerini üretebildiği için aralıktaki
-     * sayı adedi RAND_MAX + 1 değerini aşmamalıdır. Örneğin RAND_MAX
-     * 32767 ise rand() % 100000 ifadesi 32767'den büyük sayı üretemez. */
+     * rand() en fazla RAND_MAX deÄŸerini Ã¼retebildiÄŸi iÃ§in aralÄ±ktaki
+     * sayÄ± adedi RAND_MAX + 1 deÄŸerini aÅŸmamalÄ±dÄ±r. Ã–rneÄŸin RAND_MAX
+     * 32767 ise rand() % 100000 ifadesi 32767'den bÃ¼yÃ¼k sayÄ± Ã¼retemez. */
 
     int adet = (enBuyuk - enKucuk + 1);
 

@@ -1,39 +1,41 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     double sayi1, sayi2;
     char islem;
 
-    cout << "Birinci sayıyı giriniz: ";
+    cout << "Birinci sayÄ±yÄ± giriniz: ";
     cin >> sayi1;
 
-    cout << "İkinci sayıyı giriniz: ";
+    cout << "Ä°kinci sayÄ±yÄ± giriniz: ";
     cin >> sayi2;
 
-    cout << "İşlemi giriniz (+, -, *, /): ";
+    cout << "Ä°ÅŸlemi giriniz (+, -, *, /): ";
     cin >> islem;
 
-    // Girilen işlem karakterine göre uygun hesaplama yapılır.
+    // Girilen iÅŸlem karakterine gÃ¶re uygun hesaplama yapÄ±lÄ±r.
     if (islem == '+')
-        cout << "Sonuç: " << sayi1 + sayi2 << endl;
+        cout << "SonuÃ§: " << sayi1 + sayi2 << endl;
     else if (islem == '-')
-        cout << "Sonuç: " << sayi1 - sayi2 << endl;
+        cout << "SonuÃ§: " << sayi1 - sayi2 << endl;
     else if (islem == '*')
-        cout << "Sonuç: " << sayi1 * sayi2 << endl;
+        cout << "SonuÃ§: " << sayi1 * sayi2 << endl;
     else if (islem == '/')
     {
-        // İkinci sayı sıfırdan farklı ise
+        // Ä°kinci sayÄ± sÄ±fÄ±rdan farklÄ± ise
         if (sayi2 != 0.0)
-            cout << "Sonuç: " << sayi1 / sayi2 << endl;
+            cout << "SonuÃ§: " << sayi1 / sayi2 << endl;
         else
-            cout << "Hata: Sıfıra bölme yapılamaz." << endl;
+            cout << "Hata: SÄ±fÄ±ra bÃ¶lme yapÄ±lamaz." << endl;
     }
     else
-        cout << "Geçersiz işlem!" << endl;
+        cout << "GeÃ§ersiz iÅŸlem!" << endl;
 
     return 0;
 }

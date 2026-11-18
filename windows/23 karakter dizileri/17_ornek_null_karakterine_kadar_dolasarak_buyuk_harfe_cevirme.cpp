@@ -1,23 +1,25 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     char metin[] = "Merhaba dunya, nasilsin?";
 
-    /* Karakter dizilerinde döngü koþulu olarak dizinin eleman sayýsý
-     * yerine null karakteri kullanýlabilir. Döngü null karakterine
-     * gelene kadar döner. Böylece metnin uzunluðu bilinmeden bütün
-     * karakterler dolaþýlýr.
+    /* Karakter dizilerinde dÃ¶ngÃ¼ koÅŸulu olarak dizinin eleman sayÄ±sÄ±
+     * yerine null karakteri kullanÄ±labilir. DÃ¶ngÃ¼ null karakterine
+     * gelene kadar dÃ¶ner. BÃ¶ylece metnin uzunluÄŸu bilinmeden bÃ¼tÃ¼n
+     * karakterler dolaÅŸÄ±lÄ±r.
      *
-     * Küçük harfler ASCII tablosunda büyük harflerden 32 ('a' - 'A')
-     * sonraki konumda yer alýr. Küçük bir harften bu fark çýkarýlýrsa harfin
-     * büyüðü elde edilir. Harf olmayan karakterler deðiþtirilmez. */
+     * KÃ¼Ã§Ã¼k harfler ASCII tablosunda bÃ¼yÃ¼k harflerden 32 ('a' - 'A')
+     * sonraki konumda yer alÄ±r. KÃ¼Ã§Ã¼k bir harften bu fark Ã§Ä±karÄ±lÄ±rsa harfin
+     * bÃ¼yÃ¼ÄŸÃ¼ elde edilir. Harf olmayan karakterler deÄŸiÅŸtirilmez. */
     for (int i = 0; metin[i] != '\0'; i++)
     {
-        // Küçük harf ise
+        // KÃ¼Ã§Ã¼k harf ise
         if (metin[i] >= 'a' && metin[i] <= 'z')
         {
             metin[i] -= 'a' - 'A';
@@ -26,8 +28,8 @@ int main(int argc, char** argv)
 
     cout << metin << endl; // MERHABA DUNYA, NASILSIN?
 
-    /* Türkçe harfler (ç, ð, ý, ö, þ, ü) a-z aralýðýnda
-     * olmadýðý için bu örnekte dönüþtürülmez. */
+    /* TÃ¼rkÃ§e harfler (Ã§, ÄŸ, Ä±, Ã¶, ÅŸ, Ã¼) a-z aralÄ±ÄŸÄ±nda
+     * olmadÄ±ÄŸÄ± iÃ§in bu Ã¶rnekte dÃ¶nÃ¼ÅŸtÃ¼rÃ¼lmez. */
 
     return 0;
 }

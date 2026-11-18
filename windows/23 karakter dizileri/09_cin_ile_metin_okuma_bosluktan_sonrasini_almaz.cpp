@@ -1,13 +1,15 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     char ad[20];
 
-    cout << "Adýnýzý giriniz: ";
+    cout << "AdÄ±nÄ±zÄ± giriniz: ";
 
     /* cin ile karakter dizisine metin okunabilir. Okunan karakterlerin
      * sonuna null karakteri otomatik olarak eklenir. */
@@ -15,16 +17,16 @@ int main(int argc, char** argv)
 
     cout << "Merhaba " << ad << endl;
 
-    /* cin, bir boþluk karakterine (boþluk, sekme, Enter) gelince
-     * okumayý keser. Baþtaki boþluklar atlanýr. Girilen metne göre
+    /* cin, bir boÅŸluk karakterine (boÅŸluk, sekme, Enter) gelince
+     * okumayÄ± keser. BaÅŸtaki boÅŸluklar atlanÄ±r. Girilen metne gÃ¶re
      * diziye okunan metin:
      *
      * Ahmet         -> Ahmet
      *    Ahmet      -> Ahmet
      * Ahmet Kaya    -> Ahmet
      *
-     * Okunmayan karakterler (" Kaya") girdi tamponunda kalýr ve
-     * sonraki okuma iþleminde okunur. */
+     * Okunmayan karakterler (" Kaya") girdi tamponunda kalÄ±r ve
+     * sonraki okuma iÅŸleminde okunur. */
 
     return 0;
 }

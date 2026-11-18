@@ -1,16 +1,18 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 enum gun {pts = 1, sal, car, per, cum, cts, paz};
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     gun bugun = car;
 
     /* static_cast<int>() ile enum tipindeki
-     * bir değer int tipine dönüştürülebilir. */
+     * bir deÄŸer int tipine dÃ¶nÃ¼ÅŸtÃ¼rÃ¼lebilir. */
 
     int sayi = static_cast<int>(bugun);
 

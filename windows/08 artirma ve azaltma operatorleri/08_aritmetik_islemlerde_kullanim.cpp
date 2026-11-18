@@ -1,13 +1,15 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int sayi1 = 10;
 
-    // Önce mevcut değer kullanılır, sonra 1 artırılır
+    // Ã–nce mevcut deÄŸer kullanÄ±lÄ±r, sonra 1 artÄ±rÄ±lÄ±r
     int sonuc = sayi1++ * 2;
 
     cout << sonuc << endl; // 20
@@ -15,18 +17,18 @@ int main(int argc, char** argv)
 
     int sayi2 = 10;
 
-    // Önce değer 1 azaltılır, sonra kullanılır
+    // Ã–nce deÄŸer 1 azaltÄ±lÄ±r, sonra kullanÄ±lÄ±r
     sonuc = --sayi2 * 2;
 
     cout << sonuc << endl; // 18
     cout << sayi2 << endl;  // 9
 
-    /* İlk işlem aşağıdaki işlemlerle eşdeğerdir:
+    /* Ä°lk iÅŸlem aÅŸaÄŸÄ±daki iÅŸlemlerle eÅŸdeÄŸerdir:
      *
      * int sonuc = sayi1 * 2;
      * sayi1++;
      *
-     * İkinci işlem aşağıdaki işlemlerle eşdeğerdir:
+     * Ä°kinci iÅŸlem aÅŸaÄŸÄ±daki iÅŸlemlerle eÅŸdeÄŸerdir:
      *
      * sayi2--;
      * sonuc = sayi2 * 2;

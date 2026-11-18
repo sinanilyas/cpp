@@ -1,20 +1,22 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int sayi;
 
-    cout << "Bir tamsayı giriniz (0-1): ";
+    cout << "Bir tamsayÄ± giriniz (0-1): ";
     cin >> sayi;
 
-    // Koşullardan en az biri doğruysa if bloğu çalıştırılır.
+    // KoÅŸullardan en az biri doÄŸruysa if bloÄŸu Ã§alÄ±ÅŸtÄ±rÄ±lÄ±r.
     if (sayi == 0 || sayi == 1)
-        cout << "Sayı 0 veya 1'dir." << endl;
+        cout << "SayÄ± 0 veya 1'dir." << endl;
     else
-        cout << "Sayı 0 veya 1 değildir." << endl;
+        cout << "SayÄ± 0 veya 1 deÄŸildir." << endl;
 
     return 0;
 }

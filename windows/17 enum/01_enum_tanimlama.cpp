@@ -1,16 +1,18 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
-// Haftanın günlerini temsil eden enum tipi
+// HaftanÄ±n gÃ¼nlerini temsil eden enum tipi
 enum gun {pts, sal, car, per, cum, cts, paz};
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* enum, isimlendirilmiş tamsayı sabitleri tanımlamak için kullanılır.
-     * İlk elemana varsayılan olarak 0 değeri verilir.
-     * Sonraki elemanların değerleri birer artar. */
+    /* enum, isimlendirilmiÅŸ tamsayÄ± sabitleri tanÄ±mlamak iÃ§in kullanÄ±lÄ±r.
+     * Ä°lk elemana varsayÄ±lan olarak 0 deÄŸeri verilir.
+     * Sonraki elemanlarÄ±n deÄŸerleri birer artar. */
 
     cout << pts << endl; // 0
     cout << sal << endl; // 1

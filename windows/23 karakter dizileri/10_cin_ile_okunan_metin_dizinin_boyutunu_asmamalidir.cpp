@@ -1,24 +1,26 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* 6 elemanlý diziye en fazla 5 karakterlik bir metin okunabilir.
-     * Son eleman null karakteri için gereklidir. */
+    /* 6 elemanlÄ± diziye en fazla 5 karakterlik bir metin okunabilir.
+     * Son eleman null karakteri iÃ§in gereklidir. */
     char ad[6];
 
-    cout << "Adýnýzý giriniz: ";
-    cin >> ad; // MANTIK HATASI: Girilen metin uzunsa dizinin dýþýna yazýlýr
+    cout << "AdÄ±nÄ±zÄ± giriniz: ";
+    cin >> ad; // MANTIK HATASI: Girilen metin uzunsa dizinin dÄ±ÅŸÄ±na yazÄ±lÄ±r
 
     cout << "Merhaba " << ad << endl;
 
-    /* cin, girilen metnin diziye sýðýp sýðmadýðýný denetlemez.
-     * Örneðin Abdurrahman (11 karakter) girilirse null karakteriyle
-     * birlikte 12 karakter, 6 elemanlý diziye yazýlmaya çalýþýlýr.
-     * Dizinin dýþýna yazýlan karakterler baþka deðiþkenlerin deðerlerini
-     * bozabilir ya da programýn çökmesine yol açabilir. */
+    /* cin, girilen metnin diziye sÄ±ÄŸÄ±p sÄ±ÄŸmadÄ±ÄŸÄ±nÄ± denetlemez.
+     * Ã–rneÄŸin Abdurrahman (11 karakter) girilirse null karakteriyle
+     * birlikte 12 karakter, 6 elemanlÄ± diziye yazÄ±lmaya Ã§alÄ±ÅŸÄ±lÄ±r.
+     * Dizinin dÄ±ÅŸÄ±na yazÄ±lan karakterler baÅŸka deÄŸiÅŸkenlerin deÄŸerlerini
+     * bozabilir ya da programÄ±n Ã§Ã¶kmesine yol aÃ§abilir. */
 
     return 0;
 }

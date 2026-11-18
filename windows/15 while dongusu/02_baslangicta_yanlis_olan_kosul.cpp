@@ -1,20 +1,22 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int sayac = 15;
 
-    // Koşul başlangıçta yanlış olduğu için döngü hiç çalışmaz.
+    // KoÅŸul baÅŸlangÄ±Ã§ta yanlÄ±ÅŸ olduÄŸu iÃ§in dÃ¶ngÃ¼ hiÃ§ Ã§alÄ±ÅŸmaz.
     while (sayac <= 10)
     {
         cout << sayac << endl;
         sayac++;
     }
 
-    cout << "Döngü sona erdi." << endl;
+    cout << "DÃ¶ngÃ¼ sona erdi." << endl;
 
     return 0;
 }

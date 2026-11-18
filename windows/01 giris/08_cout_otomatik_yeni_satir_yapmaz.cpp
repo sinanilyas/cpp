@@ -1,12 +1,14 @@
-// Her cout komutu yeni bir satýr oluþturmaz
+// Her cout komutu yeni bir satÄ±r oluÅŸturmaz
 
 #include <iostream>
+#include <windows.h>
 
 int main(int argc, char** argv) {
-	setlocale(LC_ALL, "Turkish");
+	SetConsoleCP(CP_UTF8);
+	SetConsoleOutputCP(CP_UTF8);
 	
-	std::cout << "Satýr 1";
-	std::cout << "Satýr 2";
+	std::cout << "SatÄ±r 1";
+	std::cout << "SatÄ±r 2";
 	
 	return 0;
 }

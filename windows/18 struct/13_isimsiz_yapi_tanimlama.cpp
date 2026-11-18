@@ -1,14 +1,16 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* Yapıya isim vermeden doğrudan değişken tanımlanabilir.
-     * Bu durumda yapı türünün adı bulunmaz.
-     * Yapı türünün adı olmadığı için daha sonra bu türün
-     * adını kullanarak başka bir değişken tanımlanamaz. */
+    /* YapÄ±ya isim vermeden doÄŸrudan deÄŸiÅŸken tanÄ±mlanabilir.
+     * Bu durumda yapÄ± tÃ¼rÃ¼nÃ¼n adÄ± bulunmaz.
+     * YapÄ± tÃ¼rÃ¼nÃ¼n adÄ± olmadÄ±ÄŸÄ± iÃ§in daha sonra bu tÃ¼rÃ¼n
+     * adÄ±nÄ± kullanarak baÅŸka bir deÄŸiÅŸken tanÄ±mlanamaz. */
     struct
     {
         int kod;

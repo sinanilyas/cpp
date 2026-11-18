@@ -1,26 +1,28 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* srand() döngü içinde çağrılırsa her tekrarda tohum değeri
-     * yeniden verilir ve sayı dizisi baştan başlar.
-     * Döngü bir saniyeden kısa sürede tamamlandığı için time(0)
-     * her tekrarda aynı değeri verir. Bu yüzden hep aynı sayı üretilir. */
+    /* srand() dÃ¶ngÃ¼ iÃ§inde Ã§aÄŸrÄ±lÄ±rsa her tekrarda tohum deÄŸeri
+     * yeniden verilir ve sayÄ± dizisi baÅŸtan baÅŸlar.
+     * DÃ¶ngÃ¼ bir saniyeden kÄ±sa sÃ¼rede tamamlandÄ±ÄŸÄ± iÃ§in time(0)
+     * her tekrarda aynÄ± deÄŸeri verir. Bu yÃ¼zden hep aynÄ± sayÄ± Ã¼retilir. */
 
     for (int i = 1; i <= 5; i++)
     {
-        srand(time(0)); // MANTIK HATASI: srand() döngü içinde çağrılmamalıdır
+        srand(time(0)); // MANTIK HATASI: srand() dÃ¶ngÃ¼ iÃ§inde Ã§aÄŸrÄ±lmamalÄ±dÄ±r
         cout << rand() << endl;
     }
 
-    // Ekrana 5 kez aynı sayı yazdırılır.
+    // Ekrana 5 kez aynÄ± sayÄ± yazdÄ±rÄ±lÄ±r.
 
-    /* srand() programın başında yalnızca bir kez çağrılmalıdır. */
+    /* srand() programÄ±n baÅŸÄ±nda yalnÄ±zca bir kez Ã§aÄŸrÄ±lmalÄ±dÄ±r. */
 
     return 0;
 }

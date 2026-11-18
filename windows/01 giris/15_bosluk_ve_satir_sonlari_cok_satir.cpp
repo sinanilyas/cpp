@@ -1,5 +1,6 @@
 #include <iostream>
-// Boşluk ve satır sonları, bazı özel durumlar dışında kodun anlamını etkilemez.
+#include <windows.h>
+// BoÅŸluk ve satÄ±r sonlarÄ±, bazÄ± Ã¶zel durumlar dÄ±ÅŸÄ±nda kodun anlamÄ±nÄ± etkilemez.
 using
 namespace
 std;
@@ -14,10 +15,13 @@ char
 argv
 )
 {
-setlocale(
-				LC_ALL
-		,
-	"Turkish"
+SetConsoleCP(
+				CP_UTF8
 			)           ;
+SetConsoleOutputCP
+	(
+		CP_UTF8
+	)
+			;
 			cout
-		<<           "Satır 1"<<endl<< "Satır 2"<< endl;return 0;}
+		<<           "SatÄ±r 1"<<endl<< "SatÄ±r 2"<< endl;return 0;}

@@ -1,21 +1,23 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     /* Metinler char tipindeki dizilerde saklanabilir. Bu dizilere
      * karakter dizisi denir. Metnin her karakteri dizinin bir
-     * elemanına yerleştirilir.
+     * elemanÄ±na yerleÅŸtirilir.
      *
-     * Metnin nerede bittiğinin anlaşılması için son karakterden sonra
-     * null karakteri ('\0') yazılır. null karakterinin ASCII kodu 0'dır.
-     * Bu nedenle dizinin eleman sayısı metnin uzunluğundan 1 fazla
-     * olmalıdır: "Ali" metni için 3 + 1 = 4 eleman gerekir.
+     * Metnin nerede bittiÄŸinin anlaÅŸÄ±lmasÄ± iÃ§in son karakterden sonra
+     * null karakteri ('\0') yazÄ±lÄ±r. null karakterinin ASCII kodu 0'dÄ±r.
+     * Bu nedenle dizinin eleman sayÄ±sÄ± metnin uzunluÄŸundan 1 fazla
+     * olmalÄ±dÄ±r: "Ali" metni iÃ§in 3 + 1 = 4 eleman gerekir.
      *
-     * Diğer dizilerde olduğu gibi süslü parantezle başlangıç değeri
-     * verilebilir. Son karakter null karakteri olmalıdır. */
+     * DiÄŸer dizilerde olduÄŸu gibi sÃ¼slÃ¼ parantezle baÅŸlangÄ±Ã§ deÄŸeri
+     * verilebilir. Son karakter null karakteri olmalÄ±dÄ±r. */
     char ad[4] = {'A', 'l', 'i', '\0'};
 
     for (int i = 0; i < 3; i++)
@@ -26,8 +28,8 @@ int main(int argc, char** argv)
 
     cout << static_cast<int>(ad[3]) << endl; // 0
 
-    /* '\0' yerine 0 da yazılabilir: {'A', 'l', 'i', 0}
-     * '0' yazılmamalıdır. '0' rakam karakteridir ve ASCII kodu 48'dir. */
+    /* '\0' yerine 0 da yazÄ±labilir: {'A', 'l', 'i', 0}
+     * '0' yazÄ±lmamalÄ±dÄ±r. '0' rakam karakteridir ve ASCII kodu 48'dir. */
 
     return 0;
 }

@@ -1,18 +1,20 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     srand(time(0));
 
-    /* Bilgisayar 1-100 arasında rastgele bir sayı tutar.
-     * Kullanıcı sayıyı bulana kadar tahmin yapar ve
+    /* Bilgisayar 1-100 arasÄ±nda rastgele bir sayÄ± tutar.
+     * KullanÄ±cÄ± sayÄ±yÄ± bulana kadar tahmin yapar ve
      * her tahminden sonra ipucu verilir.
-     * Sayı rastgele üretildiği için oyun her seferinde farklıdır. */
+     * SayÄ± rastgele Ã¼retildiÄŸi iÃ§in oyun her seferinde farklÄ±dÄ±r. */
 
     int tutulanSayi = rand() % 100 + 1;
     int tahmin;
@@ -26,12 +28,12 @@ int main(int argc, char** argv)
         denemeSayisi++;
 
         if (tahmin < tutulanSayi)
-            cout << "Daha büyük bir sayı giriniz." << endl;
+            cout << "Daha bÃ¼yÃ¼k bir sayÄ± giriniz." << endl;
         else if (tahmin > tutulanSayi)
-            cout << "Daha küçük bir sayı giriniz." << endl;
+            cout << "Daha kÃ¼Ã§Ã¼k bir sayÄ± giriniz." << endl;
     } while (tahmin != tutulanSayi);
 
-    cout << "Tebrikler! Sayıyı " << denemeSayisi << " denemede buldunuz." << endl;
+    cout << "Tebrikler! SayÄ±yÄ± " << denemeSayisi << " denemede buldunuz." << endl;
 
     return 0;
 }

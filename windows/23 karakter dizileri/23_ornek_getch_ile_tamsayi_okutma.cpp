@@ -1,34 +1,36 @@
 #include <iostream>
-#include <cctype>  // isdigit için
-#include <cstdlib> // atoi için
-#include <conio.h> // _getch için
+#include <cctype>  // isdigit iÃ§in
+#include <cstdlib> // atoi iÃ§in
+#include <conio.h> // _getch iÃ§in
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* Basılan tuşlar _getch ile tek tek okunur. Yalnızca rakamlar ekrana
-     * yazdırılır ve diziye eklenir, diğer tuşlar yok sayılır. Böylece
-     * kullanıcının harf ya da başka bir karakter girmesi engellenir.
-     * Enter tuşuna basıldığında ya da dizi dolduğunda okuma biter ve
-     * rakamlardan oluşan metin atoi ile sayıya dönüştürülür. */
+    /* BasÄ±lan tuÅŸlar _getch ile tek tek okunur. YalnÄ±zca rakamlar ekrana
+     * yazdÄ±rÄ±lÄ±r ve diziye eklenir, diÄŸer tuÅŸlar yok sayÄ±lÄ±r. BÃ¶ylece
+     * kullanÄ±cÄ±nÄ±n harf ya da baÅŸka bir karakter girmesi engellenir.
+     * Enter tuÅŸuna basÄ±ldÄ±ÄŸÄ±nda ya da dizi dolduÄŸunda okuma biter ve
+     * rakamlardan oluÅŸan metin atoi ile sayÄ±ya dÃ¶nÃ¼ÅŸtÃ¼rÃ¼lÃ¼r. */
     const int UZUNLUK = 5;
     char rakamlar[UZUNLUK];
     int siraNo = 0;
 
-    cout << "Bir tamsayı giriniz: ";
+    cout << "Bir tamsayÄ± giriniz: ";
 
     while (true)
     {
-        // Türkçe harflerde isdigit fonksiyonuna negatif sayı verilmemesi için unsigned char kullanılıyor
+        // TÃ¼rkÃ§e harflerde isdigit fonksiyonuna negatif sayÄ± verilmemesi iÃ§in unsigned char kullanÄ±lÄ±yor
         unsigned char karakter = _getch();
 
         bool enterMi = karakter == '\r';
 
         if (enterMi)
         {
-            break; // Enter tuşuna basılmışsa sayı okumayı bitir
+            break; // Enter tuÅŸuna basÄ±lmÄ±ÅŸsa sayÄ± okumayÄ± bitir
         }
 
         if (isdigit(karakter))
@@ -36,21 +38,21 @@ int main(int argc, char** argv)
             cout << karakter;
             rakamlar[siraNo++] = karakter;
 
-            // Son eleman null karakteri için ayrıldığı için en fazla UZUNLUK - 1 rakam okunur
+            // Son eleman null karakteri iÃ§in ayrÄ±ldÄ±ÄŸÄ± iÃ§in en fazla UZUNLUK - 1 rakam okunur
             bool diziDolduMu = siraNo == UZUNLUK - 1;
 
             if (diziDolduMu)
             {
-                break; // Dizi dolduysa sayı okumayı bitir
+                break; // Dizi dolduysa sayÄ± okumayÄ± bitir
             }
         }
     }
 
-    rakamlar[siraNo] = '\0'; // Okunan son rakamdan sonra null karakteri yerleştirilir
+    rakamlar[siraNo] = '\0'; // Okunan son rakamdan sonra null karakteri yerleÅŸtirilir
 
     int sayi = atoi(rakamlar);
 
-    cout << endl << "Girilen sayı: " << sayi << endl;
+    cout << endl << "Girilen sayÄ±: " << sayi << endl;
 
     return 0;
 }

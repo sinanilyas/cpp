@@ -1,18 +1,20 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     char harfNotu;
 
     cout << "Harf notunuzu giriniz (A-F): ";
     cin >> harfNotu;
 
-    /* Büyük ve küçük harflerin aynı işlemi yapması için
-     * iki ayrı case aynı komutlara yönlendirilebilir.
-     * Örneğin kullanıcı A veya a girerse "Pekiyi" yazdırılır. */
+    /* BÃ¼yÃ¼k ve kÃ¼Ã§Ã¼k harflerin aynÄ± iÅŸlemi yapmasÄ± iÃ§in
+     * iki ayrÄ± case aynÄ± komutlara yÃ¶nlendirilebilir.
+     * Ã–rneÄŸin kullanÄ±cÄ± A veya a girerse "Pekiyi" yazdÄ±rÄ±lÄ±r. */
 
     switch (harfNotu)
     {
@@ -22,7 +24,7 @@ int main(int argc, char** argv)
             break;
         case 'B':
         case 'b':
-            cout << "İyi" << endl;
+            cout << "Ä°yi" << endl;
             break;
         case 'C':
         case 'c':
@@ -30,14 +32,14 @@ int main(int argc, char** argv)
             break;
         case 'D':
         case 'd':
-            cout << "Geçer" << endl;
+            cout << "GeÃ§er" << endl;
             break;
         case 'F':
         case 'f':
-            cout << "Başarısız" << endl;
+            cout << "BaÅŸarÄ±sÄ±z" << endl;
             break;
         default:
-            cout << "Geçersiz harf notu!" << endl;
+            cout << "GeÃ§ersiz harf notu!" << endl;
             break;
     }
 

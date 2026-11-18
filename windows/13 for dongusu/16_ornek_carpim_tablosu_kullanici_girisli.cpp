@@ -1,16 +1,18 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* Çarpım tablosu oluşturulacak sayı kullanıcıdan alınarak
-     * döngü içerisinde kullanılabilir. */
+    /* Ã‡arpÄ±m tablosu oluÅŸturulacak sayÄ± kullanÄ±cÄ±dan alÄ±narak
+     * dÃ¶ngÃ¼ iÃ§erisinde kullanÄ±labilir. */
 
     int sayi;
 
-    cout << "Çarpım tablosu oluşturulacak sayıyı giriniz: ";
+    cout << "Ã‡arpÄ±m tablosu oluÅŸturulacak sayÄ±yÄ± giriniz: ";
     cin >> sayi;
 
     for (int i = 1; i <= 10; i++)

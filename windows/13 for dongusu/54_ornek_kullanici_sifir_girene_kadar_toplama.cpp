@@ -1,19 +1,21 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* Tekrar sayısı önceden bilinmiyorsa sonsuz döngü kullanılabilir.
-     * Kullanıcı 0 girdiğinde break ile döngü sonlandırılır.
-     * Girilen diğer sayıların toplamı hesaplanır. */
+    /* Tekrar sayÄ±sÄ± Ã¶nceden bilinmiyorsa sonsuz dÃ¶ngÃ¼ kullanÄ±labilir.
+     * KullanÄ±cÄ± 0 girdiÄŸinde break ile dÃ¶ngÃ¼ sonlandÄ±rÄ±lÄ±r.
+     * Girilen diÄŸer sayÄ±larÄ±n toplamÄ± hesaplanÄ±r. */
 
     int sayi, toplam = 0;
 
     for (;;)
     {
-        cout << "Bir tamsayı giriniz (Çıkış: 0): ";
+        cout << "Bir tamsayÄ± giriniz (Ã‡Ä±kÄ±ÅŸ: 0): ";
         cin >> sayi;
 
         if (sayi == 0) break;
@@ -21,7 +23,7 @@ int main(int argc, char** argv)
         toplam += sayi;
     }
 
-    cout << "Sayıların toplamı: " << toplam << endl;
+    cout << "SayÄ±larÄ±n toplamÄ±: " << toplam << endl;
 
     return 0;
 }

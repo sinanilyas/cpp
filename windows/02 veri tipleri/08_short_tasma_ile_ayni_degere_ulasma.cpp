@@ -1,18 +1,20 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv) {
-	setlocale(LC_ALL, "Turkish");
+	SetConsoleCP(CP_UTF8);
+	SetConsoleOutputCP(CP_UTF8);
 	
-	/* short 65536 farklı değer saklayabilir */
+	/* short 65536 farklÄ± deÄŸer saklayabilir */
 	
-	// Bir sayının 65536 fazlası atanırsa bir tur atılıp aynı sayı elde edilir.	
+	// Bir sayÄ±nÄ±n 65536 fazlasÄ± atanÄ±rsa bir tur atÄ±lÄ±p aynÄ± sayÄ± elde edilir.	
 	short s1 = 7 + 65536;
-	cout << "Sayı 1: " << s1 << endl;
+	cout << "SayÄ± 1: " << s1 << endl;
 	
-	// Bir sayının 65536x2=131072 fazlası atanırsa iki tur atılıp aynı sayı elde edilir.	
+	// Bir sayÄ±nÄ±n 65536x2=131072 fazlasÄ± atanÄ±rsa iki tur atÄ±lÄ±p aynÄ± sayÄ± elde edilir.	
 	short s2 = 7 + 65536 * 2;
-	cout << "Sayı 2: " << s2 << endl;
+	cout << "SayÄ± 2: " << s2 << endl;
 	
 	return 0;
 }

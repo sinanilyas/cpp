@@ -1,24 +1,26 @@
 #include <iostream>
 #include <iomanip>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* Bir işlemin sonucu, atandığı değişkenin tipine göre belirlenmez.
-     * Önce işlem gerçekleştirilir, ardından elde edilen sonuç
-     * gerekirse değişkenin tipine dönüştürülür. */
+    /* Bir iÅŸlemin sonucu, atandÄ±ÄŸÄ± deÄŸiÅŸkenin tipine gÃ¶re belirlenmez.
+     * Ã–nce iÅŸlem gerÃ§ekleÅŸtirilir, ardÄ±ndan elde edilen sonuÃ§
+     * gerekirse deÄŸiÅŸkenin tipine dÃ¶nÃ¼ÅŸtÃ¼rÃ¼lÃ¼r. */
 
-    // Önce int bölmesi yapılır, sonuç 2 olur.
-    // Sonra double tipine dönüştürüp 2.0 olarak atanır.
+    // Ã–nce int bÃ¶lmesi yapÄ±lÄ±r, sonuÃ§ 2 olur.
+    // Sonra double tipine dÃ¶nÃ¼ÅŸtÃ¼rÃ¼p 2.0 olarak atanÄ±r.
     double s1 = 5 / 2;
 
-    // Önce 2 değeri double tipine dönüştürülür, double bölmesi yapılır, sonuç 2.5 olur
-    // Sonra sonuç tip dönüşümü olmadan 2.5 olarak atanır.
+    // Ã–nce 2 deÄŸeri double tipine dÃ¶nÃ¼ÅŸtÃ¼rÃ¼lÃ¼r, double bÃ¶lmesi yapÄ±lÄ±r, sonuÃ§ 2.5 olur
+    // Sonra sonuÃ§ tip dÃ¶nÃ¼ÅŸÃ¼mÃ¼ olmadan 2.5 olarak atanÄ±r.
     double s2 = 5.0 / 2;
 
-    cout << fixed << setprecision(2); // Sabit noktayı hep göster
+    cout << fixed << setprecision(2); // Sabit noktayÄ± hep gÃ¶ster
     cout << s1 << endl; // 2.00
     cout << s2 << endl; // 2.50
 

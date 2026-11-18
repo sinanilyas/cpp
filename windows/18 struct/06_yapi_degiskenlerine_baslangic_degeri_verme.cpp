@@ -1,4 +1,5 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 struct urun
@@ -9,15 +10,16 @@ struct urun
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* Yapı değişkeni tanımlanırken üyelerine başlangıç
-     * değerleri küme parantezleri içerisinde verilebilir.
-     * Değerler, üyelerin tanımlanma sırasına göre atanır. */
+    /* YapÄ± deÄŸiÅŸkeni tanÄ±mlanÄ±rken Ã¼yelerine baÅŸlangÄ±Ã§
+     * deÄŸerleri kÃ¼me parantezleri iÃ§erisinde verilebilir.
+     * DeÄŸerler, Ã¼yelerin tanÄ±mlanma sÄ±rasÄ±na gÃ¶re atanÄ±r. */
     urun buzdolabi = {101, 25000.0};
 
-    cout << "Ürün kodu: " << buzdolabi.kod << endl;
-    cout << "Ürün fiyatı: " << buzdolabi.fiyat << endl;
+    cout << "ÃœrÃ¼n kodu: " << buzdolabi.kod << endl;
+    cout << "ÃœrÃ¼n fiyatÄ±: " << buzdolabi.fiyat << endl;
 
     return 0;
 }

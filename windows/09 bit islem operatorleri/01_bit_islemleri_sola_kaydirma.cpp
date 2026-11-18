@@ -1,29 +1,31 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv) {
-	setlocale(LC_ALL, "Turkish");
+	SetConsoleCP(CP_UTF8);
+	SetConsoleOutputCP(CP_UTF8);
 
-	// int 4 byte (32 bit) yer kapladığı için
-	// örneğin 3 sayısı hafızada aşağıdaki şekilde saklanır
+	// int 4 byte (32 bit) yer kapladÄ±ÄŸÄ± iÃ§in
+	// Ã¶rneÄŸin 3 sayÄ±sÄ± hafÄ±zada aÅŸaÄŸÄ±daki ÅŸekilde saklanÄ±r
 	// 00000000000000000000000000000011
 	int sonuc;
 	
-	/* 1 bit sola kaydırıldığında sayının 2 katı bulunur */
+	/* 1 bit sola kaydÄ±rÄ±ldÄ±ÄŸÄ±nda sayÄ±nÄ±n 2 katÄ± bulunur */
 	
 	// Eski: 00000000000000000000000000000011 (3)
 	// Yeni: 00000000000000000000000000000110 (6)
 	sonuc = 3 << 1;
 	cout << sonuc << endl; // 6
 	
-	/* 2 bit sola kaydırıldığında sayının 2x2=4 katı bulunur */
+	/* 2 bit sola kaydÄ±rÄ±ldÄ±ÄŸÄ±nda sayÄ±nÄ±n 2x2=4 katÄ± bulunur */
 
 	// Eski: 00000000000000000000000000000011 (3)
 	// Yeni: 00000000000000000000000000001100 (12)
 	sonuc = 3 << 2;
 	cout << sonuc << endl; // 12
 	
-	/* 3 bit sola kaydırıldığında sayının 2x2x2=8 katı bulunur */
+	/* 3 bit sola kaydÄ±rÄ±ldÄ±ÄŸÄ±nda sayÄ±nÄ±n 2x2x2=8 katÄ± bulunur */
 
 	// Eski: 00000000000000000000000000000011 (3)
 	// Yeni: 00000000000000000000000000011000 (24)

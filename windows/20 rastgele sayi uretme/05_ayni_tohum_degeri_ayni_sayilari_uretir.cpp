@@ -1,13 +1,15 @@
 #include <iostream>
 #include <cstdlib>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* srand() aynı tohum değeriyle tekrar çağrılırsa
-     * sayı dizisi baştan başlar ve aynı sayılar yeniden üretilir. */
+    /* srand() aynÄ± tohum deÄŸeriyle tekrar Ã§aÄŸrÄ±lÄ±rsa
+     * sayÄ± dizisi baÅŸtan baÅŸlar ve aynÄ± sayÄ±lar yeniden Ã¼retilir. */
 
     srand(5);
 

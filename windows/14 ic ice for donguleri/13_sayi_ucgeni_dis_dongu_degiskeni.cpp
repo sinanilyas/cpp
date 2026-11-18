@@ -1,13 +1,15 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* İç döngü içerisinde dış döngünün değişkeni de kullanılabilir.
-     * Dış döngünün değişkeni, iç döngünün tüm tekrarları
-     * boyunca aynı değeri korur. */
+    /* Ä°Ã§ dÃ¶ngÃ¼ iÃ§erisinde dÄ±ÅŸ dÃ¶ngÃ¼nÃ¼n deÄŸiÅŸkeni de kullanÄ±labilir.
+     * DÄ±ÅŸ dÃ¶ngÃ¼nÃ¼n deÄŸiÅŸkeni, iÃ§ dÃ¶ngÃ¼nÃ¼n tÃ¼m tekrarlarÄ±
+     * boyunca aynÄ± deÄŸeri korur. */
 
     for (int i = 1; i <= 5; i++)
     {

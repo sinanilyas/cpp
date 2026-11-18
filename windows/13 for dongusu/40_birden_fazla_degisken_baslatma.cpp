@@ -1,13 +1,15 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* for döngüsünün başlatma bölümünde aynı tipte
-     * birden fazla değişken tanımlanabilir.
-     * Değişkenler virgül ile birbirinden ayrılır. */
+    /* for dÃ¶ngÃ¼sÃ¼nÃ¼n baÅŸlatma bÃ¶lÃ¼mÃ¼nde aynÄ± tipte
+     * birden fazla deÄŸiÅŸken tanÄ±mlanabilir.
+     * DeÄŸiÅŸkenler virgÃ¼l ile birbirinden ayrÄ±lÄ±r. */
 
     for (int i = 1, j = 10; i <= 5; i++)
     {

@@ -1,24 +1,26 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int sayi = 15;
     int bolen = 0;
 
-    // HATA: Tamsayýnýn sýfýra bölünmesi tanýmsýz davranýþtýr
+    // HATA: TamsayÄ±nÄ±n sÄ±fÄ±ra bÃ¶lÃ¼nmesi tanÄ±msÄ±z davranÄ±ÅŸtÄ±r
     sayi /= bolen;
 
     cout << sayi << endl;
 
-    /* Yukarýdaki iþlem aþaðýdaki iþlemle eþdeðerdir:
+    /* YukarÄ±daki iÅŸlem aÅŸaÄŸÄ±daki iÅŸlemle eÅŸdeÄŸerdir:
      *
      * sayi = sayi / bolen;
      *
-     * Tamsayýlar sýfýra bölünemez.
-     * Program çalýþma sýrasýnda hata vererek sonlanabilir.
+     * TamsayÄ±lar sÄ±fÄ±ra bÃ¶lÃ¼nemez.
+     * Program Ã§alÄ±ÅŸma sÄ±rasÄ±nda hata vererek sonlanabilir.
      */
 
     return 0;

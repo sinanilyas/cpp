@@ -1,11 +1,13 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv) {
-	setlocale(LC_ALL, "Turkish");
+	SetConsoleCP(CP_UTF8);
+	SetConsoleOutputCP(CP_UTF8);
 	
-	/* Karşılaştırma işlemlerinin sonuçları true/false olduğu için
-	 * bu işlemlerin sonuçları bool değişkenlerde saklanabilir */
+	/* KarÅŸÄ±laÅŸtÄ±rma iÅŸlemlerinin sonuÃ§larÄ± true/false olduÄŸu iÃ§in
+	 * bu iÅŸlemlerin sonuÃ§larÄ± bool deÄŸiÅŸkenlerde saklanabilir */
 	
 	bool s1 = 4 < 1;
 	bool s2 = 4 == 4;

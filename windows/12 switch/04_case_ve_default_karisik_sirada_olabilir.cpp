@@ -1,31 +1,33 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int mevsimNo;
 
-    cout << "Mevsim numarasýný giriniz (1-4): ";
+    cout << "Mevsim numarasÄ±nÄ± giriniz (1-4): ";
     cin >> mevsimNo;
 
-    /* case deðerleri sýralý olmak zorunda deðildir.
-     * default sonda olmak zorunda deðildir. */
+    /* case deÄŸerleri sÄ±ralÄ± olmak zorunda deÄŸildir.
+     * default sonda olmak zorunda deÄŸildir. */
 
     switch (mevsimNo)
     {
         case 4:
-            cout << "Kýþ" << endl;
+            cout << "KÄ±ÅŸ" << endl;
             break;
         default:
-            cout << "Geçersiz mevsim numarasý!" << endl;
+            cout << "GeÃ§ersiz mevsim numarasÄ±!" << endl;
             break;
         case 2:
             cout << "Yaz" << endl;
             break;
         case 1:
-            cout << "Ýlkbahar" << endl;
+            cout << "Ä°lkbahar" << endl;
             break;
         case 3:
             cout << "Sonbahar" << endl;

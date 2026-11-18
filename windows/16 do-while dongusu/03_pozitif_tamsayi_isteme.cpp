@@ -1,23 +1,25 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int sayi;
 
-    /* Kullanıcı pozitif bir tamsayı girene kadar
-     * sayı istemeye devam edilir.
-     * İlk giriş, koşul kontrol edilmeden yapılır. */
+    /* KullanÄ±cÄ± pozitif bir tamsayÄ± girene kadar
+     * sayÄ± istemeye devam edilir.
+     * Ä°lk giriÅŸ, koÅŸul kontrol edilmeden yapÄ±lÄ±r. */
 
     do
     {
-        cout << "Pozitif bir tamsayı giriniz: ";
+        cout << "Pozitif bir tamsayÄ± giriniz: ";
         cin >> sayi;
     } while (sayi <= 0);
 
-    cout << "Girdiğiniz sayı: " << sayi << endl;
+    cout << "GirdiÄŸiniz sayÄ±: " << sayi << endl;
 
     return 0;
 }

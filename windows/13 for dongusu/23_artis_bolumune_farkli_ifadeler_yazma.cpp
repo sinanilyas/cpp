@@ -1,17 +1,19 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* for döngüsünün artış bölümünde yalnızca ++ ve --
-     * operatörleri değil, farklı ifadeler de kullanılabilir.
-     * Bu bölümdeki ifade döngü gövdesinden sonra çalıştırılır. */
+    /* for dÃ¶ngÃ¼sÃ¼nÃ¼n artÄ±ÅŸ bÃ¶lÃ¼mÃ¼nde yalnÄ±zca ++ ve --
+     * operatÃ¶rleri deÄŸil, farklÄ± ifadeler de kullanÄ±labilir.
+     * Bu bÃ¶lÃ¼mdeki ifade dÃ¶ngÃ¼ gÃ¶vdesinden sonra Ã§alÄ±ÅŸtÄ±rÄ±lÄ±r. */
 
     for (int i = 1; i <= 10; cout << i++ << endl)
     {
-        cout << "Döngü çalışıyor." << endl;
+        cout << "DÃ¶ngÃ¼ Ã§alÄ±ÅŸÄ±yor." << endl;
     }
 
     return 0;

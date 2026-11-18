@@ -1,19 +1,21 @@
 #include <iostream>
-#include <iomanip> // setprecision için gerekli
+#include <iomanip> // setprecision iÃ§in gerekli
+#include <windows.h>
 
 using namespace std;
 
 int main(int argc, char** argv) {
-	setlocale(LC_ALL, "Turkish");
+	SetConsoleCP(CP_UTF8);
+	SetConsoleOutputCP(CP_UTF8);
 	
-	// Ondalık noktayı ve sondaki sıfırları göster
-	// (varsayılan precision: 6)
+	// OndalÄ±k noktayÄ± ve sondaki sÄ±fÄ±rlarÄ± gÃ¶ster
+	// (varsayÄ±lan precision: 6)
 	cout << showpoint;
 	
 	cout << 5.0 << endl;      // 5.00000
 	cout << 5.12 << endl;     // 5.12000
 	
-	// Varsayılan ayara geri dön
+	// VarsayÄ±lan ayara geri dÃ¶n
 	cout << noshowpoint;
 	
 	cout << 5.0 << endl;      // 5

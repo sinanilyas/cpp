@@ -1,14 +1,16 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* İç döngüde if kullanılarak yalnızca belirli
-     * konumlara karakter yazdırılabilir.
-     * İlk ve son satırlarla ilk ve son sütunlara yıldız,
-     * diğer konumlara ise boşluk yazdırılır. */
+    /* Ä°Ã§ dÃ¶ngÃ¼de if kullanÄ±larak yalnÄ±zca belirli
+     * konumlara karakter yazdÄ±rÄ±labilir.
+     * Ä°lk ve son satÄ±rlarla ilk ve son sÃ¼tunlara yÄ±ldÄ±z,
+     * diÄŸer konumlara ise boÅŸluk yazdÄ±rÄ±lÄ±r. */
 
     for (int i = 1; i <= 5; i++)
     {

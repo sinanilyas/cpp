@@ -1,14 +1,16 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* Ondalıklı sabit sayılar herhangi bir son ek kullanılmazsa
-     * double tipinde oluşturulur. */
+    /* OndalÄ±klÄ± sabit sayÄ±lar herhangi bir son ek kullanÄ±lmazsa
+     * double tipinde oluÅŸturulur. */
 
-    // Örtük double -> float dönüşümü yapılır
+    // Ã–rtÃ¼k double -> float dÃ¶nÃ¼ÅŸÃ¼mÃ¼ yapÄ±lÄ±r
     float s1 = 5.2;
     float s2 = 6.; // 6.0
     float s3 = .7; // 0.7

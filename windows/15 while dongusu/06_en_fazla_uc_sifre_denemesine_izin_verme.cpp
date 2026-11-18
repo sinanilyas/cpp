@@ -1,27 +1,29 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     const int DOGRU_SIFRE = 1234;
     int girilenSifre = 0;
     int denemeSayisi = 0;
 
-    // Þifre doðru girilene veya 3 deneme yapýlana kadar devam eder.
+    // Åžifre doÄŸru girilene veya 3 deneme yapÄ±lana kadar devam eder.
     while (girilenSifre != DOGRU_SIFRE && denemeSayisi < 3)
     {
-        cout << "Þifreyi giriniz: ";
+        cout << "Åžifreyi giriniz: ";
         cin >> girilenSifre;
 
         denemeSayisi++;
     }
 
     if (girilenSifre == DOGRU_SIFRE)
-        cout << "Giriþ baþarýlý." << endl;
+        cout << "GiriÅŸ baÅŸarÄ±lÄ±." << endl;
     else
-        cout << "Deneme hakkýnýz bitti." << endl;
+        cout << "Deneme hakkÄ±nÄ±z bitti." << endl;
 
     return 0;
 }

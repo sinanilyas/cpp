@@ -1,23 +1,25 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int sayi = 10;
 
-    // sayi değişkeninin değeri 1 artırılır
+    // sayi deÄŸiÅŸkeninin deÄŸeri 1 artÄ±rÄ±lÄ±r
     sayi++;
 
     cout << sayi << endl; // 11
 
-    /* Yukarıdaki işlem aşağıdaki işlemlerle eşdeğerdir:
+    /* YukarÄ±daki iÅŸlem aÅŸaÄŸÄ±daki iÅŸlemlerle eÅŸdeÄŸerdir:
      *
      * sayi = sayi + 1;
      * sayi += 1;
      *
-     * ++ operatörü, değişkenin değerini 1 artırır.
+     * ++ operatÃ¶rÃ¼, deÄŸiÅŸkenin deÄŸerini 1 artÄ±rÄ±r.
      */
 
     return 0;

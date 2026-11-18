@@ -1,22 +1,24 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int sayi;
 
-    cout << "Bir tamsayý giriniz: ";
+    cout << "Bir tamsayÄ± giriniz: ";
     cin >> sayi;
 
-    // Ýçteki if yalnýzca dýþtaki koþul doðruysa deðerlendirilir.
+    // Ä°Ã§teki if yalnÄ±zca dÄ±ÅŸtaki koÅŸul doÄŸruysa deÄŸerlendirilir.
     if (sayi > 0)
     {
-        cout << "Sayý pozitiftir." << endl;
+        cout << "SayÄ± pozitiftir." << endl;
 
         if (sayi % 2 == 0)
-            cout << "Sayý ayný zamanda çifttir." << endl;
+            cout << "SayÄ± aynÄ± zamanda Ã§ifttir." << endl;
     }
 
     cout << "Program sona erdi." << endl;

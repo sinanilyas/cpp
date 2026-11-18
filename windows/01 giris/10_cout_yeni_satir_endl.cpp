@@ -1,12 +1,14 @@
-// endl ile yeni satýr oluþturma
+// endl ile yeni satÄ±r oluÅŸturma
 
 #include <iostream>
+#include <windows.h>
 
 int main(int argc, char** argv) {
-	setlocale(LC_ALL, "Turkish");
+	SetConsoleCP(CP_UTF8);
+	SetConsoleOutputCP(CP_UTF8);
 	
-	std::cout << "Satýr 1" << std::endl;
-	std::cout << "Satýr 2" << std::endl;
+	std::cout << "SatÄ±r 1" << std::endl;
+	std::cout << "SatÄ±r 2" << std::endl;
 	
 	return 0;
 }

@@ -1,13 +1,15 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* || operatörü kullanıldığında koşullardan en az
-     * birinin doğru olması döngünün devam etmesi için yeterlidir.
-     * Her iki koşul da yanlış olduğunda döngü sona erer. */
+    /* || operatÃ¶rÃ¼ kullanÄ±ldÄ±ÄŸÄ±nda koÅŸullardan en az
+     * birinin doÄŸru olmasÄ± dÃ¶ngÃ¼nÃ¼n devam etmesi iÃ§in yeterlidir.
+     * Her iki koÅŸul da yanlÄ±ÅŸ olduÄŸunda dÃ¶ngÃ¼ sona erer. */
 
     for (int i = 1, j = 10; i <= 3 || j >= 7; i++, j--)
     {

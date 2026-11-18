@@ -1,31 +1,33 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* Dizi, aynı tipteki birden fazla değeri tek bir isim altında
-     * saklamak için kullanılır. Dizideki her bir değere eleman denir.
+    /* Dizi, aynÄ± tipteki birden fazla deÄŸeri tek bir isim altÄ±nda
+     * saklamak iÃ§in kullanÄ±lÄ±r. Dizideki her bir deÄŸere eleman denir.
      *
-     * Tanımlama biçimi:  tip diziAdi[elemanSayisi];
+     * TanÄ±mlama biÃ§imi:  tip diziAdi[elemanSayisi];
      *
-     * Aşağıdaki tanımlama, 10 tane int değer saklayabilen sayilar
-     * adında bir dizi oluşturur. sayi1, sayi2, ..., sayi10 gibi
-     * 10 ayrı değişken tanımlamak yerine tek bir dizi tanımlanır. */
+     * AÅŸaÄŸÄ±daki tanÄ±mlama, 10 tane int deÄŸer saklayabilen sayilar
+     * adÄ±nda bir dizi oluÅŸturur. sayi1, sayi2, ..., sayi10 gibi
+     * 10 ayrÄ± deÄŸiÅŸken tanÄ±mlamak yerine tek bir dizi tanÄ±mlanÄ±r. */
     int sayilar[10];
 
-    /* Dizi tanımlandığında bütün elemanları için bellekte
-     * art arda yer ayrılır: 10 * sizeof(int) bayt. */
+    /* Dizi tanÄ±mlandÄ±ÄŸÄ±nda bÃ¼tÃ¼n elemanlarÄ± iÃ§in bellekte
+     * art arda yer ayrÄ±lÄ±r: 10 * sizeof(int) bayt. */
     cout << sizeof(sayilar) << endl; // Genellikle 40
 
-    // Farklı tiplerde diziler de tanımlanabilir.
+    // FarklÄ± tiplerde diziler de tanÄ±mlanabilir.
     double fiyatlar[3];
 
     cout << sizeof(fiyatlar) << endl; // Genellikle 24
 
-    /* Başlangıç değeri verilmediği için bu dizilerin elemanları
-     * belirsiz değerler içerir. */
+    /* BaÅŸlangÄ±Ã§ deÄŸeri verilmediÄŸi iÃ§in bu dizilerin elemanlarÄ±
+     * belirsiz deÄŸerler iÃ§erir. */
 
     return 0;
 }

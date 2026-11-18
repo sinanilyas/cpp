@@ -1,23 +1,25 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* Döngü koşulu hiçbir zaman yanlış olmuyorsa
-     * sonsuz döngü oluşur.
+    /* DÃ¶ngÃ¼ koÅŸulu hiÃ§bir zaman yanlÄ±ÅŸ olmuyorsa
+     * sonsuz dÃ¶ngÃ¼ oluÅŸur.
      *
-     * Bu örnekte i değeri her tekrarda yeniden 1 yapılır.
-     * Bu nedenle i <= 5 koşulu sürekli doğru kalır. */
+     * Bu Ã¶rnekte i deÄŸeri her tekrarda yeniden 1 yapÄ±lÄ±r.
+     * Bu nedenle i <= 5 koÅŸulu sÃ¼rekli doÄŸru kalÄ±r. */
 
     for (int i = 1; i <= 5; i = 1)
     {
         cout << i << endl;
     }
 
-    // Sonsuz döngü nedeniyle buraya ulaşılamaz.
-    cout << "Döngü sona erdi." << endl;
+    // Sonsuz dÃ¶ngÃ¼ nedeniyle buraya ulaÅŸÄ±lamaz.
+    cout << "DÃ¶ngÃ¼ sona erdi." << endl;
 
     return 0;
 }

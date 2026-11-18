@@ -1,8 +1,9 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
-/* struct anahtar sözcüğü ile farklı veri tipindeki
- * üyeler bir araya getirilerek yeni bir yapı türü tanımlanabilir. */
+/* struct anahtar sÃ¶zcÃ¼ÄŸÃ¼ ile farklÄ± veri tipindeki
+ * Ã¼yeler bir araya getirilerek yeni bir yapÄ± tÃ¼rÃ¼ tanÄ±mlanabilir. */
 
 struct urun
 {
@@ -12,7 +13,8 @@ struct urun
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     return 0;
 }

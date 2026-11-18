@@ -1,13 +1,15 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* İç içe döngüler kullanılarak satır ve sütunlardan
-     * oluşan şekiller oluşturulabilir.
-     * Dış döngü satırları, iç döngü sütunları oluşturur. */
+    /* Ä°Ã§ iÃ§e dÃ¶ngÃ¼ler kullanÄ±larak satÄ±r ve sÃ¼tunlardan
+     * oluÅŸan ÅŸekiller oluÅŸturulabilir.
+     * DÄ±ÅŸ dÃ¶ngÃ¼ satÄ±rlarÄ±, iÃ§ dÃ¶ngÃ¼ sÃ¼tunlarÄ± oluÅŸturur. */
 
     for (int i = 1; i <= 3; i++)
     {
@@ -16,7 +18,7 @@ int main(int argc, char** argv)
             cout << "* ";
         }
 
-        // İç döngü tamamlandığında alt satıra geçilir.
+        // Ä°Ã§ dÃ¶ngÃ¼ tamamlandÄ±ÄŸÄ±nda alt satÄ±ra geÃ§ilir.
         cout << endl;
     }
 

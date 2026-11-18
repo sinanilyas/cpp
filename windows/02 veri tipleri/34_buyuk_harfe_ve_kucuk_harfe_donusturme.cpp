@@ -1,20 +1,22 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv) {
-	setlocale(LC_ALL, "Turkish");
+	SetConsoleCP(CP_UTF8);
+	SetConsoleOutputCP(CP_UTF8);
 	
-	/* A-Z arasındaki harfler ASCII tablosunda alfabetik sıra ile saklanmaktadır.
-	 * Aynı şekilde a-z arasındaki harfler de alfabetik sıralıdır. */
+	/* A-Z arasÄ±ndaki harfler ASCII tablosunda alfabetik sÄ±ra ile saklanmaktadÄ±r.
+	 * AynÄ± ÅŸekilde a-z arasÄ±ndaki harfler de alfabetik sÄ±ralÄ±dÄ±r. */
 	
 	int fark = 'a' - 'A'; // 97-65 = 32
 	
-	// Herhangi bir büyük harfe 32 eklendiğinde o harfin küçük harfi elde edilir.
+	// Herhangi bir bÃ¼yÃ¼k harfe 32 eklendiÄŸinde o harfin kÃ¼Ã§Ã¼k harfi elde edilir.
 	char buyuk1 = 'E';
 	char kucuk1 = buyuk1 + fark;
 	cout << kucuk1 << endl;
 	
-	// Herhangi bir küçük harften 32 çıkarıldığında o harfin büyük harfi elde edilir.
+	// Herhangi bir kÃ¼Ã§Ã¼k harften 32 Ã§Ä±karÄ±ldÄ±ÄŸÄ±nda o harfin bÃ¼yÃ¼k harfi elde edilir.
 	char kucuk2 = 'n';
 	char buyuk2 = kucuk2 - fark;
 	cout << buyuk2 << endl;

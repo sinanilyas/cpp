@@ -1,16 +1,18 @@
 #include <iostream>
+#include <windows.h>
 
 using namespace std;
 
 int main(int argc, char** argv) {
-	setlocale(LC_ALL, "Turkish");
+	SetConsoleCP(CP_UTF8);
+	SetConsoleOutputCP(CP_UTF8);
 
-	/* C++ stili tanımlamada sabitler tıpkı değişken tanımlar gibi
-	 * tanımlanır ve başına const anahtar kelimesi yazılır.
-	 * C++ dilinde program yazarken bu stil önerilir. */
+	/* C++ stili tanÄ±mlamada sabitler tÄ±pkÄ± deÄŸiÅŸken tanÄ±mlar gibi
+	 * tanÄ±mlanÄ±r ve baÅŸÄ±na const anahtar kelimesi yazÄ±lÄ±r.
+	 * C++ dilinde program yazarken bu stil Ã¶nerilir. */
 	const double KATSAYI = 4.5;
 
-	KATSAYI = 2.4; // HATA: Sabit değeri değiştirilemez
+	KATSAYI = 2.4; // HATA: Sabit deÄŸeri deÄŸiÅŸtirilemez
 
 	cout << KATSAYI << endl;
 

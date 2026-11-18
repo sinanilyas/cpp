@@ -1,14 +1,16 @@
 #include <iostream>
+#include <windows.h>
 
 using namespace std;
 
 int main(int argc, char** argv) {
-	setlocale(LC_ALL, "Turkish");
+	SetConsoleCP(CP_UTF8);
+	SetConsoleOutputCP(CP_UTF8);
 	
 	cout << hex;
-	cout << "16'lý Sistem: "  << 15 << endl;
-	cout << "16'lý Sistem: "  << 0xF << endl;
-	cout << "16'lý Sistem: "  << 0b1111 << endl;
+	cout << "16'lÄ± Sistem: "  << 15 << endl;
+	cout << "16'lÄ± Sistem: "  << 0xF << endl;
+	cout << "16'lÄ± Sistem: "  << 0b1111 << endl;
 
 	cout << oct;
 	cout << "8'li Sistem: " << 15 << endl;

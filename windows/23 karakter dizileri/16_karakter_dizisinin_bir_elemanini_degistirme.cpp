@@ -1,23 +1,25 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     char ad[] = "ali";
 
     cout << ad << endl; // ali
 
-    /* Karakter dizisinin herhangi bir karakteri, diðer dizilerde olduðu
-     * gibi indisi kullanýlarak deðiþtirilebilir. */
+    /* Karakter dizisinin herhangi bir karakteri, diÄŸer dizilerde olduÄŸu
+     * gibi indisi kullanÄ±larak deÄŸiÅŸtirilebilir. */
     ad[0] = 'A';
 
     cout << ad << endl; // Ali
 
-    /* Dizi tanýmlandýktan sonra baþka bir metin atanamaz.
-     * Diðer dizilerde olduðu gibi baþlangýç deðerleri yalnýzca
-     * tanýmlama sýrasýnda atanabilir.
+    /* Dizi tanÄ±mlandÄ±ktan sonra baÅŸka bir metin atanamaz.
+     * DiÄŸer dizilerde olduÄŸu gibi baÅŸlangÄ±Ã§ deÄŸerleri yalnÄ±zca
+     * tanÄ±mlama sÄ±rasÄ±nda atanabilir.
      *    char ad[] = "Ali";
      *    ad = "Can"; // HATA
      */

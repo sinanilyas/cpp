@@ -1,20 +1,22 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* for içinde tanımlanan döngü değişkeni
-     * yalnızca döngü içerisinde kullanılabilir.
-     * Döngü sona erdiğinde bu değişkenin kapsamı biter. */
+    /* for iÃ§inde tanÄ±mlanan dÃ¶ngÃ¼ deÄŸiÅŸkeni
+     * yalnÄ±zca dÃ¶ngÃ¼ iÃ§erisinde kullanÄ±labilir.
+     * DÃ¶ngÃ¼ sona erdiÄŸinde bu deÄŸiÅŸkenin kapsamÄ± biter. */
 
     for (int i = 0; i < 5; i++)
     {
         cout << i << endl;
     }
 
-    // HATA: i değişkeni döngü dışında kullanılamaz.
+    // HATA: i deÄŸiÅŸkeni dÃ¶ngÃ¼ dÄ±ÅŸÄ±nda kullanÄ±lamaz.
     cout << i << endl;
 
     return 0;

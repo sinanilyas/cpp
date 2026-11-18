@@ -1,24 +1,26 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
-// Yapı tanımlama
+// YapÄ± tanÄ±mlama
 struct ogrenci
 {
     int numara;
     int notu;
 };
 
-// Mevcut yapı tipine alternatif isim verme
+// Mevcut yapÄ± tipine alternatif isim verme
 typedef ogrenci ogr;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    // Yapının orijinal ismiyle değişken tanımlama
+    // YapÄ±nÄ±n orijinal ismiyle deÄŸiÅŸken tanÄ±mlama
     ogrenci ogr1 = {101, 80};
 
-    // typedef ile verilen isimle değişken tanımlama
+    // typedef ile verilen isimle deÄŸiÅŸken tanÄ±mlama
     ogr ogr2 = {102, 90};
 
     cout << ogr1.numara << " - " << ogr1.notu << endl; // 101 - 80

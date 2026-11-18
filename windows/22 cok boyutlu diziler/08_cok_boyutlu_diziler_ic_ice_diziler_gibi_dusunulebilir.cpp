@@ -1,34 +1,36 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int matris[3][2] = {{1, 2}, {3, 4}, {5, 6}};
 
-    /* İki boyutlu bir dizi, elemanları dizi olan bir dizi gibi
-     * düşünülebilir. matris 3 elemanlı bir dizidir ve her elemanı
-     * 2 tane int değerden oluşan bir dizidir:
+    /* Ä°ki boyutlu bir dizi, elemanlarÄ± dizi olan bir dizi gibi
+     * dÃ¼ÅŸÃ¼nÃ¼lebilir. matris 3 elemanlÄ± bir dizidir ve her elemanÄ±
+     * 2 tane int deÄŸerden oluÅŸan bir dizidir:
      *
      *     matris[0] -> {1, 2}
      *     matris[1] -> {3, 4}
      *     matris[2] -> {5, 6}
      *
-     * İç içe parantezlerle başlangıç değeri verilirken her iç küme
-     * parantezi, bir satır dizisinin başlangıç değerlerini içerir.
+     * Ä°Ã§ iÃ§e parantezlerle baÅŸlangÄ±Ã§ deÄŸeri verilirken her iÃ§ kÃ¼me
+     * parantezi, bir satÄ±r dizisinin baÅŸlangÄ±Ã§ deÄŸerlerini iÃ§erir.
      *
-     * matris[1][0] ifadesinde önce matris[1] ile 1 indisli satır
-     * dizisine, sonra [0] ile bu dizinin 0 indisli elemanına erişilir. */
+     * matris[1][0] ifadesinde Ã¶nce matris[1] ile 1 indisli satÄ±r
+     * dizisine, sonra [0] ile bu dizinin 0 indisli elemanÄ±na eriÅŸilir. */
     cout << matris[1][0] << endl; // 3
 
-    cout << sizeof(matris) << endl;       // Genellikle 24: bütün matris
-    cout << sizeof(matris[0]) << endl;    // Genellikle 8: bir satır (2 int)
+    cout << sizeof(matris) << endl;       // Genellikle 24: bÃ¼tÃ¼n matris
+    cout << sizeof(matris[0]) << endl;    // Genellikle 8: bir satÄ±r (2 int)
     cout << sizeof(matris[0][0]) << endl; // Genellikle 4: bir eleman (int)
 
-    /* Tek boyutlu dizilerde olduğu gibi eleman sayısı sizeof ile
-     * bulunabilir. matris dizisinin eleman sayısı satır sayısını,
-     * bir satır dizisinin eleman sayısı da sütun sayısını verir. */
+    /* Tek boyutlu dizilerde olduÄŸu gibi eleman sayÄ±sÄ± sizeof ile
+     * bulunabilir. matris dizisinin eleman sayÄ±sÄ± satÄ±r sayÄ±sÄ±nÄ±,
+     * bir satÄ±r dizisinin eleman sayÄ±sÄ± da sÃ¼tun sayÄ±sÄ±nÄ± verir. */
     int satirSayisi = sizeof(matris) / sizeof(matris[0]);
     int sutunSayisi = sizeof(matris[0]) / sizeof(matris[0][0]);
 
@@ -45,7 +47,7 @@ int main(int argc, char** argv)
         cout << endl;
     }
 
-    // Matris satır satır yazdırılır: 1 2 / 3 4 / 5 6
+    // Matris satÄ±r satÄ±r yazdÄ±rÄ±lÄ±r: 1 2 / 3 4 / 5 6
 
     return 0;
 }

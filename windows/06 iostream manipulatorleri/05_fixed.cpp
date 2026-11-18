@@ -1,11 +1,13 @@
 #include <iostream>
+#include <windows.h>
 
 using namespace std;
 
 int main(int argc, char** argv) {
-	setlocale(LC_ALL, "Turkish");
+	SetConsoleCP(CP_UTF8);
+	SetConsoleOutputCP(CP_UTF8);
 	
-	// Ondalıklı sayıları sabit noktalı biçimde göster
+	// OndalÄ±klÄ± sayÄ±larÄ± sabit noktalÄ± biÃ§imde gÃ¶ster
 	cout << fixed;
 		
 	cout << 5.12 << endl; // 5.120000

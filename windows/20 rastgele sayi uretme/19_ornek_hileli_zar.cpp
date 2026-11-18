@@ -1,31 +1,33 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     srand(time(0));
 
-    /* Hileli zarda bir sonucun gelme olasılığı diğerlerinden fazladır.
-     * Bir sonucun olasılığını artırmak için o sonuca
-     * daha fazla sayı karşılık getirilir.
+    /* Hileli zarda bir sonucun gelme olasÄ±lÄ±ÄŸÄ± diÄŸerlerinden fazladÄ±r.
+     * Bir sonucun olasÄ±lÄ±ÄŸÄ±nÄ± artÄ±rmak iÃ§in o sonuca
+     * daha fazla sayÄ± karÅŸÄ±lÄ±k getirilir.
      *
-     * rand() % 10 + 1 ifadesi 1-10 arasında 10 farklı sayı üretir.
-     * 6, 7, 8, 9 ve 10 değerlerinin hepsi 6 kabul edilirse:
-     *   6 gelme olasılığı: 5/10 = %50
-     *   Diğer sayıların her birinin gelme olasılığı: 1/10 = %10 */
+     * rand() % 10 + 1 ifadesi 1-10 arasÄ±nda 10 farklÄ± sayÄ± Ã¼retir.
+     * 6, 7, 8, 9 ve 10 deÄŸerlerinin hepsi 6 kabul edilirse:
+     *   6 gelme olasÄ±lÄ±ÄŸÄ±: 5/10 = %50
+     *   DiÄŸer sayÄ±larÄ±n her birinin gelme olasÄ±lÄ±ÄŸÄ±: 1/10 = %10 */
 
     int sayac1 = 0, sayac2 = 0, sayac3 = 0, sayac4 = 0, sayac5 = 0, sayac6 = 0;
 
-    // Zar 6000 kez atılır ve her sonucun kaç kez geldiği sayılır
+    // Zar 6000 kez atÄ±lÄ±r ve her sonucun kaÃ§ kez geldiÄŸi sayÄ±lÄ±r
     for (int i = 1; i <= 6000; i++)
     {
         int zar = rand() % 10 + 1;
 
-        if (zar > 6) zar = 6; // 7, 8, 9 ve 10 değerleri de 6 kabul edilir
+        if (zar > 6) zar = 6; // 7, 8, 9 ve 10 deÄŸerleri de 6 kabul edilir
 
         switch (zar)
         {
@@ -50,16 +52,16 @@ int main(int argc, char** argv)
         }
     }
 
-    cout << "1 gelme sayısı: " << sayac1 << endl;
-    cout << "2 gelme sayısı: " << sayac2 << endl;
-    cout << "3 gelme sayısı: " << sayac3 << endl;
-    cout << "4 gelme sayısı: " << sayac4 << endl;
-    cout << "5 gelme sayısı: " << sayac5 << endl;
-    cout << "6 gelme sayısı: " << sayac6 << endl;
+    cout << "1 gelme sayÄ±sÄ±: " << sayac1 << endl;
+    cout << "2 gelme sayÄ±sÄ±: " << sayac2 << endl;
+    cout << "3 gelme sayÄ±sÄ±: " << sayac3 << endl;
+    cout << "4 gelme sayÄ±sÄ±: " << sayac4 << endl;
+    cout << "5 gelme sayÄ±sÄ±: " << sayac5 << endl;
+    cout << "6 gelme sayÄ±sÄ±: " << sayac6 << endl;
 
-    /* 6 yaklaşık 3000 kez (6000 / 2), diğer sayıların her biri
-     * yaklaşık 600 kez (6000 / 10) gelir.
-     * Hilesiz zarda ise her sonuç yaklaşık 1000 kez gelir. */
+    /* 6 yaklaÅŸÄ±k 3000 kez (6000 / 2), diÄŸer sayÄ±larÄ±n her biri
+     * yaklaÅŸÄ±k 600 kez (6000 / 10) gelir.
+     * Hilesiz zarda ise her sonuÃ§ yaklaÅŸÄ±k 1000 kez gelir. */
 
     return 0;
 }

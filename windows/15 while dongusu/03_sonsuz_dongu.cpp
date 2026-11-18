@@ -1,20 +1,22 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int sayac = 1;
 
-    // Sayaç artırılmadığı için koşul sürekli doğru kalır.
+    // SayaÃ§ artÄ±rÄ±lmadÄ±ÄŸÄ± iÃ§in koÅŸul sÃ¼rekli doÄŸru kalÄ±r.
     while (sayac <= 10)
     {
         cout << sayac << endl;
     }
 
-    // Bu satıra hiçbir zaman ulaşılamaz.
-    cout << "Döngü sona erdi." << endl;
+    // Bu satÄ±ra hiÃ§bir zaman ulaÅŸÄ±lamaz.
+    cout << "DÃ¶ngÃ¼ sona erdi." << endl;
 
     return 0;
 }

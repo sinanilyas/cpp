@@ -1,22 +1,24 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     for (int i = 0; i < 5; i++)
     {
         cout << "Merhaba" << endl;
     }
 
-    /* int i = 0 -> i değişkeni tanımlanır ve 0 değeri atanır.
-     * i < 5     -> i değeri 5'ten küçük olduğu sürece döngü çalışır.
-     * i++       -> Her tekrardan sonra i değeri 1 artırılır.
+    /* int i = 0 -> i deÄŸiÅŸkeni tanÄ±mlanÄ±r ve 0 deÄŸeri atanÄ±r.
+     * i < 5     -> i deÄŸeri 5'ten kÃ¼Ã§Ã¼k olduÄŸu sÃ¼rece dÃ¶ngÃ¼ Ã§alÄ±ÅŸÄ±r.
+     * i++       -> Her tekrardan sonra i deÄŸeri 1 artÄ±rÄ±lÄ±r.
      *
-     * Döngü gövdesi i = 0, 1, 2, 3 ve 4 için çalışır.
-     * Böylece "Merhaba" metni ekrana 5 kez yazdırılır.
-     * i değeri 5 olduğunda koşul yanlış olur ve döngü sona erer.
+     * DÃ¶ngÃ¼ gÃ¶vdesi i = 0, 1, 2, 3 ve 4 iÃ§in Ã§alÄ±ÅŸÄ±r.
+     * BÃ¶ylece "Merhaba" metni ekrana 5 kez yazdÄ±rÄ±lÄ±r.
+     * i deÄŸeri 5 olduÄŸunda koÅŸul yanlÄ±ÅŸ olur ve dÃ¶ngÃ¼ sona erer.
      */
 
     return 0;

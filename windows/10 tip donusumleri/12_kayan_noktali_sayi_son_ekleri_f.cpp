@@ -1,14 +1,16 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* Ondalıklı sabit sayıların float tipinde oluşturulması için
+    /* OndalÄ±klÄ± sabit sayÄ±larÄ±n float tipinde oluÅŸturulmasÄ± iÃ§in
      * f veya F son eki eklenir. */
 
-    // Herhangi bir dönüşüme gerek yoktur
+    // Herhangi bir dÃ¶nÃ¼ÅŸÃ¼me gerek yoktur
     float s1 = 5.2f;
     float s2 = 6.f;
     float s3 = .7f;

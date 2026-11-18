@@ -1,5 +1,5 @@
-// Özellikle ihtiyaç duyulmadığı sürece
-// int argc, char** argv yazılması zorunlu değildir.
+// Ã–zellikle ihtiyaÃ§ duyulmadÄ±ÄŸÄ± sÃ¼rece
+// int argc, char** argv yazÄ±lmasÄ± zorunlu deÄŸildir.
 int main(int argc, char** argv) {
 	return 0;
 }

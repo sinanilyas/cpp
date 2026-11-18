@@ -1,33 +1,35 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int sayi;
 
-    cout << "Bir tamsayı giriniz: ";
+    cout << "Bir tamsayÄ± giriniz: ";
     cin >> sayi;
 
-    /* case etiketlerinde yalnızca doğrudan yazılmış
-     * sabit değerler değil, sabit ifadeler de kullanılabilir.
-     * Bu ifadeler derleme zamanında hesaplanır.
-     * Örneğin case 2+3 yazmakla case 5 yazmak aynı anlama gelir. */
+    /* case etiketlerinde yalnÄ±zca doÄŸrudan yazÄ±lmÄ±ÅŸ
+     * sabit deÄŸerler deÄŸil, sabit ifadeler de kullanÄ±labilir.
+     * Bu ifadeler derleme zamanÄ±nda hesaplanÄ±r.
+     * Ã–rneÄŸin case 2+3 yazmakla case 5 yazmak aynÄ± anlama gelir. */
 
     switch (sayi)
     {
         case 2 + 3:
-            cout << "Sayı 5'tir." << endl;
+            cout << "SayÄ± 5'tir." << endl;
             break;
         case 2 * 3:
-            cout << "Sayı 6'dır." << endl;
+            cout << "SayÄ± 6'dÄ±r." << endl;
             break;
         case 10 - 3:
-            cout << "Sayı 7'dir." << endl;
+            cout << "SayÄ± 7'dir." << endl;
             break;
         default:
-            cout << "Sayı 5, 6 veya 7 değildir." << endl;
+            cout << "SayÄ± 5, 6 veya 7 deÄŸildir." << endl;
             break;
     }
 

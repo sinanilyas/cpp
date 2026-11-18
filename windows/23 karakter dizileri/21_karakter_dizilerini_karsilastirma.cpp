@@ -1,19 +1,21 @@
 #include <iostream>
-#include <cstring> // strcmp için
+#include <cstring> // strcmp iÃ§in
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     /* strcmp(metin1, metin2) iki metni karakter karakter, ASCII
-     * kodlarına göre karşılaştırır ve
-     *   metinler aynıysa 0,
-     *   metin1 sıralamada önce geliyorsa negatif bir sayı,
-     *   metin1 sıralamada sonra geliyorsa pozitif bir sayı döndürür.
+     * kodlarÄ±na gÃ¶re karÅŸÄ±laÅŸtÄ±rÄ±r ve
+     *   metinler aynÄ±ysa 0,
+     *   metin1 sÄ±ralamada Ã¶nce geliyorsa negatif bir sayÄ±,
+     *   metin1 sÄ±ralamada sonra geliyorsa pozitif bir sayÄ± dÃ¶ndÃ¼rÃ¼r.
      *
-     * Döndürülen sayının kendisi derleyiciye göre değişebilir.
-     * Yalnızca 0 olup olmadığına ve işaretine bakılmalıdır. */
+     * DÃ¶ndÃ¼rÃ¼len sayÄ±nÄ±n kendisi derleyiciye gÃ¶re deÄŸiÅŸebilir.
+     * YalnÄ±zca 0 olup olmadÄ±ÄŸÄ±na ve iÅŸaretine bakÄ±lmalÄ±dÄ±r. */
     char ad1[] = "Ali";
     char ad2[] = "Ali";
     char ad3[] = "Aleyna";
@@ -21,20 +23,20 @@ int main(int argc, char** argv)
     char ad5[] = "ali";
 
     cout << strcmp(ad1, ad2) << endl; // 0
-    cout << strcmp(ad1, ad3) << endl; // Pozitif bir sayı (genellikle 1): 'i' (105) > 'e' (101)
-    cout << strcmp(ad1, ad4) << endl; // Negatif bir sayı (genellikle -1): 'A' (65) < 'Z' (90)
-    cout << strcmp(ad1, ad5) << endl; // Negatif bir sayı (genellikle -1): 'A' (65) < 'a' (97)
+    cout << strcmp(ad1, ad3) << endl; // Pozitif bir sayÄ± (genellikle 1): 'i' (105) > 'e' (101)
+    cout << strcmp(ad1, ad4) << endl; // Negatif bir sayÄ± (genellikle -1): 'A' (65) < 'Z' (90)
+    cout << strcmp(ad1, ad5) << endl; // Negatif bir sayÄ± (genellikle -1): 'A' (65) < 'a' (97)
 
-    // Büyük harfler küçük harflerden önce geldiği için "Ali" ile "ali" aynı değildir.
+    // BÃ¼yÃ¼k harfler kÃ¼Ã§Ã¼k harflerden Ã¶nce geldiÄŸi iÃ§in "Ali" ile "ali" aynÄ± deÄŸildir.
 
-    // İki metnin aynı olup olmadığı strcmp sonucunun 0 olmasıyla anlaşılır.
+    // Ä°ki metnin aynÄ± olup olmadÄ±ÄŸÄ± strcmp sonucunun 0 olmasÄ±yla anlaÅŸÄ±lÄ±r.
     if (strcmp(ad1, ad2) == 0)
     {
-        cout << "Metinler aynı" << endl;
+        cout << "Metinler aynÄ±" << endl;
     }
 
-    /* ad1 == ad2 yazılırsa metinler aynı olsa bile sonuç false olur.
-     * Bunun nedeni ileride işaretçiler konusunda anlatılacaktır. */
+    /* ad1 == ad2 yazÄ±lÄ±rsa metinler aynÄ± olsa bile sonuÃ§ false olur.
+     * Bunun nedeni ileride iÅŸaretÃ§iler konusunda anlatÄ±lacaktÄ±r. */
 
     return 0;
 }

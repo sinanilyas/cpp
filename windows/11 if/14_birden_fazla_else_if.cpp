@@ -1,16 +1,18 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int notu;
 
-    cout << "Sýnav notunuzu giriniz: ";
+    cout << "SÄ±nav notunuzu giriniz: ";
     cin >> notu;
 
-    // Koþullar yukarýdan aþaðýya doðru deðerlendirilir.
+    // KoÅŸullar yukarÄ±dan aÅŸaÄŸÄ±ya doÄŸru deÄŸerlendirilir.
     if (notu >= 90)
         cout << "Harf notu: AA" << endl;
     else if (notu >= 80)

@@ -1,20 +1,22 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
-// enum tanımlanırken aynı zamanda değişken de tanımlanabilir.
+// enum tanÄ±mlanÄ±rken aynÄ± zamanda deÄŸiÅŸken de tanÄ±mlanabilir.
 enum gun {pts = 1, sal, car, per, cum, cts, paz} bugun = pts;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     cout << bugun << endl; // 1
 
-    // bugun değişkeninin değeri değiştirilebilir
+    // bugun deÄŸiÅŸkeninin deÄŸeri deÄŸiÅŸtirilebilir
     bugun = cum;
     cout << bugun << endl; // 5
 
-    // Aynı tipte başka değişkenler de tanımlanabilir
+    // AynÄ± tipte baÅŸka deÄŸiÅŸkenler de tanÄ±mlanabilir
     gun yarin = cts;
     cout << yarin << endl; // 6
 

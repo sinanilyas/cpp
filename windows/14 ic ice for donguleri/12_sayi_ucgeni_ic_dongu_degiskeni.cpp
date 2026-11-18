@@ -1,12 +1,14 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* İç döngünün değişkeni ekrana yazdırılarak
-     * her satırda artan sayı dizileri oluşturulabilir. */
+    /* Ä°Ã§ dÃ¶ngÃ¼nÃ¼n deÄŸiÅŸkeni ekrana yazdÄ±rÄ±larak
+     * her satÄ±rda artan sayÄ± dizileri oluÅŸturulabilir. */
 
     for (int i = 1; i <= 5; i++)
     {

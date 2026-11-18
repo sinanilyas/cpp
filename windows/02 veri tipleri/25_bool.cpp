@@ -1,11 +1,13 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv) {
-	setlocale(LC_ALL, "Turkish");
+	SetConsoleCP(CP_UTF8);
+	SetConsoleOutputCP(CP_UTF8);
 	
-	/* bool veri tipi sadece 0 ve 1 değerlerini saklar.
-	 * 0 haricindeki tüm sayıları 1'e dönüştürür. */
+	/* bool veri tipi sadece 0 ve 1 deÄŸerlerini saklar.
+	 * 0 haricindeki tÃ¼m sayÄ±larÄ± 1'e dÃ¶nÃ¼ÅŸtÃ¼rÃ¼r. */
 	
 	bool s1 = 0;
 	bool s2 = 1;

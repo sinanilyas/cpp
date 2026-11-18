@@ -1,13 +1,15 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* Döngüler ters yönde çalýþtýrýlarak ters piramit oluþturulabilir.
-     * Her satýrda boþluk sayýsý 1 artarken
-     * yýldýz sayýsý 2 azalýr. */
+    /* DÃ¶ngÃ¼ler ters yÃ¶nde Ã§alÄ±ÅŸtÄ±rÄ±larak ters piramit oluÅŸturulabilir.
+     * Her satÄ±rda boÅŸluk sayÄ±sÄ± 1 artarken
+     * yÄ±ldÄ±z sayÄ±sÄ± 2 azalÄ±r. */
 
     for (int i = 5; i >= 1; i--)
     {

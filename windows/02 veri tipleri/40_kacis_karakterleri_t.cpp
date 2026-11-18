@@ -1,10 +1,12 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv) {
-	setlocale(LC_ALL, "Turkish");
+	SetConsoleCP(CP_UTF8);
+	SetConsoleOutputCP(CP_UTF8);
 	
-	/* '\t' (9) imleci bir sonraki sekme (tab) konumuna götürür */
+	/* '\t' (9) imleci bir sonraki sekme (tab) konumuna gÃ¶tÃ¼rÃ¼r */
 	
 	cout << "1\t0" << endl;
 	cout << "12\t0" << endl;

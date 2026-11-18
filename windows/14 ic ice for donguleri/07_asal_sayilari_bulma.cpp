@@ -1,14 +1,16 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* Dış döngü 2'den 100'e kadar olan sayıları kontrol eder.
-     * İç döngü her sayının asal olup olmadığını belirler.
-     * Bir bölen bulunduğunda break ile iç döngü sonlandırılır.
-     * Asal olan sayılar ekrana yazdırılır. */
+    /* DÄ±ÅŸ dÃ¶ngÃ¼ 2'den 100'e kadar olan sayÄ±larÄ± kontrol eder.
+     * Ä°Ã§ dÃ¶ngÃ¼ her sayÄ±nÄ±n asal olup olmadÄ±ÄŸÄ±nÄ± belirler.
+     * Bir bÃ¶len bulunduÄŸunda break ile iÃ§ dÃ¶ngÃ¼ sonlandÄ±rÄ±lÄ±r.
+     * Asal olan sayÄ±lar ekrana yazdÄ±rÄ±lÄ±r. */
 
     for (int sayi = 2; sayi <= 100; sayi++)
     {

@@ -1,23 +1,25 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* Değeri program çalışırken belli olan
-     * bir değişkenle dizi tanımlanmamalıdır. */
+    /* DeÄŸeri program Ã§alÄ±ÅŸÄ±rken belli olan
+     * bir deÄŸiÅŸkenle dizi tanÄ±mlanmamalÄ±dÄ±r. */
 
     int n;
-    cout << "Eleman sayısı: ";
+    cout << "Eleman sayÄ±sÄ±: ";
     cin >> n;
 
     int dizi[n];
 
-    cout << n << " elemanlı dizi oluşturuldu." << endl;
+    cout << n << " elemanlÄ± dizi oluÅŸturuldu." << endl;
 
-    /* Standart C++ bu kullanıma izin vermez. Bazı derleyiciler
-     * bu kodu derlese de bazıları hata verir. */
+    /* Standart C++ bu kullanÄ±ma izin vermez. BazÄ± derleyiciler
+     * bu kodu derlese de bazÄ±larÄ± hata verir. */
 
     return 0;
 }

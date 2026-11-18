@@ -1,13 +1,15 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* Dizinin eleman sayısı metnin uzunluğundan 1 fazla yazılırsa
-     * null karakterini yazmak gerekmez. Eksik başlangıç değerleri 0 olduğu
-     * için son elemana 0, yani null karakteri verilir. */
+    /* Dizinin eleman sayÄ±sÄ± metnin uzunluÄŸundan 1 fazla yazÄ±lÄ±rsa
+     * null karakterini yazmak gerekmez. Eksik baÅŸlangÄ±Ã§ deÄŸerleri 0 olduÄŸu
+     * iÃ§in son elemana 0, yani null karakteri verilir. */
     char ad[4] = {'A', 'l', 'i'};
 
     cout << ad << endl; // Ali

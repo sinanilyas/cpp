@@ -1,20 +1,22 @@
 #include <iostream>
+#include <windows.h>
 
-/* C stili sabit tanımlamada;
+/* C stili sabit tanÄ±mlamada;
  * Veri tipi belirtilmez.
- * = operatörü ile değer atama işlemi yapılmaz.
- * Tanımlamanın sonuna noktalı virgül (;) konulmaz.
- * Sabit isimleri genellikle büyük harflerle yazılır.
+ * = operatÃ¶rÃ¼ ile deÄŸer atama iÅŸlemi yapÄ±lmaz.
+ * TanÄ±mlamanÄ±n sonuna noktalÄ± virgÃ¼l (;) konulmaz.
+ * Sabit isimleri genellikle bÃ¼yÃ¼k harflerle yazÄ±lÄ±r.
  *
- * #define komutu, önişlemciye derleme öncesinde
- * kod içerisinde geçen KARAKTER ifadelerini
- * 'A' ile değiştirmesini söyler. */
+ * #define komutu, Ã¶niÅŸlemciye derleme Ã¶ncesinde
+ * kod iÃ§erisinde geÃ§en KARAKTER ifadelerini
+ * 'A' ile deÄŸiÅŸtirmesini sÃ¶yler. */
 #define KARAKTER 'A'
 
 using namespace std;
 
 int main(int argc, char** argv) {
-	setlocale(LC_ALL, "Turkish");
+	SetConsoleCP(CP_UTF8);
+	SetConsoleOutputCP(CP_UTF8);
 
 	cout << KARAKTER << endl;
 

@@ -1,14 +1,16 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int sayi = 2;
 
-    /* HATA: Ayný switch içerisinde birden fazla
-     * case ayný deðere sahip olamaz. */
+    /* HATA: AynÄ± switch iÃ§erisinde birden fazla
+     * case aynÄ± deÄŸere sahip olamaz. */
 
     switch (sayi)
     {
@@ -16,9 +18,9 @@ int main(int argc, char** argv)
             cout << "Bir" << endl;
             break;
         case 2:
-            cout << "Ýki" << endl;
+            cout << "Ä°ki" << endl;
             break;
-        case 2: // HATA: case 2 daha önce tanýmlandý.
+        case 2: // HATA: case 2 daha Ã¶nce tanÄ±mlandÄ±.
             cout << "Yine iki" << endl;
             break;
     }

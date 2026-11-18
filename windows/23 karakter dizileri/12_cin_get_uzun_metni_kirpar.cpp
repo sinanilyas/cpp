@@ -1,18 +1,20 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     const int MAX = 6;
     char ad[MAX];
 
-    cout << "Adýnýzý giriniz: ";
+    cout << "AdÄ±nÄ±zÄ± giriniz: ";
 
-    /* cin.get(dizi, MAX) en fazla MAX - 1 karakter okur. MAX deðerine
-     * null karakteri dahildir; son eleman null karakteri için ayrýlýr.
-     * Girilen metin daha uzunsa hata oluþmaz, metin kýrpýlýr. */
+    /* cin.get(dizi, MAX) en fazla MAX - 1 karakter okur. MAX deÄŸerine
+     * null karakteri dahildir; son eleman null karakteri iÃ§in ayrÄ±lÄ±r.
+     * Girilen metin daha uzunsa hata oluÅŸmaz, metin kÄ±rpÄ±lÄ±r. */
     cin.get(ad, MAX);
 
     cout << "Merhaba " << ad << endl;
@@ -20,8 +22,8 @@ int main(int argc, char** argv)
     /* Ali          -> Ali
      * Abdurrahman  -> Abdur
      *
-     * Okunmayan karakterler girdi tamponunda kalýr.
-     * MAX yerine sizeof(ad) de yazýlabilir: cin.get(ad, sizeof(ad)); */
+     * Okunmayan karakterler girdi tamponunda kalÄ±r.
+     * MAX yerine sizeof(ad) de yazÄ±labilir: cin.get(ad, sizeof(ad)); */
 
     return 0;
 }

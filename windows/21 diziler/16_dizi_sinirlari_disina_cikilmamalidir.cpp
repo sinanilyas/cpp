@@ -1,31 +1,33 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int sayilar[5] = {10, 20, 30, 40, 50};
 
-    /* 5 elemanlý dizinin geçerli indisleri 0, 1, 2, 3 ve 4'tür.
-     * Döngü koþulunda < yerine <= yazýlýrsa döngü 6 kez döner
-     * ve dizide olmayan sayilar[5] elemanýna eriþilir. */
-    for (int i = 0; i <= 5; i++) // MANTIK HATASI: Koþul i < 5 olmalýdýr
+    /* 5 elemanlÄ± dizinin geÃ§erli indisleri 0, 1, 2, 3 ve 4'tÃ¼r.
+     * DÃ¶ngÃ¼ koÅŸulunda < yerine <= yazÄ±lÄ±rsa dÃ¶ngÃ¼ 6 kez dÃ¶ner
+     * ve dizide olmayan sayilar[5] elemanÄ±na eriÅŸilir. */
+    for (int i = 0; i <= 5; i++) // MANTIK HATASI: KoÅŸul i < 5 olmalÄ±dÄ±r
     {
         cout << sayilar[i] << " ";
     }
     cout << endl;
 
-    // Genellikle 10 20 30 40 50 ve anlamsýz bir deðer yazdýrýlýr.
+    // Genellikle 10 20 30 40 50 ve anlamsÄ±z bir deÄŸer yazdÄ±rÄ±lÄ±r.
 
-    /* C++ indisin dizi sýnýrlarý içinde olup olmadýðýný denetlemez.
-     * Program derlenir, ancak dizinin dýþýndaki bir elemana eriþmenin
-     * sonucu belirsizdir. Genellikle dizinin hemen arkasýndaki bellek
-     * alanýndan anlamsýz bir deðer okunur. Derleyici ayarlarýna göre
-     * program beklenmedik biçimde çalýþabilir ya da çökebilir.
+    /* C++ indisin dizi sÄ±nÄ±rlarÄ± iÃ§inde olup olmadÄ±ÄŸÄ±nÄ± denetlemez.
+     * Program derlenir, ancak dizinin dÄ±ÅŸÄ±ndaki bir elemana eriÅŸmenin
+     * sonucu belirsizdir. Genellikle dizinin hemen arkasÄ±ndaki bellek
+     * alanÄ±ndan anlamsÄ±z bir deÄŸer okunur. Derleyici ayarlarÄ±na gÃ¶re
+     * program beklenmedik biÃ§imde Ã§alÄ±ÅŸabilir ya da Ã§Ã¶kebilir.
      *
-     * Dizi sýnýrlarý dýþýna deðer yazmak daha da tehlikelidir: baþka
-     * deðiþkenlerin deðerleri bozulabilir ya da program çökebilir. */
+     * Dizi sÄ±nÄ±rlarÄ± dÄ±ÅŸÄ±na deÄŸer yazmak daha da tehlikelidir: baÅŸka
+     * deÄŸiÅŸkenlerin deÄŸerleri bozulabilir ya da program Ã§Ã¶kebilir. */
 
     return 0;
 }

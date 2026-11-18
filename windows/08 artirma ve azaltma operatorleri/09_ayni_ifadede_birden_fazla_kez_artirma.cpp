@@ -1,18 +1,20 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int sayi = 10;
 
-    // Aynı değişken cout ifadesinde iki kez artırılıyor
+    // AynÄ± deÄŸiÅŸken cout ifadesinde iki kez artÄ±rÄ±lÄ±yor
     cout << sayi++ << sayi++ << endl;
 
-    /* Bu kullanım C++17 öncesi sürümlerde tanımsız
-     * davranışa yol açar. Bu nedenle bu tür
-     * ifadelerden kaçınılması tavsiye edilir.
+    /* Bu kullanÄ±m C++17 Ã¶ncesi sÃ¼rÃ¼mlerde tanÄ±msÄ±z
+     * davranÄ±ÅŸa yol aÃ§ar. Bu nedenle bu tÃ¼r
+     * ifadelerden kaÃ§Ä±nÄ±lmasÄ± tavsiye edilir.
      */
 
     return 0;

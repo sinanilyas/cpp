@@ -1,17 +1,19 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     const int MAX = 30;
     char adSoyad[MAX];
 
-    cout << "Adınızı ve soyadınızı giriniz: ";
+    cout << "AdÄ±nÄ±zÄ± ve soyadÄ±nÄ±zÄ± giriniz: ";
 
-    /* cin.get(dizi, MAX) Enter tuşuna basılana kadar girilen bütün
-     * karakterleri boşluklar dahil okur ve sonuna null karakteri ekler.
+    /* cin.get(dizi, MAX) Enter tuÅŸuna basÄ±lana kadar girilen bÃ¼tÃ¼n
+     * karakterleri boÅŸluklar dahil okur ve sonuna null karakteri ekler.
      * Enter karakteri ('\n') diziye eklenmez. */
     cin.get(adSoyad, MAX);
 
@@ -20,7 +22,7 @@ int main(int argc, char** argv)
     /* Ahmet Kaya       -> Ahmet Kaya
      * Mehmet Ali Kaya  -> Mehmet Ali Kaya
      *
-     * cin >> kullanımından farklı olarak baştaki boşluklar da okunur. */
+     * cin >> kullanÄ±mÄ±ndan farklÄ± olarak baÅŸtaki boÅŸluklar da okunur. */
 
     return 0;
 }

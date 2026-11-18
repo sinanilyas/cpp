@@ -1,20 +1,22 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* C tipi açık (explicit) tip dönüşümü */
+    /* C tipi aÃ§Ä±k (explicit) tip dÃ¶nÃ¼ÅŸÃ¼mÃ¼ */
 
     long long s1 = 5LL;
 
-    int s2 = s1;       // Örtük tip dönüşümü yapılır
-    int s3 = (int)s1;  // Açık tip dönüşümü yapılır (C tipi açık dönüşüm)
+    int s2 = s1;       // Ã–rtÃ¼k tip dÃ¶nÃ¼ÅŸÃ¼mÃ¼ yapÄ±lÄ±r
+    int s3 = (int)s1;  // AÃ§Ä±k tip dÃ¶nÃ¼ÅŸÃ¼mÃ¼ yapÄ±lÄ±r (C tipi aÃ§Ä±k dÃ¶nÃ¼ÅŸÃ¼m)
 
-    /* Burada örtük dönüşüm zaten otomatik yapılacağı için açık dönüşüme ihtiyaç yoktur,
-     * fakat yine de bir tip dönüşüm yapıldığı özellikle
-     * gösterilmek isteniyorsa açık dönüşüm yapılabilir. */
+    /* Burada Ã¶rtÃ¼k dÃ¶nÃ¼ÅŸÃ¼m zaten otomatik yapÄ±lacaÄŸÄ± iÃ§in aÃ§Ä±k dÃ¶nÃ¼ÅŸÃ¼me ihtiyaÃ§ yoktur,
+     * fakat yine de bir tip dÃ¶nÃ¼ÅŸÃ¼m yapÄ±ldÄ±ÄŸÄ± Ã¶zellikle
+     * gÃ¶sterilmek isteniyorsa aÃ§Ä±k dÃ¶nÃ¼ÅŸÃ¼m yapÄ±labilir. */
 
     return 0;
 }

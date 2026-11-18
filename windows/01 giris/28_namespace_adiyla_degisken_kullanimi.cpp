@@ -1,4 +1,5 @@
 #include <iostream>
+#include <windows.h>
 
 namespace sayilar {
 	int s1 = 5, s2 = 6;
@@ -7,10 +8,11 @@ namespace sayilar {
 using namespace std;
 
 int main(int argc, char** argv) {
-	setlocale(LC_ALL, "Turkish");
+	SetConsoleCP(CP_UTF8);
+	SetConsoleOutputCP(CP_UTF8);
 
-	cout << "Sayý 1: " << sayilar::s1 << endl;
-	cout << "Sayý 2: " << sayilar::s2 << endl;
+	cout << "SayÄ± 1: " << sayilar::s1 << endl;
+	cout << "SayÄ± 2: " << sayilar::s2 << endl;
 
 	return 0;
 }

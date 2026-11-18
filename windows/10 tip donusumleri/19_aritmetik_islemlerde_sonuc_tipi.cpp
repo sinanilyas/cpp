@@ -1,16 +1,18 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* İki tamsayı arasında bölme işlemi yapıldığında sonuç da tamsayı olur.
-     * Bölme sonucunun kesirli kısmı atılır. */
+    /* Ä°ki tamsayÄ± arasÄ±nda bÃ¶lme iÅŸlemi yapÄ±ldÄ±ÄŸÄ±nda sonuÃ§ da tamsayÄ± olur.
+     * BÃ¶lme sonucunun kesirli kÄ±smÄ± atÄ±lÄ±r. */
     cout << 5 / 2 << endl;     // 2
 
-    /* Sayılardan en az biri double tipindeyse diğer sayı da double
-     * tipine dönüştürülür ve sonuç double olur. */
+    /* SayÄ±lardan en az biri double tipindeyse diÄŸer sayÄ± da double
+     * tipine dÃ¶nÃ¼ÅŸtÃ¼rÃ¼lÃ¼r ve sonuÃ§ double olur. */
     cout << 5.0 / 2 << endl;   // 2.5
     cout << 5 / 2.0 << endl;   // 2.5
     cout << 5.0 / 2.0 << endl; // 2.5

@@ -1,14 +1,16 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* continue komutu, döngünün o anki tekrarında
-     * kalan komutları atlayarak bir sonraki tekrara geçilmesini sağlar.
-     * for döngüsünde önce artış bölümü çalıştırılır,
-     * ardından koşul yeniden kontrol edilir. */
+    /* continue komutu, dÃ¶ngÃ¼nÃ¼n o anki tekrarÄ±nda
+     * kalan komutlarÄ± atlayarak bir sonraki tekrara geÃ§ilmesini saÄŸlar.
+     * for dÃ¶ngÃ¼sÃ¼nde Ã¶nce artÄ±ÅŸ bÃ¶lÃ¼mÃ¼ Ã§alÄ±ÅŸtÄ±rÄ±lÄ±r,
+     * ardÄ±ndan koÅŸul yeniden kontrol edilir. */
 
     for (int i = 1; i <= 10; i++)
     {
@@ -17,7 +19,7 @@ int main(int argc, char** argv)
         cout << i << endl;
     }
 
-    // Ekrana 6 hariç 1'den 10'a kadar olan sayılar yazdırılır.
+    // Ekrana 6 hariÃ§ 1'den 10'a kadar olan sayÄ±lar yazdÄ±rÄ±lÄ±r.
 
     return 0;
 }

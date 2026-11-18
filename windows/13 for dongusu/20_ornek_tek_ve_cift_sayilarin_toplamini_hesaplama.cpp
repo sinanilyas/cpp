@@ -1,13 +1,15 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* Döngü içerisinde if kullanılarak yalnızca
-     * belirli koşulları sağlayan sayılar toplanabilir.
-     * Bu örnekte 1 ile 100 arasındaki çift sayılar toplanır. */
+    /* DÃ¶ngÃ¼ iÃ§erisinde if kullanÄ±larak yalnÄ±zca
+     * belirli koÅŸullarÄ± saÄŸlayan sayÄ±lar toplanabilir.
+     * Bu Ã¶rnekte 1 ile 100 arasÄ±ndaki Ã§ift sayÄ±lar toplanÄ±r. */
 
     int tek_toplam = 0, cift_toplam = 0;
 
@@ -17,8 +19,8 @@ int main(int argc, char** argv)
         else tek_toplam += i;
     }
 
-    cout << "Tek sayıların toplamı: " << tek_toplam << endl;
-    cout << "Çift sayıların toplamı: " << cift_toplam << endl;
+    cout << "Tek sayÄ±larÄ±n toplamÄ±: " << tek_toplam << endl;
+    cout << "Ã‡ift sayÄ±larÄ±n toplamÄ±: " << cift_toplam << endl;
 
     return 0;
 }

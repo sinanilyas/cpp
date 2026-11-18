@@ -1,20 +1,22 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* Döngü değişkeni aritmetik işlemlerde kullanılabilir.
-     * Değişkenin değerini bir işlemde kullanmak
-     * o değişkenin değerini değiştirmez. */
+    /* DÃ¶ngÃ¼ deÄŸiÅŸkeni aritmetik iÅŸlemlerde kullanÄ±labilir.
+     * DeÄŸiÅŸkenin deÄŸerini bir iÅŸlemde kullanmak
+     * o deÄŸiÅŸkenin deÄŸerini deÄŸiÅŸtirmez. */
 
     for (int i = 0; i < 5; i++)
     {
         cout << i + 10 << endl;
     }
 
-    // Ekrana sırasıyla 10, 11, 12, 13 ve 14 yazdırılır.
+    // Ekrana sÄ±rasÄ±yla 10, 11, 12, 13 ve 14 yazdÄ±rÄ±lÄ±r.
 
     return 0;
 }

@@ -1,21 +1,23 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int sayi = 1;
 
-    /* do-while döngüsünde önce döngü gövdesi çalıştırılır,
-     * ardından koşul kontrol edilir.
-     * Koşul doğru olduğu sürece döngü tekrarlanır. */
+    /* do-while dÃ¶ngÃ¼sÃ¼nde Ã¶nce dÃ¶ngÃ¼ gÃ¶vdesi Ã§alÄ±ÅŸtÄ±rÄ±lÄ±r,
+     * ardÄ±ndan koÅŸul kontrol edilir.
+     * KoÅŸul doÄŸru olduÄŸu sÃ¼rece dÃ¶ngÃ¼ tekrarlanÄ±r. */
 
     do
     {
         cout << sayi << endl;
         sayi++;
-    } while (sayi <= 5); // Sondaki noktalı virgül zorunludur.
+    } while (sayi <= 5); // Sondaki noktalÄ± virgÃ¼l zorunludur.
 
     return 0;
 }

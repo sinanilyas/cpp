@@ -1,14 +1,16 @@
 #include <iostream>
+#include <windows.h>
 
 using namespace std;
 
 int main(int argc, char** argv) {
-	setlocale(LC_ALL, "Turkish");
+	SetConsoleCP(CP_UTF8);
+	SetConsoleOutputCP(CP_UTF8);
 	
-	cout << "Satýr 1" << endl;
-	cout << "Satýr 2" << endl;
+	cout << "SatÄ±r 1" << endl;
+	cout << "SatÄ±r 2" << endl;
 
-	// Bir tuþa basýlana kadar bekle
+	// Bir tuÅŸa basÄ±lana kadar bekle
 	system("pause");
 	
 	return 0;

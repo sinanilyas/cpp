@@ -1,21 +1,23 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* Çift tırnakla başlangıç değeri verilirken dizinin eleman sayısı
-     * yazılırsa metnin karakterleri ve null karakteri diziye sığmalıdır.
-     * "Ali" metni için en az 4 eleman gerekir. */
+    /* Ã‡ift tÄ±rnakla baÅŸlangÄ±Ã§ deÄŸeri verilirken dizinin eleman sayÄ±sÄ±
+     * yazÄ±lÄ±rsa metnin karakterleri ve null karakteri diziye sÄ±ÄŸmalÄ±dÄ±r.
+     * "Ali" metni iÃ§in en az 4 eleman gerekir. */
 
-    // HATA: Dizide null karakteri için yer yok.
+    // HATA: Dizide null karakteri iÃ§in yer yok.
     char ad[3] = "Ali";
 
     cout << ad << endl;
 
-    /* Eleman sayısı daha büyük yazılabilir. char ad[10] = "Ali";
-     * tanımlamasında kalan elemanların hepsi null karakteri olur. */
+    /* Eleman sayÄ±sÄ± daha bÃ¼yÃ¼k yazÄ±labilir. char ad[10] = "Ali";
+     * tanÄ±mlamasÄ±nda kalan elemanlarÄ±n hepsi null karakteri olur. */
 
     return 0;
 }

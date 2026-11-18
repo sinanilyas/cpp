@@ -1,14 +1,16 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* Başlangıç değerleri verilirse köşeli parantez içine eleman
-     * sayısı yazılmayabilir. Derleyici, verilen başlangıç değerlerini
-     * sayarak eleman sayısını kendisi belirler. */
-    int sayilar[] = {10, 20, 30, 40, 50, 60}; // 6 elemanlı dizi
+    /* BaÅŸlangÄ±Ã§ deÄŸerleri verilirse kÃ¶ÅŸeli parantez iÃ§ine eleman
+     * sayÄ±sÄ± yazÄ±lmayabilir. Derleyici, verilen baÅŸlangÄ±Ã§ deÄŸerlerini
+     * sayarak eleman sayÄ±sÄ±nÄ± kendisi belirler. */
+    int sayilar[] = {10, 20, 30, 40, 50, 60}; // 6 elemanlÄ± dizi
 
     for (int i = 0; i < 6; i++)
     {
@@ -16,10 +18,10 @@ int main(int argc, char** argv)
     }
     cout << endl;
 
-    // Ekrana 10 20 30 40 50 60 yazdırılır.
+    // Ekrana 10 20 30 40 50 60 yazdÄ±rÄ±lÄ±r.
 
-    /* Hem eleman sayısı hem de başlangıç değerleri yazılmazsa
-     * (int dizi[];) derleyici dizi için ne kadar yer ayıracağını
+    /* Hem eleman sayÄ±sÄ± hem de baÅŸlangÄ±Ã§ deÄŸerleri yazÄ±lmazsa
+     * (int dizi[];) derleyici dizi iÃ§in ne kadar yer ayÄ±racaÄŸÄ±nÄ±
      * bilemez ve program derlenmez. */
 
     return 0;

@@ -1,4 +1,5 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 struct urun
@@ -9,13 +10,14 @@ struct urun
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     urun buzdolabi, firin;
 
-    /* Her yapı değişkeninin kendine ait üyeleri vardır.
-     * buzdolabının kendine ait kod ve fiyat üye değişkenleri,
-     * fırının kendine ait kod ve fiyat üye değişkenleri vardır. */
+    /* Her yapÄ± deÄŸiÅŸkeninin kendine ait Ã¼yeleri vardÄ±r.
+     * buzdolabÄ±nÄ±n kendine ait kod ve fiyat Ã¼ye deÄŸiÅŸkenleri,
+     * fÄ±rÄ±nÄ±n kendine ait kod ve fiyat Ã¼ye deÄŸiÅŸkenleri vardÄ±r. */
 
     buzdolabi.kod = 101;
     buzdolabi.fiyat = 25000.0;
@@ -23,11 +25,11 @@ int main(int argc, char** argv)
     firin.kod = 201;
     firin.fiyat = 15000.0;
 
-    cout << "Buzdolabı ürün kodu: " << buzdolabi.kod << endl;
-    cout << "Buzdolabı ürün fiyatı: " << buzdolabi.fiyat << endl;
+    cout << "BuzdolabÄ± Ã¼rÃ¼n kodu: " << buzdolabi.kod << endl;
+    cout << "BuzdolabÄ± Ã¼rÃ¼n fiyatÄ±: " << buzdolabi.fiyat << endl;
 
-    cout << "Fırın ürün kodu: " << firin.kod << endl;
-    cout << "fırın ürün fiyatı: " << firin.fiyat << endl;
+    cout << "FÄ±rÄ±n Ã¼rÃ¼n kodu: " << firin.kod << endl;
+    cout << "fÄ±rÄ±n Ã¼rÃ¼n fiyatÄ±: " << firin.fiyat << endl;
 
     return 0;
 }

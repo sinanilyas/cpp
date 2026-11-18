@@ -1,17 +1,19 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 enum gun {pts = 1, sal, car, per, cum, cts, paz};
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    // static_cast ile açýk dönüþüm yapýlabilir.
+    // static_cast ile aÃ§Ä±k dÃ¶nÃ¼ÅŸÃ¼m yapÄ±labilir.
     gun bugun = static_cast<gun>(3);
     cout << bugun << endl; // 3
 
-    // int tipindeki bir deðiþken de dönüþtürülebilir.
+    // int tipindeki bir deÄŸiÅŸken de dÃ¶nÃ¼ÅŸtÃ¼rÃ¼lebilir.
     int sayi = 5;
     bugun = static_cast<gun>(sayi);
     cout << bugun << endl; // 5

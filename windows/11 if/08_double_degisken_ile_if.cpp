@@ -1,16 +1,18 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     double sayi;
 
-    cout << "Bir ondalýklý sayý giriniz: ";
+    cout << "Bir ondalÄ±klÄ± sayÄ± giriniz: ";
     cin >> sayi;
 
-	/* sayi 0.0'dan farklý ise:
+	/* sayi 0.0'dan farklÄ± ise:
 	 *     sayi = true
 	 *     !sayi = false
 	 * sayi 0.0 ise:
@@ -18,8 +20,8 @@ int main(int argc, char** argv)
 	 *     !sayi = true.
 	 */
 
-    if (sayi) cout << "Sayý sýfýrdan farklýdýr." << endl;
-    if (!sayi) cout << "Sayý sýfýrdýr." << endl;
+    if (sayi) cout << "SayÄ± sÄ±fÄ±rdan farklÄ±dÄ±r." << endl;
+    if (!sayi) cout << "SayÄ± sÄ±fÄ±rdÄ±r." << endl;
 
     return 0;
 }

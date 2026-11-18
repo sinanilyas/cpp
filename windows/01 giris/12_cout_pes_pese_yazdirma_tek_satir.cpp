@@ -1,12 +1,14 @@
 #include <iostream>
+#include <windows.h>
 
 using namespace std;
 
 int main(int argc, char** argv) {
-	setlocale(LC_ALL, "Turkish");
+	SetConsoleCP(CP_UTF8);
+	SetConsoleOutputCP(CP_UTF8);
 
-	// Tek cout komutu ile de peþ peþe yazdýrýlabilir	
-	cout << "Satýr 1" << endl << "Satýr 2" << endl;
+	// Tek cout komutu ile de peÅŸ peÅŸe yazdÄ±rÄ±labilir	
+	cout << "SatÄ±r 1" << endl << "SatÄ±r 2" << endl;
 	
 	return 0;
 }

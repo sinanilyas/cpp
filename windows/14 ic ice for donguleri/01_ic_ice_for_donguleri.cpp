@@ -1,25 +1,27 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* Bir for döngüsünün içerisinde başka bir for döngüsü bulunabilir.
-     * Dış döngünün her tekrarında iç döngü baştan sona çalıştırılır. */
+    /* Bir for dÃ¶ngÃ¼sÃ¼nÃ¼n iÃ§erisinde baÅŸka bir for dÃ¶ngÃ¼sÃ¼ bulunabilir.
+     * DÄ±ÅŸ dÃ¶ngÃ¼nÃ¼n her tekrarÄ±nda iÃ§ dÃ¶ngÃ¼ baÅŸtan sona Ã§alÄ±ÅŸtÄ±rÄ±lÄ±r. */
 
     for (int i = 1; i <= 3; i++)
     {
-        cout << "Dış döngü: " << i << endl;
+        cout << "DÄ±ÅŸ dÃ¶ngÃ¼: " << i << endl;
 
         for (int j = 1; j <= 2; j++)
         {
-            cout << "   İç döngü: " << j << endl;
+            cout << "   Ä°Ã§ dÃ¶ngÃ¼: " << j << endl;
         }
     }
 
-    /* Dış döngü 3 kez, her seferinde iç döngü 2 kez çalışır.
-     * Böylece iç döngünün gövdesi toplam 3 × 2 = 6 kez çalıştırılır. */
+    /* DÄ±ÅŸ dÃ¶ngÃ¼ 3 kez, her seferinde iÃ§ dÃ¶ngÃ¼ 2 kez Ã§alÄ±ÅŸÄ±r.
+     * BÃ¶ylece iÃ§ dÃ¶ngÃ¼nÃ¼n gÃ¶vdesi toplam 3 Ã— 2 = 6 kez Ã§alÄ±ÅŸtÄ±rÄ±lÄ±r. */
 
     return 0;
 }

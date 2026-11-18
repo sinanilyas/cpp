@@ -1,23 +1,25 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* İç döngüde kullanılan continue komutu yalnızca
-     * iç döngünün o anki tekrarının kalan kısmını atlar.
-     * Dış döngünün çalışmasını etkilemez. */
+    /* Ä°Ã§ dÃ¶ngÃ¼de kullanÄ±lan continue komutu yalnÄ±zca
+     * iÃ§ dÃ¶ngÃ¼nÃ¼n o anki tekrarÄ±nÄ±n kalan kÄ±smÄ±nÄ± atlar.
+     * DÄ±ÅŸ dÃ¶ngÃ¼nÃ¼n Ã§alÄ±ÅŸmasÄ±nÄ± etkilemez. */
 
     for (int i = 1; i <= 3; i++)
     {
-        cout << "Dış döngü: " << i << endl;
+        cout << "DÄ±ÅŸ dÃ¶ngÃ¼: " << i << endl;
 
         for (int j = 1; j <= 5; j++)
         {
             if (j == 3) continue;
 
-            cout << "   İç döngü: " << j << endl;
+            cout << "   Ä°Ã§ dÃ¶ngÃ¼: " << j << endl;
         }
     }
 

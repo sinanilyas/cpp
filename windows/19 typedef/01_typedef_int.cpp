@@ -1,13 +1,15 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* typedef, mevcut bir veri tipine alternatif bir isim vermek için kullanılır.
-     * Aşağıdaki tanımlama, int veri tipine tamsayi ismini verir.
-     * typedef yeni bir veri tipi oluşturmaz. */
+    /* typedef, mevcut bir veri tipine alternatif bir isim vermek iÃ§in kullanÄ±lÄ±r.
+     * AÅŸaÄŸÄ±daki tanÄ±mlama, int veri tipine tamsayi ismini verir.
+     * typedef yeni bir veri tipi oluÅŸturmaz. */
 
     typedef int tamsayi;
 

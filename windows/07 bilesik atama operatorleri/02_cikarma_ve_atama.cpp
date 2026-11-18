@@ -1,23 +1,25 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int sayi = 10;
 
-    // sayi değişkeninin değerinden 3 çıkarılır
+    // sayi deÄŸiÅŸkeninin deÄŸerinden 3 Ã§Ä±karÄ±lÄ±r
     sayi -= 3;
 
     cout << sayi << endl; // 7
 
-    /* Yukarıdaki işlem aşağıdaki işlemle eşdeğerdir:
+    /* YukarÄ±daki iÅŸlem aÅŸaÄŸÄ±daki iÅŸlemle eÅŸdeÄŸerdir:
      *
      * sayi = sayi - 3;
      *
-     * -= operatörü, çıkarma ve atama işlemlerini
-     * tek bir işlemde birleştirir.
+     * -= operatÃ¶rÃ¼, Ã§Ä±karma ve atama iÅŸlemlerini
+     * tek bir iÅŸlemde birleÅŸtirir.
      */
 
     return 0;

@@ -1,13 +1,15 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* Bir dış döngünün içerisinde birden fazla iç döngü bulunabilir.
-     * İlk iç döngü boşlukları, ikinci iç döngü yıldızları yazdırır.
-     * Her satırda boşluk sayısı azalırken yıldız sayısı artar. */
+    /* Bir dÄ±ÅŸ dÃ¶ngÃ¼nÃ¼n iÃ§erisinde birden fazla iÃ§ dÃ¶ngÃ¼ bulunabilir.
+     * Ä°lk iÃ§ dÃ¶ngÃ¼ boÅŸluklarÄ±, ikinci iÃ§ dÃ¶ngÃ¼ yÄ±ldÄ±zlarÄ± yazdÄ±rÄ±r.
+     * Her satÄ±rda boÅŸluk sayÄ±sÄ± azalÄ±rken yÄ±ldÄ±z sayÄ±sÄ± artar. */
 
     for (int i = 1; i <= 5; i++)
     {

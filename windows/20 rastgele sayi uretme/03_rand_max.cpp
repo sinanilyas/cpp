@@ -1,19 +1,21 @@
 #include <iostream>
 #include <cstdlib>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* rand() fonksiyonu 0 ile RAND_MAX arasında (ikisi de dahil)
-     * bir tamsayı üretir. RAND_MAX, <cstdlib> içinde tanımlı bir sabittir
-     * ve rand() ile üretilebilecek en büyük sayıyı verir. */
+    /* rand() fonksiyonu 0 ile RAND_MAX arasÄ±nda (ikisi de dahil)
+     * bir tamsayÄ± Ã¼retir. RAND_MAX, <cstdlib> iÃ§inde tanÄ±mlÄ± bir sabittir
+     * ve rand() ile Ã¼retilebilecek en bÃ¼yÃ¼k sayÄ±yÄ± verir. */
 
     cout << RAND_MAX << endl; // Genellikle 32767 veya 2147483647
 
-    /* RAND_MAX değeri derleyiciye ve işletim sistemine göre değişebilir.
-     * C++ standardı en az 32767 olmasını garanti eder. */
+    /* RAND_MAX deÄŸeri derleyiciye ve iÅŸletim sistemine gÃ¶re deÄŸiÅŸebilir.
+     * C++ standardÄ± en az 32767 olmasÄ±nÄ± garanti eder. */
 
     return 0;
 }

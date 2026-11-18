@@ -1,15 +1,17 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* İki ayrı dış döngü kullanılarak baklava dilimi oluşturulabilir.
-     * İlk döngü baklavanın üst yarısını,
-     * ikinci döngü ise alt yarısını oluşturur. */
+    /* Ä°ki ayrÄ± dÄ±ÅŸ dÃ¶ngÃ¼ kullanÄ±larak baklava dilimi oluÅŸturulabilir.
+     * Ä°lk dÃ¶ngÃ¼ baklavanÄ±n Ã¼st yarÄ±sÄ±nÄ±,
+     * ikinci dÃ¶ngÃ¼ ise alt yarÄ±sÄ±nÄ± oluÅŸturur. */
 
-    // Üst yarı
+    // Ãœst yarÄ±
     for (int i = 1; i <= 5; i++)
     {
         for (int j = 1; j <= 5 - i; j++)
@@ -21,7 +23,7 @@ int main(int argc, char** argv)
         cout << endl;
     }
 
-    // Alt yarı
+    // Alt yarÄ±
     for (int i = 4; i >= 1; i--)
     {
         for (int j = 1; j <= 5 - i; j++)

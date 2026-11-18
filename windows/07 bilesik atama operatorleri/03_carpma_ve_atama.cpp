@@ -1,23 +1,25 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int sayi = 10;
 
-    // sayi değişkeninin değeri 4 ile çarpılır
+    // sayi deÄŸiÅŸkeninin deÄŸeri 4 ile Ã§arpÄ±lÄ±r
     sayi *= 4;
 
     cout << sayi << endl; // 40
 
-    /* Yukarıdaki işlem aşağıdaki işlemle eşdeğerdir:
+    /* YukarÄ±daki iÅŸlem aÅŸaÄŸÄ±daki iÅŸlemle eÅŸdeÄŸerdir:
      *
      * sayi = sayi * 4;
      *
-     * *= operatörü, çarpma ve atama işlemlerini
-     * tek bir işlemde birleştirir.
+     * *= operatÃ¶rÃ¼, Ã§arpma ve atama iÅŸlemlerini
+     * tek bir iÅŸlemde birleÅŸtirir.
      */
 
     return 0;

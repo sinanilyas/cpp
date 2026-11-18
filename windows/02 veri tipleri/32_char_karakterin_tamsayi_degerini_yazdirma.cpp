@@ -1,10 +1,12 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv) {
-	setlocale(LC_ALL, "Turkish");
+	SetConsoleCP(CP_UTF8);
+	SetConsoleOutputCP(CP_UTF8);
 	
-	/* char veri tipinin sakladığı değer int tipli bir değişkene atanabilir. */
+	/* char veri tipinin sakladÄ±ÄŸÄ± deÄŸer int tipli bir deÄŸiÅŸkene atanabilir. */
 	
 	char karakter = 'A';
 	int sayi = karakter;

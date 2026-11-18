@@ -1,18 +1,20 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* Bir tamsayı sabitinin unsigned long olması için
-     * sayının sonuna uL veya Lu son eki eklenir.
-     * u yerine U da yazılabilir, büyük/küçük harf önemli değildir.*/
+    /* Bir tamsayÄ± sabitinin unsigned long olmasÄ± iÃ§in
+     * sayÄ±nÄ±n sonuna uL veya Lu son eki eklenir.
+     * u yerine U da yazÄ±labilir, bÃ¼yÃ¼k/kÃ¼Ã§Ã¼k harf Ã¶nemli deÄŸildir.*/
 
-    // Örtük int -> unsigned long dönüşümü yapılır
+    // Ã–rtÃ¼k int -> unsigned long dÃ¶nÃ¼ÅŸÃ¼mÃ¼ yapÄ±lÄ±r
     unsigned long s1 = 5;
 
-    // 5UL sayısı baştan unsigned long tipinde oluşturulur, dönüşüm yapılmaz
+    // 5UL sayÄ±sÄ± baÅŸtan unsigned long tipinde oluÅŸturulur, dÃ¶nÃ¼ÅŸÃ¼m yapÄ±lmaz
     unsigned long s2 = 5UL;
 
     return 0;

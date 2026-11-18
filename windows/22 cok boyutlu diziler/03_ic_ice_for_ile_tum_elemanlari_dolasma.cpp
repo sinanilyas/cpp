@@ -1,17 +1,19 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int matris[3][2];
 
-    /* İki boyutlu dizinin bütün elemanları iç içe iki for döngüsüyle
-     * dolaşılır. Dış döngü satırları, iç döngü o satırdaki sütunları
-     * dolaşır. Dış döngü değişkeni (i) ilk indis, iç döngü değişkeni
-     * (j) ikinci indis olarak kullanılır.
-     * Dış döngünün her turunda iç döngü baştan sona tamamlanır. */
+    /* Ä°ki boyutlu dizinin bÃ¼tÃ¼n elemanlarÄ± iÃ§ iÃ§e iki for dÃ¶ngÃ¼sÃ¼yle
+     * dolaÅŸÄ±lÄ±r. DÄ±ÅŸ dÃ¶ngÃ¼ satÄ±rlarÄ±, iÃ§ dÃ¶ngÃ¼ o satÄ±rdaki sÃ¼tunlarÄ±
+     * dolaÅŸÄ±r. DÄ±ÅŸ dÃ¶ngÃ¼ deÄŸiÅŸkeni (i) ilk indis, iÃ§ dÃ¶ngÃ¼ deÄŸiÅŸkeni
+     * (j) ikinci indis olarak kullanÄ±lÄ±r.
+     * DÄ±ÅŸ dÃ¶ngÃ¼nÃ¼n her turunda iÃ§ dÃ¶ngÃ¼ baÅŸtan sona tamamlanÄ±r. */
     for (int i = 0; i < 3; i++)
     {
         for (int j = 0; j < 2; j++)
@@ -20,9 +22,9 @@ int main(int argc, char** argv)
         }
     }
 
-    /* Matrisi tablo biçiminde yazdırmak için bir satırın elemanları
-     * yan yana yazılır. İç döngü bitince, yani satır tamamlanınca
-     * alt satıra geçilir. */
+    /* Matrisi tablo biÃ§iminde yazdÄ±rmak iÃ§in bir satÄ±rÄ±n elemanlarÄ±
+     * yan yana yazÄ±lÄ±r. Ä°Ã§ dÃ¶ngÃ¼ bitince, yani satÄ±r tamamlanÄ±nca
+     * alt satÄ±ra geÃ§ilir. */
     for (int i = 0; i < 3; i++)
     {
         for (int j = 0; j < 2; j++)
@@ -33,13 +35,13 @@ int main(int argc, char** argv)
         cout << endl;
     }
 
-    /* Ekran çıktısı:
+    /* Ekran Ã§Ä±ktÄ±sÄ±:
      * 11 12
      * 21 22
      * 31 32
      *
-     * Her elemanın onlar basamağı satır sırasını, birler basamağı
-     * sütun sırasını gösteriyor. 32, 3. satırın 2. elemanıdır ve
+     * Her elemanÄ±n onlar basamaÄŸÄ± satÄ±r sÄ±rasÄ±nÄ±, birler basamaÄŸÄ±
+     * sÃ¼tun sÄ±rasÄ±nÄ± gÃ¶steriyor. 32, 3. satÄ±rÄ±n 2. elemanÄ±dÄ±r ve
      * indisleri [2][1]'dir. */
 
     return 0;

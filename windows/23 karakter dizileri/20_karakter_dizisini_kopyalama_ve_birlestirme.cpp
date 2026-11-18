@@ -1,21 +1,23 @@
-#define _CRT_SECURE_NO_WARNINGS // Bazý derleyicilerin strcpy, strncpy ve strcat için verdiði güvenlik uyarýlarýný kapatýr
+#define _CRT_SECURE_NO_WARNINGS // BazÄ± derleyicilerin strcpy, strncpy ve strcat iÃ§in verdiÄŸi gÃ¼venlik uyarÄ±larÄ±nÄ± kapatÄ±r
 #include <iostream>
-#include <cstring> // strcpy, strncpy, strcat ve strlen için
+#include <cstring> // strcpy, strncpy, strcat ve strlen iÃ§in
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     const int UZUNLUK = 50;
 
     char metin[UZUNLUK] = "Selam";
 
-    /* Diziler atama iþleciyle kopyalanamaz:
+    /* Diziler atama iÅŸleciyle kopyalanamaz:
      *     kopya1 = metin; // HATA
-     * Karakterler döngü ile tek tek ya da strcpy ile kopyalanýr. */
+     * Karakterler dÃ¶ngÃ¼ ile tek tek ya da strcpy ile kopyalanÄ±r. */
 
-    // Döngü ile kopyalama
+    // DÃ¶ngÃ¼ ile kopyalama
     char kopya1[UZUNLUK];
 
     for (int i = 0; i < UZUNLUK; i++)
@@ -37,29 +39,29 @@ int main(int argc, char** argv)
     cout << altMetin << endl; // Se
 
     // strcat(hedef, kaynak): Kaynak metni hedef metnin sonuna ekler.
-    strcat(metin, " Nasýlsýn?");
-    cout << metin << endl; // Selam Nasýlsýn?
+    strcat(metin, " NasÄ±lsÄ±n?");
+    cout << metin << endl; // Selam NasÄ±lsÄ±n?
 
     /* strlen, null karakterine kadar olan karakterleri sayar.
-     * null karakteri sayýlmaz. sizeof ise dizinin eleman sayýsýný verir. */
+     * null karakteri sayÄ±lmaz. sizeof ise dizinin eleman sayÄ±sÄ±nÄ± verir. */
     int metinUzunlugu = strlen(metin);
 
-    cout << "'" << metin << "' metninin uzunluðu: " << metinUzunlugu << endl; // 'Selam Nasýlsýn?' metninin uzunluðu: 15
-    cout << "metin dizisinin eleman sayýsý: " << sizeof(metin) << endl;       // metin dizisinin eleman sayýsý: 50
+    cout << "'" << metin << "' metninin uzunluÄŸu: " << metinUzunlugu << endl; // 'Selam NasÄ±lsÄ±n?' metninin uzunluÄŸu: 15
+    cout << "metin dizisinin eleman sayÄ±sÄ±: " << sizeof(metin) << endl;       // metin dizisinin eleman sayÄ±sÄ±: 50
 
-    // Döngü ile yalnýzca metnin karakterlerini ve null karakterini kopyalama
+    // DÃ¶ngÃ¼ ile yalnÄ±zca metnin karakterlerini ve null karakterini kopyalama
     char kopya3[UZUNLUK];
 
-    for (int i = 0; i <= metinUzunlugu; i++) // <= kullanýldýðý için null karakteri de kopyalanýr
+    for (int i = 0; i <= metinUzunlugu; i++) // <= kullanÄ±ldÄ±ÄŸÄ± iÃ§in null karakteri de kopyalanÄ±r
     {
         kopya3[i] = metin[i];
     }
 
-    cout << kopya3 << endl; // Selam Nasýlsýn?
+    cout << kopya3 << endl; // Selam NasÄ±lsÄ±n?
 
     /* strcpy, strncpy ve strcat dizinin boyutunu denetlemez. Hedef dizide
-     * metin ve null karakteri için yeterli yer olmalýdýr. Yer yoksa
-     * dizinin dýþýna yazýlýr. */
+     * metin ve null karakteri iÃ§in yeterli yer olmalÄ±dÄ±r. Yer yoksa
+     * dizinin dÄ±ÅŸÄ±na yazÄ±lÄ±r. */
 
     return 0;
 }

@@ -1,20 +1,22 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int sayi;
 
-    cout << "Bir tamsayı giriniz: ";
+    cout << "Bir tamsayÄ± giriniz: ";
     cin >> sayi;
 
-    // Koşul doğruysa if, yanlışsa else komutu çalıştırılır.
+    // KoÅŸul doÄŸruysa if, yanlÄ±ÅŸsa else komutu Ã§alÄ±ÅŸtÄ±rÄ±lÄ±r.
     if (sayi % 2 == 0)
-        cout << "Sayı çifttir." << endl;
+        cout << "SayÄ± Ã§ifttir." << endl;
     else
-        cout << "Sayı tektir." << endl;
+        cout << "SayÄ± tektir." << endl;
 
     cout << "Program sona erdi." << endl;
 

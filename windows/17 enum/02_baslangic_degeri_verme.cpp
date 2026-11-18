@@ -1,16 +1,18 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
-// İlk elemanın değeri 1 olarak belirlendi.
+// Ä°lk elemanÄ±n deÄŸeri 1 olarak belirlendi.
 enum gun {pts = 1, sal, car, per, cum, cts, paz};
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* enum elemanlarına başlangıç değeri verilebilir.
-     * Değer belirtilmeyen sonraki elemanların değerleri
-     * bir önceki elemanın değerinden 1 fazla olur. */
+    /* enum elemanlarÄ±na baÅŸlangÄ±Ã§ deÄŸeri verilebilir.
+     * DeÄŸer belirtilmeyen sonraki elemanlarÄ±n deÄŸerleri
+     * bir Ã¶nceki elemanÄ±n deÄŸerinden 1 fazla olur. */
 
     cout << pts << endl; // 1
     cout << sal << endl; // 2

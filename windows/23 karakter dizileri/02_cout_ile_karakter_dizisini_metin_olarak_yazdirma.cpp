@@ -1,23 +1,25 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     char ad[] = {'A', 'l', 'i', '\0'};
 
-    /* Karakter dizisinin adı cout ile yazdırılırsa dizinin bütün
-     * elemanları metinmiş gibi yazdırılır. cout, ilk elemandan başlayarak
-     * null karakterine kadar bütün karakterleri yazdırır. Elemanları
-     * döngü ile tek tek yazdırmak gerekmez. */
+    /* Karakter dizisinin adÄ± cout ile yazdÄ±rÄ±lÄ±rsa dizinin bÃ¼tÃ¼n
+     * elemanlarÄ± metinmiÅŸ gibi yazdÄ±rÄ±lÄ±r. cout, ilk elemandan baÅŸlayarak
+     * null karakterine kadar bÃ¼tÃ¼n karakterleri yazdÄ±rÄ±r. ElemanlarÄ±
+     * dÃ¶ngÃ¼ ile tek tek yazdÄ±rmak gerekmez. */
     cout << ad << endl; // Ali
 
-    // Sabit metinlerle birlikte de yazdırılabilir.
+    // Sabit metinlerle birlikte de yazdÄ±rÄ±labilir.
     cout << "Merhaba " << ad << "!" << endl; // Merhaba Ali!
 
-    /* Bu kolaylık yalnızca karakter dizilerinde vardır. int gibi diğer
-     * tiplerdeki diziler cout ile bu şekilde yazdırılamaz. */
+    /* Bu kolaylÄ±k yalnÄ±zca karakter dizilerinde vardÄ±r. int gibi diÄŸer
+     * tiplerdeki diziler cout ile bu ÅŸekilde yazdÄ±rÄ±lamaz. */
 
     return 0;
 }

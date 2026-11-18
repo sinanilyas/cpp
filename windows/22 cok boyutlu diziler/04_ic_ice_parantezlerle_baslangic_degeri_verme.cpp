@@ -1,16 +1,18 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* Çok boyutlu dizilere tanımlama sırasında başlangıç değeri
-     * verilebilir. Her satırın değerleri ayrı bir küme parantezi
-     * içine yazılır. Satırların küme parantezleri de virgülle
-     * ayrılarak dıştaki küme parantezinin içine yazılır.
-     * {1, 2} 0. satırın, {3, 4} 1. satırın, {5, 6} 2. satırın
-     * değerleridir. */
+    /* Ã‡ok boyutlu dizilere tanÄ±mlama sÄ±rasÄ±nda baÅŸlangÄ±Ã§ deÄŸeri
+     * verilebilir. Her satÄ±rÄ±n deÄŸerleri ayrÄ± bir kÃ¼me parantezi
+     * iÃ§ine yazÄ±lÄ±r. SatÄ±rlarÄ±n kÃ¼me parantezleri de virgÃ¼lle
+     * ayrÄ±larak dÄ±ÅŸtaki kÃ¼me parantezinin iÃ§ine yazÄ±lÄ±r.
+     * {1, 2} 0. satÄ±rÄ±n, {3, 4} 1. satÄ±rÄ±n, {5, 6} 2. satÄ±rÄ±n
+     * deÄŸerleridir. */
     int matris[3][2] = {{1, 2}, {3, 4}, {5, 6}};
 
     cout << matris[1][0] << endl; // 3
@@ -26,14 +28,14 @@ int main(int argc, char** argv)
         cout << endl;
     }
 
-    /* Ekran çıktısı:
+    /* Ekran Ã§Ä±ktÄ±sÄ±:
      * 1 2
      * 3 4
      * 5 6
      */
 
-    /* Satırlar alt alta yazılırsa matrisin görünümü daha kolay
-     * anlaşılır:
+    /* SatÄ±rlar alt alta yazÄ±lÄ±rsa matrisin gÃ¶rÃ¼nÃ¼mÃ¼ daha kolay
+     * anlaÅŸÄ±lÄ±r:
      *
      *     int matris[3][2] =
      *     {

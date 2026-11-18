@@ -1,12 +1,14 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* 5 sabit sayısı int tipindedir.
-     * Örtük olarak long long tipine dönüştürülür ve sayi değişkenine atanır. */
+    /* 5 sabit sayÄ±sÄ± int tipindedir.
+     * Ã–rtÃ¼k olarak long long tipine dÃ¶nÃ¼ÅŸtÃ¼rÃ¼lÃ¼r ve sayi deÄŸiÅŸkenine atanÄ±r. */
     long long sayi = 5;
 
     cout << sayi << endl; // 5

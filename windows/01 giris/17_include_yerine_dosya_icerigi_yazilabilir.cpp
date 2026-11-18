@@ -1,9 +1,9 @@
-/* #include <iostream> yazmak yerine, teorik olarak iostream başlık
-   dosyasının içeriği buraya doğrudan yazılabilir.
-   #include direktifi de temel olarak bu işlemi otomatik olarak gerçekleştirir.
-   Derleme öncesinde başlık dosyası bulunur ve içeriği bu noktada işlenir.
-   Aşağıda önce iostream başlık dosyasının içeriği, ardından da
-   kendi yazdığımız program kodları bulunmaktadır. */
+/* #include <iostream> yazmak yerine, teorik olarak iostream baÅŸlÄ±k
+   dosyasÄ±nÄ±n iÃ§eriÄŸi buraya doÄŸrudan yazÄ±labilir.
+   #include direktifi de temel olarak bu iÅŸlemi otomatik olarak gerÃ§ekleÅŸtirir.
+   Derleme Ã¶ncesinde baÅŸlÄ±k dosyasÄ± bulunur ve iÃ§eriÄŸi bu noktada iÅŸlenir.
+   AÅŸaÄŸÄ±da Ã¶nce iostream baÅŸlÄ±k dosyasÄ±nÄ±n iÃ§eriÄŸi, ardÄ±ndan da
+   kendi yazdÄ±ÄŸÄ±mÄ±z program kodlarÄ± bulunmaktadÄ±r. */
 
 // Standard iostream objects -*- C++ -*-
 
@@ -85,13 +85,16 @@ _GLIBCXX_END_NAMESPACE_VERSION
 
 #endif /* _GLIBCXX_IOSTREAM */
 
+#include <windows.h>
+
 using namespace std;
 
 int main(int argc, char** argv) {
-	setlocale(LC_ALL, "Turkish");
+	SetConsoleCP(CP_UTF8);
+	SetConsoleOutputCP(CP_UTF8);
 	
-	cout << "Satır 1" << endl;
-	cout << "Satır 2" << endl;
+	cout << "SatÄ±r 1" << endl;
+	cout << "SatÄ±r 2" << endl;
 
 	system("pause");
 	

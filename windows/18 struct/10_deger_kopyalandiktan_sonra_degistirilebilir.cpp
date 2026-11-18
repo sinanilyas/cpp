@@ -1,4 +1,5 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 struct urun
@@ -9,12 +10,13 @@ struct urun
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     urun urun1 = {101, 25000.0};
 
-    /* Değerler anlık olarak kopyalanır ancak
-     * urun1 ile urun2 arasında kalıcı bir bağ oluşmaz. */
+    /* DeÄŸerler anlÄ±k olarak kopyalanÄ±r ancak
+     * urun1 ile urun2 arasÄ±nda kalÄ±cÄ± bir baÄŸ oluÅŸmaz. */
     urun urun2 = urun1;
 
     // Bu atama urun1'in bilgilerini etkilemez

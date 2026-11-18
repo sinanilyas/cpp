@@ -1,24 +1,26 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int sayi = 10;
 
-    // Önek kullanımıyla değer 1 artırılır
+    // Ã–nek kullanÄ±mÄ±yla deÄŸer 1 artÄ±rÄ±lÄ±r
     ++sayi;
 
     cout << sayi << endl; // 11
 
-    /* Artırma operatörü değişkenin önüne veya sonuna
-     * yazıldığında tek başına aynı sonucu verir.
+    /* ArtÄ±rma operatÃ¶rÃ¼ deÄŸiÅŸkenin Ã¶nÃ¼ne veya sonuna
+     * yazÄ±ldÄ±ÄŸÄ±nda tek baÅŸÄ±na aynÄ± sonucu verir.
      *
      * ++sayi;
      * sayi++;
      *
-     * Her iki kullanım da değişkenin değerini 1 artırır.
+     * Her iki kullanÄ±m da deÄŸiÅŸkenin deÄŸerini 1 artÄ±rÄ±r.
      */
 
     return 0;

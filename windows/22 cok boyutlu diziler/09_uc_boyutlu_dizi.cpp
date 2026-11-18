@@ -1,19 +1,21 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* Dizilerin ikiden fazla boyutu olabilir. Üç boyutlu bir dizi,
-     * elemanları matris olan bir dizi gibi düşünülebilir.
+    /* Dizilerin ikiden fazla boyutu olabilir. ÃœÃ§ boyutlu bir dizi,
+     * elemanlarÄ± matris olan bir dizi gibi dÃ¼ÅŸÃ¼nÃ¼lebilir.
      *
-     * Bu örnekte 2 katlı, her katında 3 sıra ve her sırasında
-     * 4 koltuk bulunan bir sinema salonundaki koltukların durumu
-     * tutulur. 1 dolu, 0 boş koltuğu gösterir.
+     * Bu Ã¶rnekte 2 katlÄ±, her katÄ±nda 3 sÄ±ra ve her sÄ±rasÄ±nda
+     * 4 koltuk bulunan bir sinema salonundaki koltuklarÄ±n durumu
+     * tutulur. 1 dolu, 0 boÅŸ koltuÄŸu gÃ¶sterir.
      *
-     * İndislerin anlamı: koltuklar[kat][sira][koltuk]
-     * koltuklar[0], 1. katın 3 satır 4 sütunlu matrisidir. */
+     * Ä°ndislerin anlamÄ±: koltuklar[kat][sira][koltuk]
+     * koltuklar[0], 1. katÄ±n 3 satÄ±r 4 sÃ¼tunlu matrisidir. */
     int koltuklar[2][3][4] =
     {
         {{1, 1, 0, 1}, {0, 1, 1, 0}, {0, 0, 0, 1}}, // 1. kat
@@ -22,10 +24,10 @@ int main(int argc, char** argv)
 
     cout << sizeof(koltuklar) << endl; // Genellikle 96: 2 * 3 * 4 * 4 bayt
 
-    // 2. katın 2. sırasındaki 4. koltuk
+    // 2. katÄ±n 2. sÄ±rasÄ±ndaki 4. koltuk
     cout << koltuklar[1][1][3] << endl; // 1
 
-    // Üç boyutlu dizinin bütün elemanları iç içe üç döngüyle dolaşılır.
+    // ÃœÃ§ boyutlu dizinin bÃ¼tÃ¼n elemanlarÄ± iÃ§ iÃ§e Ã¼Ã§ dÃ¶ngÃ¼yle dolaÅŸÄ±lÄ±r.
     int doluSayisi = 0;
 
     for (int kat = 0; kat < 2; kat++)
@@ -34,7 +36,7 @@ int main(int argc, char** argv)
 
         for (int sira = 0; sira < 3; sira++)
         {
-            cout << sira + 1 << ". Sıra: ";
+            cout << sira + 1 << ". SÄ±ra: ";
 
             for (int koltuk = 0; koltuk < 4; koltuk++)
             {
@@ -46,7 +48,7 @@ int main(int argc, char** argv)
         }
     }
 
-    cout << "Dolu koltuk sayısı: " << doluSayisi << endl; // 12
+    cout << "Dolu koltuk sayÄ±sÄ±: " << doluSayisi << endl; // 12
 
     return 0;
 }

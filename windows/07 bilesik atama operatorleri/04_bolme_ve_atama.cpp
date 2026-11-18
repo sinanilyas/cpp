@@ -1,26 +1,28 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int sayi = 15;
 
-    // sayi değişkeninin değeri 2'ye bölünür
+    // sayi deÄŸiÅŸkeninin deÄŸeri 2'ye bÃ¶lÃ¼nÃ¼r
     sayi /= 2;
 
     cout << sayi << endl; // 7
 
-    /* Yukarıdaki işlem aşağıdaki işlemle eşdeğerdir:
+    /* YukarÄ±daki iÅŸlem aÅŸaÄŸÄ±daki iÅŸlemle eÅŸdeÄŸerdir:
      *
      * sayi = sayi / 2;
      *
-     * /= operatörü, bölme ve atama işlemlerini
-     * tek bir işlemde birleştirir.
+     * /= operatÃ¶rÃ¼, bÃ¶lme ve atama iÅŸlemlerini
+     * tek bir iÅŸlemde birleÅŸtirir.
      *
-     * Her iki işlenen de tamsayı olduğu için
-     * bölme işleminin sonucu 7 olur.
+     * Her iki iÅŸlenen de tamsayÄ± olduÄŸu iÃ§in
+     * bÃ¶lme iÅŸleminin sonucu 7 olur.
      */
 
     return 0;

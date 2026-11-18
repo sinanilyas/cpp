@@ -1,9 +1,10 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
-/* typedef kullanılarak yapı tanımlanırken
- * yapıya ayrıca bir isim verilmesi zorunlu değildir.
- * ogr ismi, tanımlanan yapı tipini ifade eder. */
+/* typedef kullanÄ±larak yapÄ± tanÄ±mlanÄ±rken
+ * yapÄ±ya ayrÄ±ca bir isim verilmesi zorunlu deÄŸildir.
+ * ogr ismi, tanÄ±mlanan yapÄ± tipini ifade eder. */
 typedef struct
 {
     int numara;
@@ -12,7 +13,8 @@ typedef struct
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     ogr ogr1 = {101, 80};
     ogr ogr2 = {102, 90};

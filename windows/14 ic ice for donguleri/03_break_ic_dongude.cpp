@@ -1,23 +1,25 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* İç içe döngülerde break komutu yalnızca
-     * bulunduğu döngüyü sonlandırır.
-     * Dış döngü çalışmaya devam eder. */
+    /* Ä°Ã§ iÃ§e dÃ¶ngÃ¼lerde break komutu yalnÄ±zca
+     * bulunduÄŸu dÃ¶ngÃ¼yÃ¼ sonlandÄ±rÄ±r.
+     * DÄ±ÅŸ dÃ¶ngÃ¼ Ã§alÄ±ÅŸmaya devam eder. */
 
     for (int i = 1; i <= 3; i++)
     {
-        cout << "Dış döngü: " << i << endl;
+        cout << "DÄ±ÅŸ dÃ¶ngÃ¼: " << i << endl;
 
         for (int j = 1; j <= 5; j++)
         {
             if (j == 3) break;
 
-            cout << "   İç döngü: " << j << endl;
+            cout << "   Ä°Ã§ dÃ¶ngÃ¼: " << j << endl;
         }
     }
 

@@ -1,13 +1,15 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* for döngüsünün koşul bölümü boş bırakılabilir.
-     * Bu durumda koşul her zaman doğru kabul edilir.
-     * Döngü başka bir şekilde sonlandırılmazsa sonsuza kadar çalışır. */
+    /* for dÃ¶ngÃ¼sÃ¼nÃ¼n koÅŸul bÃ¶lÃ¼mÃ¼ boÅŸ bÄ±rakÄ±labilir.
+     * Bu durumda koÅŸul her zaman doÄŸru kabul edilir.
+     * DÃ¶ngÃ¼ baÅŸka bir ÅŸekilde sonlandÄ±rÄ±lmazsa sonsuza kadar Ã§alÄ±ÅŸÄ±r. */
 
     for (int i = 1; ; i++)
     {
@@ -16,7 +18,7 @@ int main(int argc, char** argv)
         cout << i << endl;
     }
 
-    // Ekrana sırasıyla 1, 2, 3, 4 ve 5 yazdırılır.
+    // Ekrana sÄ±rasÄ±yla 1, 2, 3, 4 ve 5 yazdÄ±rÄ±lÄ±r.
 
     return 0;
 }

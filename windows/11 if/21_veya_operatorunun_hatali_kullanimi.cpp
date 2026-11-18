@@ -1,25 +1,27 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int sayi;
 
-    cout << "Bir tamsayý giriniz: ";
+    cout << "Bir tamsayÄ± giriniz: ";
     cin >> sayi;
 
     if (sayi == 3 || 4)
-        cout << "Sayý 3 veya 4'tür." << endl;
+        cout << "SayÄ± 3 veya 4'tÃ¼r." << endl;
     else
-        cout << "Sayý 3 veya 4 deðildir." << endl;
+        cout << "SayÄ± 3 veya 4 deÄŸildir." << endl;
 
     /* MANTIK HATASI:
-     * Bu koþul her zaman true olur
-     * çünkü || operatörünün sað tarafýndaki
-     * 4 deðeri true kabul edilir ve
-     * (sayi == 3 || true) yazýlmýþ gibi çalýþtýrýlýr
+     * Bu koÅŸul her zaman true olur
+     * Ã§Ã¼nkÃ¼ || operatÃ¶rÃ¼nÃ¼n saÄŸ tarafÄ±ndaki
+     * 4 deÄŸeri true kabul edilir ve
+     * (sayi == 3 || true) yazÄ±lmÄ±ÅŸ gibi Ã§alÄ±ÅŸtÄ±rÄ±lÄ±r
      */
 
     return 0;

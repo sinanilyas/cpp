@@ -1,14 +1,16 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* İç içe döngüler kullanılarak piramit oluşturulabilir.
-     * İlk iç döngü boşlukları, ikinci iç döngü yıldızları yazdırır.
-     * Her satırda boşluk sayısı 1 azalırken
-     * yıldız sayısı 2 artar. */
+    /* Ä°Ã§ iÃ§e dÃ¶ngÃ¼ler kullanÄ±larak piramit oluÅŸturulabilir.
+     * Ä°lk iÃ§ dÃ¶ngÃ¼ boÅŸluklarÄ±, ikinci iÃ§ dÃ¶ngÃ¼ yÄ±ldÄ±zlarÄ± yazdÄ±rÄ±r.
+     * Her satÄ±rda boÅŸluk sayÄ±sÄ± 1 azalÄ±rken
+     * yÄ±ldÄ±z sayÄ±sÄ± 2 artar. */
 
     for (int i = 1; i <= 5; i++)
     {

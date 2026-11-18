@@ -1,14 +1,16 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* time(0) her saniye değiştiği için tohum değeri olarak kullanılırsa
-     * program her çalıştırıldığında farklı sayılar üretilir. */
+    /* time(0) her saniye deÄŸiÅŸtiÄŸi iÃ§in tohum deÄŸeri olarak kullanÄ±lÄ±rsa
+     * program her Ã§alÄ±ÅŸtÄ±rÄ±ldÄ±ÄŸÄ±nda farklÄ± sayÄ±lar Ã¼retilir. */
 
     srand(time(0));
 
@@ -17,8 +19,8 @@ int main(int argc, char** argv)
         cout << rand() << endl;
     }
 
-    /* Program aynı saniye içinde iki kez çalıştırılırsa
-     * tohum değeri aynı olacağı için aynı sayılar üretilir. */
+    /* Program aynÄ± saniye iÃ§inde iki kez Ã§alÄ±ÅŸtÄ±rÄ±lÄ±rsa
+     * tohum deÄŸeri aynÄ± olacaÄŸÄ± iÃ§in aynÄ± sayÄ±lar Ã¼retilir. */
 
     return 0;
 }

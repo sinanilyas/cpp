@@ -1,15 +1,17 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* C++ tipi açık (explicit) tip dönüşümü */
+    /* C++ tipi aÃ§Ä±k (explicit) tip dÃ¶nÃ¼ÅŸÃ¼mÃ¼ */
 
     long long s1 = 5LL;
 
-    int s2 = static_cast<int>(s1);  // Açık tip dönüşümü yapılır (C++ tipi açık dönüşüm)
+    int s2 = static_cast<int>(s1);  // AÃ§Ä±k tip dÃ¶nÃ¼ÅŸÃ¼mÃ¼ yapÄ±lÄ±r (C++ tipi aÃ§Ä±k dÃ¶nÃ¼ÅŸÃ¼m)
 
     return 0;
 }

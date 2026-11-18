@@ -1,13 +1,15 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* for döngüsünün üç bölümü de boş bırakılabilir.
-     * for (;;) ifadesi sonsuz döngü oluşturur.
-     * Böyle bir döngü break komutuyla sonlandırılabilir. */
+    /* for dÃ¶ngÃ¼sÃ¼nÃ¼n Ã¼Ã§ bÃ¶lÃ¼mÃ¼ de boÅŸ bÄ±rakÄ±labilir.
+     * for (;;) ifadesi sonsuz dÃ¶ngÃ¼ oluÅŸturur.
+     * BÃ¶yle bir dÃ¶ngÃ¼ break komutuyla sonlandÄ±rÄ±labilir. */
 
     int i = 1;
 
@@ -20,7 +22,7 @@ int main(int argc, char** argv)
         i++;
     }
 
-    // Ekrana sırasıyla 1, 2, 3, 4 ve 5 yazdırılır.
+    // Ekrana sÄ±rasÄ±yla 1, 2, 3, 4 ve 5 yazdÄ±rÄ±lÄ±r.
 
     return 0;
 }

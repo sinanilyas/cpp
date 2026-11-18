@@ -1,19 +1,21 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* Döngü gövdesinde birden fazla komut çalıştırılacaksa
-     * komutlar süslü parantez içine alınmalıdır.
-     * Süslü parantez içindeki tüm komutlar
-     * her tekrarda sırasıyla çalıştırılır. */
+    /* DÃ¶ngÃ¼ gÃ¶vdesinde birden fazla komut Ã§alÄ±ÅŸtÄ±rÄ±lacaksa
+     * komutlar sÃ¼slÃ¼ parantez iÃ§ine alÄ±nmalÄ±dÄ±r.
+     * SÃ¼slÃ¼ parantez iÃ§indeki tÃ¼m komutlar
+     * her tekrarda sÄ±rasÄ±yla Ã§alÄ±ÅŸtÄ±rÄ±lÄ±r. */
 
     for (int i = 0; i < 5; i++)
     {
         cout << "Merhaba." << endl;
-        cout << "Ben C++ öğreniyorum." << endl;
+        cout << "Ben C++ Ã¶ÄŸreniyorum." << endl;
     }
 
     return 0;

@@ -1,13 +1,15 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* İç döngünün tekrar sayısı dış döngünün değişkenine
-     * bağlı olarak değiştirilebilir.
-     * Böylece her satırda farklı sayıda karakter yazdırılabilir. */
+    /* Ä°Ã§ dÃ¶ngÃ¼nÃ¼n tekrar sayÄ±sÄ± dÄ±ÅŸ dÃ¶ngÃ¼nÃ¼n deÄŸiÅŸkenine
+     * baÄŸlÄ± olarak deÄŸiÅŸtirilebilir.
+     * BÃ¶ylece her satÄ±rda farklÄ± sayÄ±da karakter yazdÄ±rÄ±labilir. */
 
     for (int i = 1; i <= 5; i++)
     {

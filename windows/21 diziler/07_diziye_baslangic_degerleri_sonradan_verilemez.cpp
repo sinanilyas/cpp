@@ -1,14 +1,16 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int sayilar[5];
 
-    // HATA: Diziye başlangıç değerleri sonradan verilemez,
-    // yalnızca en başta tanımlanırken verilebilir.
+    // HATA: Diziye baÅŸlangÄ±Ã§ deÄŸerleri sonradan verilemez,
+    // yalnÄ±zca en baÅŸta tanÄ±mlanÄ±rken verilebilir.
     sayilar = {10, 20, 30, 40, 50};
 
     return 0;

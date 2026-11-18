@@ -1,19 +1,21 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* Eksik başlangıç değeri verilirse, değer verilmeyen elemanlar
-     * 0 olur. Ancak değerlerin hangi elemanlara verileceği, iç içe
-     * parantez kullanılıp kullanılmamasına göre değişir.
-     * Aşağıdaki iki matrise aynı değerler aynı sırayla veriliyor. */
+    /* Eksik baÅŸlangÄ±Ã§ deÄŸeri verilirse, deÄŸer verilmeyen elemanlar
+     * 0 olur. Ancak deÄŸerlerin hangi elemanlara verileceÄŸi, iÃ§ iÃ§e
+     * parantez kullanÄ±lÄ±p kullanÄ±lmamasÄ±na gÃ¶re deÄŸiÅŸir.
+     * AÅŸaÄŸÄ±daki iki matrise aynÄ± deÄŸerler aynÄ± sÄ±rayla veriliyor. */
 
-    // Her satırın değerleri o satırın başından itibaren yerleştirilir.
+    // Her satÄ±rÄ±n deÄŸerleri o satÄ±rÄ±n baÅŸÄ±ndan itibaren yerleÅŸtirilir.
     int parantezli[3][2] = {{1}, {2, 3}, {4}};
 
-    // Değerler satır satır, art arda yerleştirilir.
+    // DeÄŸerler satÄ±r satÄ±r, art arda yerleÅŸtirilir.
     int parantezsiz[3][2] = {1, 2, 3, 4};
 
     cout << "parantezli:" << endl;
@@ -40,7 +42,7 @@ int main(int argc, char** argv)
         cout << endl;
     }
 
-    /* Ekran çıktısı:
+    /* Ekran Ã§Ä±ktÄ±sÄ±:
      * parantezli:
      * 1 0
      * 2 3
@@ -51,12 +53,12 @@ int main(int argc, char** argv)
      * 0 0
      */
 
-    /* Küme parantezleri boş bırakılırsa bütün elemanlar 0 olur:
+    /* KÃ¼me parantezleri boÅŸ bÄ±rakÄ±lÄ±rsa bÃ¼tÃ¼n elemanlar 0 olur:
      *
      *     int matris[3][2] = {};
      *
-     * Bir satıra sütun sayısından fazla değer yazılırsa, örneğin
-     * {{1, 2, 3}, {4, 5}} yazılırsa, program derlenmez. */
+     * Bir satÄ±ra sÃ¼tun sayÄ±sÄ±ndan fazla deÄŸer yazÄ±lÄ±rsa, Ã¶rneÄŸin
+     * {{1, 2, 3}, {4, 5}} yazÄ±lÄ±rsa, program derlenmez. */
 
     return 0;
 }

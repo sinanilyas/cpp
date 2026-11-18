@@ -1,4 +1,5 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 struct yil_ici_notlari
@@ -15,11 +16,12 @@ struct sinav
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* İç içe yapılara başlangıç değeri verilirken
-     * içteki küme parantezleri kullanılmayabilir.
-     * Değerler üyelerin tanımlanma sırasına göre atanır. */
+    /* Ä°Ã§ iÃ§e yapÄ±lara baÅŸlangÄ±Ã§ deÄŸeri verilirken
+     * iÃ§teki kÃ¼me parantezleri kullanÄ±lmayabilir.
+     * DeÄŸerler Ã¼yelerin tanÄ±mlanma sÄ±rasÄ±na gÃ¶re atanÄ±r. */
     sinav ogrenci = {70, 80, 90};
 
     cout << ogrenci.yil_ici.vize1 << endl; // 70

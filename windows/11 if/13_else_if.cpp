@@ -1,21 +1,23 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int sayi;
 
-    cout << "Bir tamsayý giriniz: ";
+    cout << "Bir tamsayÄ± giriniz: ";
     cin >> sayi;
 
     if (sayi > 0)
-        cout << "Sayý pozitiftir." << endl;
+        cout << "SayÄ± pozitiftir." << endl;
     else if (sayi < 0)
-        cout << "Sayý negatiftir." << endl;
+        cout << "SayÄ± negatiftir." << endl;
     else
-        cout << "Sayý sýfýrdýr." << endl;
+        cout << "SayÄ± sÄ±fÄ±rdÄ±r." << endl;
 
     return 0;
 }

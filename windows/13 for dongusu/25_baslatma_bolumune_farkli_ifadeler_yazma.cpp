@@ -1,18 +1,20 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* for döngüsünün başlatma bölümünde yalnızca
-     * değişken tanımlama veya değer atama değil,
-     * farklı ifadeler de kullanılabilir.
-     * Bu bölümdeki ifade yalnızca bir kez çalıştırılır. */
+    /* for dÃ¶ngÃ¼sÃ¼nÃ¼n baÅŸlatma bÃ¶lÃ¼mÃ¼nde yalnÄ±zca
+     * deÄŸiÅŸken tanÄ±mlama veya deÄŸer atama deÄŸil,
+     * farklÄ± ifadeler de kullanÄ±labilir.
+     * Bu bÃ¶lÃ¼mdeki ifade yalnÄ±zca bir kez Ã§alÄ±ÅŸtÄ±rÄ±lÄ±r. */
 
     int i = 1;
 
-    for (cout << "Döngü başlıyor." << endl; i <= 5; i++)
+    for (cout << "DÃ¶ngÃ¼ baÅŸlÄ±yor." << endl; i <= 5; i++)
     {
         cout << i << endl;
     }

@@ -1,4 +1,5 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 struct urun
@@ -9,18 +10,19 @@ struct urun
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* urun veri tipinde buzdolabi adlı bir değişken tanımlanır.
-     * Bu değişken kod ve fiyat üyelerine sahiptir. */
+    /* urun veri tipinde buzdolabi adlÄ± bir deÄŸiÅŸken tanÄ±mlanÄ±r.
+     * Bu deÄŸiÅŸken kod ve fiyat Ã¼yelerine sahiptir. */
     urun buzdolabi;
 
-    // Yapı üyelerine nokta (.) operatörü ile erişilir.
+    // YapÄ± Ã¼yelerine nokta (.) operatÃ¶rÃ¼ ile eriÅŸilir.
     buzdolabi.kod = 101;
     buzdolabi.fiyat = 25000.0;
 
-    cout << "Ürün kodu: " << buzdolabi.kod << endl;
-    cout << "Ürün fiyatı: " << buzdolabi.fiyat << endl;
+    cout << "ÃœrÃ¼n kodu: " << buzdolabi.kod << endl;
+    cout << "ÃœrÃ¼n fiyatÄ±: " << buzdolabi.fiyat << endl;
 
     return 0;
 }

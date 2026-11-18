@@ -1,20 +1,22 @@
 #include <iostream>
 #include <iomanip>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     const int SATIR = 3;
     const int SUTUN = 4;
 
     int matris[SATIR][SUTUN] = {{5, 3, 8, 1}, {2, 7, 4, 6}, {9, 0, 3, 5}};
 
-    /* Satır toplamları: dış döngü satırları, iç döngü sütunları dolaşır.
-     * Her satırın elemanları yazılır, toplamı satırın sonuna eklenir.
-     * satirToplami dış döngünün içinde tanımlandığı için her satırda
-     * 0'dan başlar. */
+    /* SatÄ±r toplamlarÄ±: dÄ±ÅŸ dÃ¶ngÃ¼ satÄ±rlarÄ±, iÃ§ dÃ¶ngÃ¼ sÃ¼tunlarÄ± dolaÅŸÄ±r.
+     * Her satÄ±rÄ±n elemanlarÄ± yazÄ±lÄ±r, toplamÄ± satÄ±rÄ±n sonuna eklenir.
+     * satirToplami dÄ±ÅŸ dÃ¶ngÃ¼nÃ¼n iÃ§inde tanÄ±mlandÄ±ÄŸÄ± iÃ§in her satÄ±rda
+     * 0'dan baÅŸlar. */
     for (int i = 0; i < SATIR; i++)
     {
         int satirToplami = 0;
@@ -30,9 +32,9 @@ int main(int argc, char** argv)
 
     cout << "-----------------" << endl;
 
-    /* Sütun toplamları: döngülerin yeri değiştirilir. Dış döngü
-     * sütunları, iç döngü satırları dolaşır. İndislerin sırası
-     * değişmez: ilk indis yine satır (i), ikinci indis sütundur (j). */
+    /* SÃ¼tun toplamlarÄ±: dÃ¶ngÃ¼lerin yeri deÄŸiÅŸtirilir. DÄ±ÅŸ dÃ¶ngÃ¼
+     * sÃ¼tunlarÄ±, iÃ§ dÃ¶ngÃ¼ satÄ±rlarÄ± dolaÅŸÄ±r. Ä°ndislerin sÄ±rasÄ±
+     * deÄŸiÅŸmez: ilk indis yine satÄ±r (i), ikinci indis sÃ¼tundur (j). */
     for (int j = 0; j < SUTUN; j++)
     {
         int sutunToplami = 0;
@@ -46,7 +48,7 @@ int main(int argc, char** argv)
     }
     cout << endl;
 
-    /* Ekran çıktısı:
+    /* Ekran Ã§Ä±ktÄ±sÄ±:
      *    5   3   8   1 | 17
      *    2   7   4   6 | 19
      *    9   0   3   5 | 17

@@ -1,20 +1,22 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int sayilar[5];
 
-    /* İndis olarak yalnızca sabit bir sayı değil, tamsayı tipinde
-     * bir değişken ya da sonucu tamsayı olan bir aritmetik işlem de
-     * yazılabilir. Böylece dizinin elemanları döngü ile işlenebilir.
+    /* Ä°ndis olarak yalnÄ±zca sabit bir sayÄ± deÄŸil, tamsayÄ± tipinde
+     * bir deÄŸiÅŸken ya da sonucu tamsayÄ± olan bir aritmetik iÅŸlem de
+     * yazÄ±labilir. BÃ¶ylece dizinin elemanlarÄ± dÃ¶ngÃ¼ ile iÅŸlenebilir.
      *
-     * İndisler 0'dan başladığı için döngü 0'dan başlar ve
-     * eleman sayısından küçük olduğu sürece devam eder. */
+     * Ä°ndisler 0'dan baÅŸladÄ±ÄŸÄ± iÃ§in dÃ¶ngÃ¼ 0'dan baÅŸlar ve
+     * eleman sayÄ±sÄ±ndan kÃ¼Ã§Ã¼k olduÄŸu sÃ¼rece devam eder. */
 
-    // Döngü değişkeni indis olarak kullanılıyor
+    // DÃ¶ngÃ¼ deÄŸiÅŸkeni indis olarak kullanÄ±lÄ±yor
     for (int i = 0; i < 5; i++)
     {
         sayilar[i] = (i + 1) * 10;
@@ -26,7 +28,7 @@ int main(int argc, char** argv)
     }
     cout << endl;
 
-    // Ekrana 10 20 30 40 50 yazdırılır.
+    // Ekrana 10 20 30 40 50 yazdÄ±rÄ±lÄ±r.
 
     int k = 2;
 
@@ -35,12 +37,12 @@ int main(int argc, char** argv)
     cout << sayilar[k - 1] << endl; // 20
     cout << sayilar[k * 2] << endl; // 50
 
-    /* Önce köşeli parantez içindeki işlem yapılır, sonra sonuçtaki
-     * indise sahip elemana erişilir. sayilar[k + 1] ifadesi
-     * sayilar[3] elemanını verir. k değişkeninin değeri değişmez.
+    /* Ã–nce kÃ¶ÅŸeli parantez iÃ§indeki iÅŸlem yapÄ±lÄ±r, sonra sonuÃ§taki
+     * indise sahip elemana eriÅŸilir. sayilar[k + 1] ifadesi
+     * sayilar[3] elemanÄ±nÄ± verir. k deÄŸiÅŸkeninin deÄŸeri deÄŸiÅŸmez.
      *
-     * İndis tamsayı olmalıdır. sayilar[1.5] gibi ondalıklı bir indis
-     * yazılırsa program derlenmez. */
+     * Ä°ndis tamsayÄ± olmalÄ±dÄ±r. sayilar[1.5] gibi ondalÄ±klÄ± bir indis
+     * yazÄ±lÄ±rsa program derlenmez. */
 
     return 0;
 }

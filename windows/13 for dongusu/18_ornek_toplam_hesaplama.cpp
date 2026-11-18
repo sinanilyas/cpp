@@ -1,14 +1,16 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* Döngü kullanılarak sayıların toplamı hesaplanabilir.
-     * Toplamı tutacak değişken başlangıçta 0 yapılır.
-     * Her tekrarda döngü değişkeninin değeri
-     * toplam değişkenine eklenir. */
+    /* DÃ¶ngÃ¼ kullanÄ±larak sayÄ±larÄ±n toplamÄ± hesaplanabilir.
+     * ToplamÄ± tutacak deÄŸiÅŸken baÅŸlangÄ±Ã§ta 0 yapÄ±lÄ±r.
+     * Her tekrarda dÃ¶ngÃ¼ deÄŸiÅŸkeninin deÄŸeri
+     * toplam deÄŸiÅŸkenine eklenir. */
 
     int toplam = 0;
 

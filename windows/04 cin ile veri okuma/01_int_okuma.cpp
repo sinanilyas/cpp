@@ -1,21 +1,23 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int sayi;
 
-    cout << "Bir tamsayı giriniz: ";
+    cout << "Bir tamsayÄ± giriniz: ";
     cin >> sayi;
 
-    /* cin ile değer okunurken kullanıcının uygun bir değer
-     * gireceği varsayılır.
+    /* cin ile deÄŸer okunurken kullanÄ±cÄ±nÄ±n uygun bir deÄŸer
+     * gireceÄŸi varsayÄ±lÄ±r.
      *
-     * Girilen değerin tipi, değişkenin tipine uygun olmalıdır.
-     * Örneğin int tipindeki bir değişkene girilen değerler
-     * aşağıdaki gibi atanır.
+     * Girilen deÄŸerin tipi, deÄŸiÅŸkenin tipine uygun olmalÄ±dÄ±r.
+     * Ã–rneÄŸin int tipindeki bir deÄŸiÅŸkene girilen deÄŸerler
+     * aÅŸaÄŸÄ±daki gibi atanÄ±r.
      *
      * 15         -> 15
      *   15       -> 15
@@ -24,10 +26,10 @@ int main(int argc, char** argv)
      * 15Abc      -> 15
      * Abc        -> 0
      *
-     * Uygun olmayan girdilerde okuma işlemi başarısız olabilir.
+     * Uygun olmayan girdilerde okuma iÅŸlemi baÅŸarÄ±sÄ±z olabilir.
      */
 
-    cout << "Girdiğiniz sayı: " << sayi << endl;
+    cout << "GirdiÄŸiniz sayÄ±: " << sayi << endl;
 
     return 0;
 }

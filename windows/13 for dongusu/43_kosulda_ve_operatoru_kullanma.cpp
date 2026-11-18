@@ -1,14 +1,16 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* Döngü koşulunda mantıksal operatörler kullanılabilir.
-     * && operatörü kullanıldığında her iki koşulun da
-     * doğru olması gerekir. Koşullardan biri yanlış
-     * olduğunda döngü sona erer. */
+    /* DÃ¶ngÃ¼ koÅŸulunda mantÄ±ksal operatÃ¶rler kullanÄ±labilir.
+     * && operatÃ¶rÃ¼ kullanÄ±ldÄ±ÄŸÄ±nda her iki koÅŸulun da
+     * doÄŸru olmasÄ± gerekir. KoÅŸullardan biri yanlÄ±ÅŸ
+     * olduÄŸunda dÃ¶ngÃ¼ sona erer. */
 
     for (int i = 1, j = 10; i <= 5 && j >= 7; i++, j--)
     {

@@ -1,22 +1,24 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int sayi;
 
-    cout << "Bir tamsayý giriniz: ";
+    cout << "Bir tamsayÄ± giriniz: ";
     cin >> sayi;
 
-    /* HATALI KULLANIM: Noktalý virgül if komutunu sonlandýrýr.
-     * Bu kullaným sözdizimi hatasý deðil, mantýk hatasýdýr.
-     * Yani program derlenir ve çalýþýr fakat beklenen sonucu üretmez. */
+    /* HATALI KULLANIM: NoktalÄ± virgÃ¼l if komutunu sonlandÄ±rÄ±r.
+     * Bu kullanÄ±m sÃ¶zdizimi hatasÄ± deÄŸil, mantÄ±k hatasÄ±dÄ±r.
+     * Yani program derlenir ve Ã§alÄ±ÅŸÄ±r fakat beklenen sonucu Ã¼retmez. */
     if (sayi > 0);
-        cout << "Sayý pozitiftir." << endl;
+        cout << "SayÄ± pozitiftir." << endl;
 
-    /* Yukarýdaki cout komutu koþuldan baðýmsýz olarak çalýþtýrýlýr. */
+    /* YukarÄ±daki cout komutu koÅŸuldan baÄŸÄ±msÄ±z olarak Ã§alÄ±ÅŸtÄ±rÄ±lÄ±r. */
 
     cout << "Program sona erdi." << endl;
 

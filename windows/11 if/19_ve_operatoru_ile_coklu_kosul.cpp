@@ -1,20 +1,22 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int sayi;
 
-    cout << "Bir tamsayý giriniz (10-20): ";
+    cout << "Bir tamsayÄ± giriniz (10-20): ";
     cin >> sayi;
 
-    // Her iki koþul da doðruysa if bloðu çalýþtýrýlýr.
+    // Her iki koÅŸul da doÄŸruysa if bloÄŸu Ã§alÄ±ÅŸtÄ±rÄ±lÄ±r.
     if (sayi >= 10 && sayi <= 20)
-        cout << "Sayý 10 ile 20 arasýndadýr." << endl;
+        cout << "SayÄ± 10 ile 20 arasÄ±ndadÄ±r." << endl;
     else
-        cout << "Sayý belirtilen aralýkta deðildir." << endl;
+        cout << "SayÄ± belirtilen aralÄ±kta deÄŸildir." << endl;
 
     return 0;
 }

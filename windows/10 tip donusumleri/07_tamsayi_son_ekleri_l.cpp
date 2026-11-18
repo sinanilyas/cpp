@@ -1,17 +1,19 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* Bir tamsayı sabitinin long olması için sayının sonuna l veya L son eki eklenir.
-      Ancak 1 ile karıştırılma ihtimali yüksek olduğu için l yerine L önerilir. */
+    /* Bir tamsayÄ± sabitinin long olmasÄ± iÃ§in sayÄ±nÄ±n sonuna l veya L son eki eklenir.
+      Ancak 1 ile karÄ±ÅŸtÄ±rÄ±lma ihtimali yÃ¼ksek olduÄŸu iÃ§in l yerine L Ã¶nerilir. */
 
-    // Örtük int -> long dönüşümü yapılır
+    // Ã–rtÃ¼k int -> long dÃ¶nÃ¼ÅŸÃ¼mÃ¼ yapÄ±lÄ±r
     long s1 = 5;
 
-    // 5L sayısı baştan long tipinde oluşturulur, dönüşüm yapılmaz
+    // 5L sayÄ±sÄ± baÅŸtan long tipinde oluÅŸturulur, dÃ¶nÃ¼ÅŸÃ¼m yapÄ±lmaz
     long s2 = 5L;
 
     return 0;

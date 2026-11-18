@@ -1,14 +1,16 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int sayilar[] = {10, 20, 30, 40, 50};
 
-    /* 1 ve 3 indisli elemanların yerleri değiştiriliyor.
-     * Değerlerden biri kaybolmasın diye geçici bir değişken kullanılır. */
+    /* 1 ve 3 indisli elemanlarÄ±n yerleri deÄŸiÅŸtiriliyor.
+     * DeÄŸerlerden biri kaybolmasÄ±n diye geÃ§ici bir deÄŸiÅŸken kullanÄ±lÄ±r. */
     int gecici = sayilar[1];
     sayilar[1] = sayilar[3];
     sayilar[3] = gecici;
@@ -19,18 +21,18 @@ int main(int argc, char** argv)
     }
     cout << endl;
 
-    // Ekrana 10 40 30 20 50 yazdırılır.
+    // Ekrana 10 40 30 20 50 yazdÄ±rÄ±lÄ±r.
 
-    /* Geçici değişken kullanılmadan
+    /* GeÃ§ici deÄŸiÅŸken kullanÄ±lmadan
      *
      *     sayilar[1] = sayilar[3];
      *     sayilar[3] = sayilar[1];
      *
-     * yazılırsa ilk atamada sayilar[1]'in eski değeri (20) kaybolur
-     * ve iki eleman da 40 olur. İki bardaktaki suyun yerini
-     * değiştirmek için üçüncü bir bardak gerekmesine benzer.
+     * yazÄ±lÄ±rsa ilk atamada sayilar[1]'in eski deÄŸeri (20) kaybolur
+     * ve iki eleman da 40 olur. Ä°ki bardaktaki suyun yerini
+     * deÄŸiÅŸtirmek iÃ§in Ã¼Ã§Ã¼ncÃ¼ bir bardak gerekmesine benzer.
      *
-     * Sıralama algoritmaları elemanların yerini bu yöntemle değiştirir. */
+     * SÄ±ralama algoritmalarÄ± elemanlarÄ±n yerini bu yÃ¶ntemle deÄŸiÅŸtirir. */
 
     return 0;
 }

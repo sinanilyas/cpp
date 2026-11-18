@@ -1,19 +1,21 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* break komutundan önceki komutlar normal şekilde çalıştırılır.
-     * break komutuyla karşılaşıldığında ise döngü sonlandırılır. */
+    /* break komutundan Ã¶nceki komutlar normal ÅŸekilde Ã§alÄ±ÅŸtÄ±rÄ±lÄ±r.
+     * break komutuyla karÅŸÄ±laÅŸÄ±ldÄ±ÄŸÄ±nda ise dÃ¶ngÃ¼ sonlandÄ±rÄ±lÄ±r. */
     for (int i = 1; i <= 5; i++)
     {
-        cout << "Başlangıç: " << i << endl;
+        cout << "BaÅŸlangÄ±Ã§: " << i << endl;
 
         if (i == 3) break;
 
-        cout << "Bitiş: " << i << endl;
+        cout << "BitiÅŸ: " << i << endl;
     }
 
     return 0;

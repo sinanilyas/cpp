@@ -1,14 +1,16 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* Dizinin elemanlarına tanımlama sırasında başlangıç değeri
-     * verilebilir. Değerler küme parantezi içinde virgülle ayrılarak
-     * yazılır ve sırasıyla 0, 1, 2, ... indisli elemanlara verilir.
-     * Yazım, yapı değişkenlerine başlangıç değeri vermeye benzer. */
+    /* Dizinin elemanlarÄ±na tanÄ±mlama sÄ±rasÄ±nda baÅŸlangÄ±Ã§ deÄŸeri
+     * verilebilir. DeÄŸerler kÃ¼me parantezi iÃ§inde virgÃ¼lle ayrÄ±larak
+     * yazÄ±lÄ±r ve sÄ±rasÄ±yla 0, 1, 2, ... indisli elemanlara verilir.
+     * YazÄ±m, yapÄ± deÄŸiÅŸkenlerine baÅŸlangÄ±Ã§ deÄŸeri vermeye benzer. */
     int sayilar[5] = {10, 20, 30, 40, 50};
 
     for (int i = 0; i < 5; i++)
@@ -17,7 +19,7 @@ int main(int argc, char** argv)
     }
     cout << endl;
 
-    // Ekrana 10 20 30 40 50 yazdırılır.
+    // Ekrana 10 20 30 40 50 yazdÄ±rÄ±lÄ±r.
 
     return 0;
 }

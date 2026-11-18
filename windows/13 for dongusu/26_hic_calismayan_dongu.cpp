@@ -1,19 +1,21 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* Döngü koşulu ilk kontrolde yanlışsa
-     * döngü gövdesi bir kez bile çalıştırılmaz. */
+    /* DÃ¶ngÃ¼ koÅŸulu ilk kontrolde yanlÄ±ÅŸsa
+     * dÃ¶ngÃ¼ gÃ¶vdesi bir kez bile Ã§alÄ±ÅŸtÄ±rÄ±lmaz. */
 
     for (int i = 10; i < 5; i++)
     {
         cout << i << endl;
     }
 
-    // Koşul başlangıçta yanlış olduğu için ekrana hiçbir şey yazdırılmaz.
+    // KoÅŸul baÅŸlangÄ±Ã§ta yanlÄ±ÅŸ olduÄŸu iÃ§in ekrana hiÃ§bir ÅŸey yazdÄ±rÄ±lmaz.
 
     return 0;
 }

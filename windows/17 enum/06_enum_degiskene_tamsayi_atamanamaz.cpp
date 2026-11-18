@@ -1,13 +1,15 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 enum gun {pts = 1, sal, car, per, cum, cts, paz};
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    // HATA: enum tipli değişkene doğrudan tamsayı atanamaz.
+    // HATA: enum tipli deÄŸiÅŸkene doÄŸrudan tamsayÄ± atanamaz.
     gun bugun = 3;
 
     return 0;

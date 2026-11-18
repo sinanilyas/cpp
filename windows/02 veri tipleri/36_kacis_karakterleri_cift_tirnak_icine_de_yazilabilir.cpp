@@ -1,12 +1,14 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv) {
-	setlocale(LC_ALL, "Turkish");
+	SetConsoleCP(CP_UTF8);
+	SetConsoleOutputCP(CP_UTF8);
 	
-	/* '\a' (7) karakteri ekranda görünmez, uyarı sesi verilmesini sağlar. */
+	/* '\a' (7) karakteri ekranda gÃ¶rÃ¼nmez, uyarÄ± sesi verilmesini saÄŸlar. */
 	
-	cout << "Uyarı sesi çalacak\a" << endl;
+	cout << "UyarÄ± sesi Ã§alacak\a" << endl;
 	
 	return 0;
 }

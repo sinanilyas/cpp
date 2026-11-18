@@ -1,18 +1,20 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <windows.h>
 using namespace std;
 
 enum KarakterTuru { Rakam, KucukHarf, BuyukHarf };
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     srand(time(0));
 
     unsigned short karakterSayisi;
-    cout << "Þifredeki karakter sayýsý: ";
+    cout << "Åžifredeki karakter sayÄ±sÄ±: ";
     cin >> karakterSayisi;
 
     for (int i = 0; i < karakterSayisi; i++)

@@ -1,22 +1,24 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int sayi;
 
-    cout << "Bir tamsayý giriniz: ";
+    cout << "Bir tamsayÄ± giriniz: ";
     cin >> sayi;
 
-    // && operatörü || operatöründen daha önceliklidir.
+    // && operatÃ¶rÃ¼ || operatÃ¶rÃ¼nden daha Ã¶nceliklidir.
     if (sayi == 30 || sayi >= 10 && sayi <= 20)
-        cout << "Sayý 30'dur veya 10-20 arasýndadýr." << endl;
+        cout << "SayÄ± 30'dur veya 10-20 arasÄ±ndadÄ±r." << endl;
     else
-        cout << "Sayý belirtilen koþullarý saðlamýyor." << endl;
+        cout << "SayÄ± belirtilen koÅŸullarÄ± saÄŸlamÄ±yor." << endl;
 
-    /* Burada sayi = 30 olduðunda:
+    /* Burada sayi = 30 olduÄŸunda:
         sayi == 30 || (sayi >= 10 && sayi <= 20) -> true
         (sayi == 30 || sayi >= 10) && sayi <= 20 -> false
      */

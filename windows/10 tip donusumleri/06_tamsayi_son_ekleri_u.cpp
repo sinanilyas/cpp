@@ -1,17 +1,19 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* Bir tamsayı sabitinin unsigned olması için
-     * sayının sonuna u veya U son eki eklenir. */
+    /* Bir tamsayÄ± sabitinin unsigned olmasÄ± iÃ§in
+     * sayÄ±nÄ±n sonuna u veya U son eki eklenir. */
 
-    // Örtük int (signed int) -> unsigned int dönüşümü yapılır
+    // Ã–rtÃ¼k int (signed int) -> unsigned int dÃ¶nÃ¼ÅŸÃ¼mÃ¼ yapÄ±lÄ±r
     unsigned int s1 = 5;
 
-    // 5u sayısı baştan unsigned int tipinde oluşturulur, dönüşüm yapılmaz
+    // 5u sayÄ±sÄ± baÅŸtan unsigned int tipinde oluÅŸturulur, dÃ¶nÃ¼ÅŸÃ¼m yapÄ±lmaz
     unsigned int s2 = 5u;
 
     return 0;

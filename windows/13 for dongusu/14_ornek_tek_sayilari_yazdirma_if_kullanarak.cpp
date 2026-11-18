@@ -1,13 +1,15 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* Döngü içerisinde if kullanılarak yalnızca
-     * belirli koşulları sağlayan değerler işlenebilir.
-     * Bir sayının 2'ye bölümünden kalan 1 ise sayı tektir. */
+    /* DÃ¶ngÃ¼ iÃ§erisinde if kullanÄ±larak yalnÄ±zca
+     * belirli koÅŸullarÄ± saÄŸlayan deÄŸerler iÅŸlenebilir.
+     * Bir sayÄ±nÄ±n 2'ye bÃ¶lÃ¼mÃ¼nden kalan 1 ise sayÄ± tektir. */
 
     for (int i = 0; i <= 10; i++)
     {
@@ -17,7 +19,7 @@ int main(int argc, char** argv)
         }
     }
 
-    // Ekrana sırasıyla 1, 3, 5, 7 ve 9 yazdırılır.
+    // Ekrana sÄ±rasÄ±yla 1, 3, 5, 7 ve 9 yazdÄ±rÄ±lÄ±r.
 
     return 0;
 }

@@ -1,18 +1,20 @@
 #include <iostream>
+#include <windows.h>
 
 using namespace std;
 
 int main(int argc, char** argv) {
-	setlocale(LC_ALL, "Turkish");
+	SetConsoleCP(CP_UTF8);
+	SetConsoleOutputCP(CP_UTF8);
 
-	// Değişkenlere başlangıç değeri verilmediğinde hata vermez, rastgele bir değer alır
+	// DeÄŸiÅŸkenlere baÅŸlangÄ±Ã§ deÄŸeri verilmediÄŸinde hata vermez, rastgele bir deÄŸer alÄ±r
 	int s1, s2, s3, s4, s5;
 	
-	cout << "Sayı 1: " << s1 << endl;
-	cout << "Sayı 2: " << s2 << endl;
-	cout << "Sayı 3: " << s3 << endl;
-	cout << "Sayı 4: " << s4 << endl;
-	cout << "Sayı 5: " << s5 << endl;
+	cout << "SayÄ± 1: " << s1 << endl;
+	cout << "SayÄ± 2: " << s2 << endl;
+	cout << "SayÄ± 3: " << s3 << endl;
+	cout << "SayÄ± 4: " << s4 << endl;
+	cout << "SayÄ± 5: " << s5 << endl;
 	
 	return 0;
 }

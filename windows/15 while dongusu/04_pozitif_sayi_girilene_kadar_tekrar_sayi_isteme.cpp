@@ -1,20 +1,22 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int sayi = 0;
 
-    // Pozitif bir sayý girilene kadar giriþ istenir.
+    // Pozitif bir sayÄ± girilene kadar giriÅŸ istenir.
     while (sayi <= 0)
     {
-        cout << "Pozitif bir sayý giriniz: ";
+        cout << "Pozitif bir sayÄ± giriniz: ";
         cin >> sayi;
     }
 
-    cout << "Girdiðiniz sayý: " << sayi << endl;
+    cout << "GirdiÄŸiniz sayÄ±: " << sayi << endl;
 
     return 0;
 }

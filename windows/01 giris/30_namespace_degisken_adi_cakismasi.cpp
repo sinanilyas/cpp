@@ -1,4 +1,5 @@
 #include <iostream>
+#include <windows.h>
 
 namespace sayilar {
 	int sayi = 6;
@@ -13,10 +14,11 @@ using namespace sayilar;
 using namespace degerler;
 
 int main(int argc, char** argv) {
-	setlocale(LC_ALL, "Turkish");
+	SetConsoleCP(CP_UTF8);
+	SetConsoleOutputCP(CP_UTF8);
 
-	// HATA: Hangi namespace'teki deðiþkenin kullanýlacaðý belirsiz
-	cout << "Sayý: " << sayi << endl;
+	// HATA: Hangi namespace'teki deÄŸiÅŸkenin kullanÄ±lacaÄŸÄ± belirsiz
+	cout << "SayÄ±: " << sayi << endl;
 
 	return 0;
 }

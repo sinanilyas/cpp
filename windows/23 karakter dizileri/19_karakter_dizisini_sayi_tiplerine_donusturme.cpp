@@ -1,19 +1,21 @@
 #include <iostream>
-#include <cstdlib> // atoi, atol ve atof için
+#include <cstdlib> // atoi, atol ve atof iÃ§in
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* Karakter dizisindeki bir metin <cstdlib> içindeki fonksiyonlarla
-     * sayıya dönüştürülebilir:
+    /* Karakter dizisindeki bir metin <cstdlib> iÃ§indeki fonksiyonlarla
+     * sayÄ±ya dÃ¶nÃ¼ÅŸtÃ¼rÃ¼lebilir:
      *   atoi: int
      *   atol: long
      *   atof: double
      *
-     * Baştaki boşluklar atlanır. Dönüştürme, sayıya ait olmayan ilk
-     * karakterde durur. Metin bir sayıyla başlamıyorsa 0 döndürülür. */
+     * BaÅŸtaki boÅŸluklar atlanÄ±r. DÃ¶nÃ¼ÅŸtÃ¼rme, sayÄ±ya ait olmayan ilk
+     * karakterde durur. Metin bir sayÄ±yla baÅŸlamÄ±yorsa 0 dÃ¶ndÃ¼rÃ¼lÃ¼r. */
     char metin1[] = "123";
     char metin2[] = "   -456";
     char metin3[] = "abc123";
@@ -21,16 +23,16 @@ int main(int argc, char** argv)
 
     cout << "atoi(" << metin1 << ")\t: " << atoi(metin1) << endl; // 123
     cout << "atoi(" << metin2 << ")\t: " << atoi(metin2) << endl; // -456
-    cout << "atoi(" << metin3 << ")\t: " << atoi(metin3) << endl; // 0 (sayı olmayan bir karakterle başlıyor)
-    cout << "atoi(" << metin4 << ")\t: " << atoi(metin4) << endl; // 789 ('x' görünce durur)
+    cout << "atoi(" << metin3 << ")\t: " << atoi(metin3) << endl; // 0 (sayÄ± olmayan bir karakterle baÅŸlÄ±yor)
+    cout << "atoi(" << metin4 << ")\t: " << atoi(metin4) << endl; // 789 ('x' gÃ¶rÃ¼nce durur)
 
     char metin5[] = "123456";
     long sayi5 = atol(metin5);
     cout << "atol(" << metin5 << ")\t: " << sayi5 << endl; // 123456
 
-    /* atof, ondalık ayırıcı olarak programın dil ayarındaki karakteri
-     * kullanır. setlocale ile Türkçe seçildiği için nokta yerine virgül
-     * yazılmalıdır. cout bu ayardan etkilenmez ve noktayla yazdırır. */
+    /* atof, ondalÄ±k ayÄ±rÄ±cÄ± olarak programÄ±n dil ayarÄ±ndaki karakteri
+     * kullanÄ±r. setlocale ile TÃ¼rkÃ§e seÃ§ildiÄŸi iÃ§in nokta yerine virgÃ¼l
+     * yazÄ±lmalÄ±dÄ±r. cout bu ayardan etkilenmez ve noktayla yazdÄ±rÄ±r. */
     char metin6[] = "3,14";
     double sayi6 = atof(metin6);
     cout << "atof(" << metin6 << ")\t: " << sayi6 << endl; // Genellikle 3.14

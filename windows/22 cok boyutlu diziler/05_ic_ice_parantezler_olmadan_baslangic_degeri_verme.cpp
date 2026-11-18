@@ -1,14 +1,16 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* Başlangıç değerleri iç içe parantezler kullanılmadan, tek bir
-     * küme parantezi içine de yazılabilir. Değerler satır satır
-     * yerleştirilir: önce 0. satırın elemanlarına, sonra 1. satırın
-     * elemanlarına verilir ve bu böyle devam eder. */
+    /* BaÅŸlangÄ±Ã§ deÄŸerleri iÃ§ iÃ§e parantezler kullanÄ±lmadan, tek bir
+     * kÃ¼me parantezi iÃ§ine de yazÄ±labilir. DeÄŸerler satÄ±r satÄ±r
+     * yerleÅŸtirilir: Ã¶nce 0. satÄ±rÄ±n elemanlarÄ±na, sonra 1. satÄ±rÄ±n
+     * elemanlarÄ±na verilir ve bu bÃ¶yle devam eder. */
     int matris[3][2] = {1, 2, 3, 4, 5, 6};
 
     for (int i = 0; i < 3; i++)
@@ -21,18 +23,18 @@ int main(int argc, char** argv)
         cout << endl;
     }
 
-    /* Ekran çıktısı:
+    /* Ekran Ã§Ä±ktÄ±sÄ±:
      * 1 2
      * 3 4
      * 5 6
      *
-     * Bu tanımlama, int matris[3][2] = {{1, 2}, {3, 4}, {5, 6}};
-     * tanımlamasıyla aynı sonucu verir. Çok boyutlu dizinin
-     * elemanları bellekte satır satır art arda saklanır; değerler de
-     * bu sırayla yerleştirilir.
+     * Bu tanÄ±mlama, int matris[3][2] = {{1, 2}, {3, 4}, {5, 6}};
+     * tanÄ±mlamasÄ±yla aynÄ± sonucu verir. Ã‡ok boyutlu dizinin
+     * elemanlarÄ± bellekte satÄ±r satÄ±r art arda saklanÄ±r; deÄŸerler de
+     * bu sÄ±rayla yerleÅŸtirilir.
      *
-     * İç içe parantezler kullanılırsa hangi değerin hangi satıra ait
-     * olduğu daha açık görülür. */
+     * Ä°Ã§ iÃ§e parantezler kullanÄ±lÄ±rsa hangi deÄŸerin hangi satÄ±ra ait
+     * olduÄŸu daha aÃ§Ä±k gÃ¶rÃ¼lÃ¼r. */
 
     return 0;
 }

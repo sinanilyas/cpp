@@ -1,9 +1,11 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int girilenNot;
 
@@ -12,10 +14,10 @@ int main(int argc, char** argv)
         cout << "Notu girin (0-100): ";
         cin >> girilenNot;
 
-        // Girilen not geçerliyse döngüden çýk
+        // Girilen not geÃ§erliyse dÃ¶ngÃ¼den Ã§Ä±k
         if (girilenNot >= 0 && girilenNot <= 100) break;
 
-        cout << "HATA: 0-100 arasýnda bir deðer girmelisiniz." << endl;
+        cout << "HATA: 0-100 arasÄ±nda bir deÄŸer girmelisiniz." << endl;
     }
 
     cout << "Girilen not: " << girilenNot << endl;

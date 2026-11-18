@@ -1,20 +1,22 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 enum gun {pts = 1, sal, car, per, cum, cts, paz};
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     gun bugun = car;
 
-    /* enum değerleriyle aritmetik işlem yapılabilir.
-     * Ancak işlemin sonucu int tipindedir. */
+    /* enum deÄŸerleriyle aritmetik iÅŸlem yapÄ±labilir.
+     * Ancak iÅŸlemin sonucu int tipindedir. */
     int sonuc = bugun + 1;
 
-    /* int tipinden enum tipine örtük dönüşüm yapılamaz.
-     * static_cast ile açık dönüşüm yapılmalıdır. */
+    /* int tipinden enum tipine Ã¶rtÃ¼k dÃ¶nÃ¼ÅŸÃ¼m yapÄ±lamaz.
+     * static_cast ile aÃ§Ä±k dÃ¶nÃ¼ÅŸÃ¼m yapÄ±lmalÄ±dÄ±r. */
     gun yarin = static_cast<gun>(sonuc);
 
     cout << bugun << endl; // 3

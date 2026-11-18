@@ -1,18 +1,20 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int a = 5;
 
-    // Önce 3 == 3 karşılaştırılır, sonra sonuç a'ya atanır.
-    // Sonra da a'nın değeri kontrol edilir.
+    // Ã–nce 3 == 3 karÅŸÄ±laÅŸtÄ±rÄ±lÄ±r, sonra sonuÃ§ a'ya atanÄ±r.
+    // Sonra da a'nÄ±n deÄŸeri kontrol edilir.
     if (a = 3 == 3)
-        cout << "Koşul doğrudur." << endl;
+        cout << "KoÅŸul doÄŸrudur." << endl;
     else
-        cout << "Koşul yanlıştır." << endl;
+        cout << "KoÅŸul yanlÄ±ÅŸtÄ±r." << endl;
 
     cout << "a = " << a << endl; // 1
 

@@ -1,14 +1,16 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* 5.6 sabit sayısı double tipindedir.
-     * sayi değişkenine atanırken otomatik olarak int tipine dönüştürülür.
-     * Dönüşüm sırasında kesirli kısmı atılır.
-     * Bu dönüşüme kapalı ya da örtük (implicit) tür dönüşümü denir. */
+    /* 5.6 sabit sayÄ±sÄ± double tipindedir.
+     * sayi deÄŸiÅŸkenine atanÄ±rken otomatik olarak int tipine dÃ¶nÃ¼ÅŸtÃ¼rÃ¼lÃ¼r.
+     * DÃ¶nÃ¼ÅŸÃ¼m sÄ±rasÄ±nda kesirli kÄ±smÄ± atÄ±lÄ±r.
+     * Bu dÃ¶nÃ¼ÅŸÃ¼me kapalÄ± ya da Ã¶rtÃ¼k (implicit) tÃ¼r dÃ¶nÃ¼ÅŸÃ¼mÃ¼ denir. */
     int sayi = 5.6;
 
     cout << sayi << endl; // 5

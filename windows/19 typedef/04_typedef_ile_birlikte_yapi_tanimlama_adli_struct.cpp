@@ -1,8 +1,9 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
-/* typedef direkt yapı tanımlaması ile
- * birlikte kullanılabilir */
+/* typedef direkt yapÄ± tanÄ±mlamasÄ± ile
+ * birlikte kullanÄ±labilir */
 typedef struct ogrenci
 {
     int numara;
@@ -11,9 +12,10 @@ typedef struct ogrenci
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    // Değişken tanımlarken ogrenci veya ogr tipi kullanılabilir
+    // DeÄŸiÅŸken tanÄ±mlarken ogrenci veya ogr tipi kullanÄ±labilir
     ogrenci ogr1 = {101, 80};
     ogr ogr2 = {102, 90};
 

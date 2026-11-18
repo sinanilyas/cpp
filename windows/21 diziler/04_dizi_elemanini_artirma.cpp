@@ -1,9 +1,11 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int yas[3];
 
@@ -13,15 +15,15 @@ int main(int argc, char** argv)
 
     int a = 1;
 
-    /* yas[a]++ ifadesinde ++ işleci dizi elemanına uygulanır.
-     * Önce a indisli eleman bulunur, sonra bu elemanın değeri
-     * 1 artırılır. a değişkeninin değeri değişmez. */
+    /* yas[a]++ ifadesinde ++ iÅŸleci dizi elemanÄ±na uygulanÄ±r.
+     * Ã–nce a indisli eleman bulunur, sonra bu elemanÄ±n deÄŸeri
+     * 1 artÄ±rÄ±lÄ±r. a deÄŸiÅŸkeninin deÄŸeri deÄŸiÅŸmez. */
     yas[a]++;
 
     cout << yas[0] << " " << yas[1] << " " << yas[2] << endl; // 18 21 25
     cout << a << endl;                                         // 1
 
-    /* yas[a]++ ifadesi yas[a] = yas[a] + 1 ifadesiyle eşdeğerdir. */
+    /* yas[a]++ ifadesi yas[a] = yas[a] + 1 ifadesiyle eÅŸdeÄŸerdir. */
 
     return 0;
 }

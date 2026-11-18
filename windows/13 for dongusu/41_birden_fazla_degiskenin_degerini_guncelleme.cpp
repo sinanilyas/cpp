@@ -1,13 +1,15 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* for döngüsünün artış bölümünde virgül kullanılarak
-     * birden fazla ifade yazılabilir.
-     * Bu ifadeler her tekrardan sonra soldan sağa çalıştırılır. */
+    /* for dÃ¶ngÃ¼sÃ¼nÃ¼n artÄ±ÅŸ bÃ¶lÃ¼mÃ¼nde virgÃ¼l kullanÄ±larak
+     * birden fazla ifade yazÄ±labilir.
+     * Bu ifadeler her tekrardan sonra soldan saÄŸa Ã§alÄ±ÅŸtÄ±rÄ±lÄ±r. */
 
     for (int i = 1, j = 10; i <= 5; i++, j--)
     {

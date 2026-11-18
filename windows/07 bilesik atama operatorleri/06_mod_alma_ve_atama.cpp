@@ -1,25 +1,27 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int sayi = 17;
 
-    // sayi değişkeninin 5'e bölümünden kalan hesaplanır
+    // sayi deÄŸiÅŸkeninin 5'e bÃ¶lÃ¼mÃ¼nden kalan hesaplanÄ±r
     sayi %= 5;
 
     cout << sayi << endl; // 2
 
-    /* Yukarıdaki işlem aşağıdaki işlemle eşdeğerdir:
+    /* YukarÄ±daki iÅŸlem aÅŸaÄŸÄ±daki iÅŸlemle eÅŸdeÄŸerdir:
      *
      * sayi = sayi % 5;
      *
-     * %= operatörü, mod alma ve atama işlemlerini
-     * tek bir işlemde birleştirir.
+     * %= operatÃ¶rÃ¼, mod alma ve atama iÅŸlemlerini
+     * tek bir iÅŸlemde birleÅŸtirir.
      *
-     * % operatörü yalnızca tamsayı tipleriyle kullanılabilir.
+     * % operatÃ¶rÃ¼ yalnÄ±zca tamsayÄ± tipleriyle kullanÄ±labilir.
      */
 
     return 0;

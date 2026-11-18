@@ -1,14 +1,16 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* ASCII tablosundaki 32-255 arasındaki karakterler
-     * ekranda görüntülenebilir karakterlerdir.
-     * Döngü değişkeni char tipine dönüştürülerek
-     * sayıların karşılık geldiği karakterler yazdırılabilir. */
+    /* ASCII tablosundaki 32-255 arasÄ±ndaki karakterler
+     * ekranda gÃ¶rÃ¼ntÃ¼lenebilir karakterlerdir.
+     * DÃ¶ngÃ¼ deÄŸiÅŸkeni char tipine dÃ¶nÃ¼ÅŸtÃ¼rÃ¼lerek
+     * sayÄ±larÄ±n karÅŸÄ±lÄ±k geldiÄŸi karakterler yazdÄ±rÄ±labilir. */
 
     for (int i = 32; i <= 255; i++)
     {

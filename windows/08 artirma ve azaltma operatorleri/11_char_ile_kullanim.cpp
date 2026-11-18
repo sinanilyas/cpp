@@ -1,25 +1,27 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     char karakter = 'A';
 
-    // Karakterin kod değeri 1 artırılır
+    // Karakterin kod deÄŸeri 1 artÄ±rÄ±lÄ±r
     karakter++;
 
     cout << karakter << endl; // B
 
-    /* ++ ve -- operatörleri char tipindeki
-     * değişkenlerle de kullanılabilir.
+    /* ++ ve -- operatÃ¶rleri char tipindeki
+     * deÄŸiÅŸkenlerle de kullanÄ±labilir.
      *
      * 'A' karakterinin ASCII kodu 65,
-     * 'B' karakterinin ASCII kodu 66'dır.
+     * 'B' karakterinin ASCII kodu 66'dÄ±r.
      *
-     * Artırma ve azaltma işlemleri karakterlerin
-     * sayısal kod değerleri üzerinde gerçekleştirilir.
+     * ArtÄ±rma ve azaltma iÅŸlemleri karakterlerin
+     * sayÄ±sal kod deÄŸerleri Ã¼zerinde gerÃ§ekleÅŸtirilir.
      */
 
     return 0;

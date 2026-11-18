@@ -1,10 +1,10 @@
-// cout komutunu kullanabilmek için bu komutun
-// tanımlandığı iostream kütüphanesini
+// cout komutunu kullanabilmek iÃ§in bu komutun
+// tanÄ±mlandÄ±ÄŸÄ± iostream kÃ¼tÃ¼phanesini
 // programa dahil etmek gerekir
 #include <iostream>
 
 int main(int argc, char** argv) {
-	std::cout << "Yazdığım ilk C++ programı.";
+	std::cout << "YazdÄ±ÄŸÄ±m ilk C++ programÄ±.";
 	
 	return 0;
 }

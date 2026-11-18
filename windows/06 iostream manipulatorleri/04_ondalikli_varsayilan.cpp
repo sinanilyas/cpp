@@ -1,11 +1,13 @@
 #include <iostream>
+#include <windows.h>
 
 using namespace std;
 
 int main(int argc, char** argv) {
-	setlocale(LC_ALL, "Turkish");
+	SetConsoleCP(CP_UTF8);
+	SetConsoleOutputCP(CP_UTF8);
 	
-	// Varsayılan (sayıyagöre kendisi gösterim şekline karar veriyor)
+	// VarsayÄ±lan (sayÄ±yagÃ¶re kendisi gÃ¶sterim ÅŸekline karar veriyor)
 	
 	cout << 5.12 << endl; // 5.12
 	cout << 5.123456789 << endl; // 5.12346

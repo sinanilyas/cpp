@@ -1,12 +1,14 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* < operatöründe sýnýr deðer döngüye dâhil deðildir.
-     * <= operatöründe sýnýr deðer döngüye dâhildir. */
+    /* < operatÃ¶rÃ¼nde sÄ±nÄ±r deÄŸer dÃ¶ngÃ¼ye dÃ¢hil deÄŸildir.
+     * <= operatÃ¶rÃ¼nde sÄ±nÄ±r deÄŸer dÃ¶ngÃ¼ye dÃ¢hildir. */
 
     for (int i = 0; i < 5; i++)
     {

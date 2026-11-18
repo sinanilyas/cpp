@@ -1,17 +1,19 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    // cin girilen değeri değişkenin veri tipine göre yorumlar.
+    // cin girilen deÄŸeri deÄŸiÅŸkenin veri tipine gÃ¶re yorumlar.
 
     int yas;
     double boy;
     char cinsiyet;
 
-    cout << "Yaş: ";
+    cout << "YaÅŸ: ";
     cin >> yas;
 
     cout << "Boy: ";
@@ -20,7 +22,7 @@ int main(int argc, char** argv)
     cout << "Cinsiyet: ";
     cin >> cinsiyet;
 
-    cout << "Yaş: " << yas << endl;
+    cout << "YaÅŸ: " << yas << endl;
     cout << "Boy: " << boy << endl;
     cout << "Cinsiyet: " << cinsiyet << endl;
 

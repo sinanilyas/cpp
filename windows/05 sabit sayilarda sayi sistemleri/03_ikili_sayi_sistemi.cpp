@@ -1,18 +1,20 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-	setlocale(LC_ALL, "Turkish");
+	SetConsoleCP(CP_UTF8);
+	SetConsoleOutputCP(CP_UTF8);
 
     int sayi = 0b1111;
 
-    /* C++ dilinde başına 0b veya 0B eklenerek yazılan tamsayı sabitleri
-     * 2'li sayı sisteminde yorumlanır.
-     * Bu gösterimde yalnızca 0-1 arasındaki rakamlar kullanılabilir.
+    /* C++ dilinde baÅŸÄ±na 0b veya 0B eklenerek yazÄ±lan tamsayÄ± sabitleri
+     * 2'li sayÄ± sisteminde yorumlanÄ±r.
+     * Bu gÃ¶sterimde yalnÄ±zca 0-1 arasÄ±ndaki rakamlar kullanÄ±labilir.
      *
-     * 2'li sayı sistemindeki 1111 sayısı
-     * 10'lu sayı sisteminde 15'e karşılık gelir.
+     * 2'li sayÄ± sistemindeki 1111 sayÄ±sÄ±
+     * 10'lu sayÄ± sisteminde 15'e karÅŸÄ±lÄ±k gelir.
      * (1x8) + (1x4) + (1x2) + (1x1) = 15 */
 
     cout << sayi << endl; // 15

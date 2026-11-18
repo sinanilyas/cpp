@@ -1,20 +1,22 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* Döngü gövdesinde süslü parantez kullanılmazsa
-     * yalnızca ilk komut döngüye dâhil edilir. */
+    /* DÃ¶ngÃ¼ gÃ¶vdesinde sÃ¼slÃ¼ parantez kullanÄ±lmazsa
+     * yalnÄ±zca ilk komut dÃ¶ngÃ¼ye dÃ¢hil edilir. */
 
     for (int i = 0; i < 5; i++)
         cout << "Merhaba." << endl;
-		cout << "Ben C++ öğreniyorum." << endl;
+		cout << "Ben C++ Ã¶ÄŸreniyorum." << endl;
 		
-	/* Her iki komut alt alta ve aynı hizada yazıldığı için
-	 * ikisinin de döngüye dâhil olduğunu algısı oluşur.
-	 * Ancak döngüye yalnızca ilk cout komutu dâhildir. */
+	/* Her iki komut alt alta ve aynÄ± hizada yazÄ±ldÄ±ÄŸÄ± iÃ§in
+	 * ikisinin de dÃ¶ngÃ¼ye dÃ¢hil olduÄŸunu algÄ±sÄ± oluÅŸur.
+	 * Ancak dÃ¶ngÃ¼ye yalnÄ±zca ilk cout komutu dÃ¢hildir. */
 
     return 0;
 }

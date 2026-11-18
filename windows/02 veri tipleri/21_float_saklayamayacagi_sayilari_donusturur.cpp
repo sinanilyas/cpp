@@ -1,11 +1,13 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv) {
-	setlocale(LC_ALL, "Turkish");
+	SetConsoleCP(CP_UTF8);
+	SetConsoleOutputCP(CP_UTF8);
 	
-	/* float veri tipi her sayıyı doğru bir şekilde saklayacağını garanti etmez.
-	 * Saklayamayacağı sayıları saklayabileceği en yakın sayıya dönüştürür. */
+	/* float veri tipi her sayÄ±yÄ± doÄŸru bir ÅŸekilde saklayacaÄŸÄ±nÄ± garanti etmez.
+	 * SaklayamayacaÄŸÄ± sayÄ±larÄ± saklayabileceÄŸi en yakÄ±n sayÄ±ya dÃ¶nÃ¼ÅŸtÃ¼rÃ¼r. */
 	
 	float s1 = 1234.5678; 
 	float s2 = 0.0000009;

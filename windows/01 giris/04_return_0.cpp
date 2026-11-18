@@ -1,6 +1,6 @@
 int main() {
-	/* Programın sonunda return 0; yazılması yaygın bir kullanımdır
-	   ancak teknik olarak zorunlu değildir. */
+	/* ProgramÄ±n sonunda return 0; yazÄ±lmasÄ± yaygÄ±n bir kullanÄ±mdÄ±r
+	   ancak teknik olarak zorunlu deÄŸildir. */
 	return 0;
 }
 

@@ -1,16 +1,18 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 enum gun {pts = 1, sal, car, per, cum, cts, paz};
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     gun bugun = car;
 
-    /* enum tipli değişkenler switch içerisinde kullanılabilir.
-     * case ifadelerinde enum elemanlarının isimleri yazılabilir. */
+    /* enum tipli deÄŸiÅŸkenler switch iÃ§erisinde kullanÄ±labilir.
+     * case ifadelerinde enum elemanlarÄ±nÄ±n isimleri yazÄ±labilir. */
 
     switch (bugun)
     {
@@ -18,13 +20,13 @@ int main(int argc, char** argv)
             cout << "Pazartesi" << endl;
             break;
         case sal:
-            cout << "Salı" << endl;
+            cout << "SalÄ±" << endl;
             break;
         case car:
-            cout << "Çarşamba" << endl;
+            cout << "Ã‡arÅŸamba" << endl;
             break;
         case per:
-            cout << "Perşembe" << endl;
+            cout << "PerÅŸembe" << endl;
             break;
         case cum:
             cout << "Cuma" << endl;

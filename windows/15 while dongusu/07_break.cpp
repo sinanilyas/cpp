@@ -1,22 +1,24 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int sayac = 1;
 
     while (sayac <= 10)
     {
-        // Sayaç 6 olduðunda döngü hemen sona erer.
+        // SayaÃ§ 6 olduÄŸunda dÃ¶ngÃ¼ hemen sona erer.
         if (sayac == 6) break;
 
         cout << sayac << endl;
         sayac++;
     }
 
-    cout << "Döngü sona erdi." << endl;
+    cout << "DÃ¶ngÃ¼ sona erdi." << endl;
 
     return 0;
 }

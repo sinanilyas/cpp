@@ -1,19 +1,21 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* Bir sayının faktöriyeli, 1'den o sayıya kadar olan
-     * pozitif tamsayıların çarpımıdır.
-     * Örneğin 5! = 1 * 2 * 3 * 4 * 5 = 120
+    /* Bir sayÄ±nÄ±n faktÃ¶riyeli, 1'den o sayÄ±ya kadar olan
+     * pozitif tamsayÄ±larÄ±n Ã§arpÄ±mÄ±dÄ±r.
+     * Ã–rneÄŸin 5! = 1 * 2 * 3 * 4 * 5 = 120
      * 0! = 1 olarak kabul edilir. */
 
     int sayi;
     unsigned long long faktoriyel = 1;
 
-    cout << "Faktöriyeli hesaplanacak sayıyı giriniz (0-20): ";
+    cout << "FaktÃ¶riyeli hesaplanacak sayÄ±yÄ± giriniz (0-20): ";
     cin >> sayi;
 
     for (int i = 2; i <= sayi; i++) faktoriyel *= i;

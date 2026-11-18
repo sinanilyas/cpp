@@ -1,17 +1,19 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int sayilar[] = {34, 12, 78, 5, 61, 23};
     int elemanSayisi = sizeof(sayilar) / sizeof(sayilar[0]);
 
-    /* En büyük ve en küçük değişkenlerine başlangıçta dizinin ilk
-     * elemanı verilir. Sonra bütün elemanlar bunlarla karşılaştırılır.
-     * Başlangıç değeri olarak 0 verilseydi, bütün elemanları negatif
-     * olan bir dizide en büyük değer yanlış bulunurdu. */
+    /* En bÃ¼yÃ¼k ve en kÃ¼Ã§Ã¼k deÄŸiÅŸkenlerine baÅŸlangÄ±Ã§ta dizinin ilk
+     * elemanÄ± verilir. Sonra bÃ¼tÃ¼n elemanlar bunlarla karÅŸÄ±laÅŸtÄ±rÄ±lÄ±r.
+     * BaÅŸlangÄ±Ã§ deÄŸeri olarak 0 verilseydi, bÃ¼tÃ¼n elemanlarÄ± negatif
+     * olan bir dizide en bÃ¼yÃ¼k deÄŸer yanlÄ±ÅŸ bulunurdu. */
     int enBuyuk = sayilar[0];
     int enKucuk = sayilar[0];
     int toplam = sayilar[0];
@@ -27,11 +29,11 @@ int main(int argc, char** argv)
         toplam += sayilar[i];
     }
 
-    // Tamsayı bölmesini önlemek için toplam double tipine dönüştürülür
+    // TamsayÄ± bÃ¶lmesini Ã¶nlemek iÃ§in toplam double tipine dÃ¶nÃ¼ÅŸtÃ¼rÃ¼lÃ¼r
     double ortalama = static_cast<double>(toplam) / elemanSayisi;
 
-    cout << "En büyük: " << enBuyuk << endl;  // 78
-    cout << "En küçük: " << enKucuk << endl;  // 5
+    cout << "En bÃ¼yÃ¼k: " << enBuyuk << endl;  // 78
+    cout << "En kÃ¼Ã§Ã¼k: " << enKucuk << endl;  // 5
     cout << "Toplam: " << toplam << endl;     // 213
     cout << "Ortalama: " << ortalama << endl; // 35.5
 

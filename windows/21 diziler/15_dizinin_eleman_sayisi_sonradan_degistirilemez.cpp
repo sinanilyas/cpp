@@ -1,39 +1,41 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* Dizinin eleman sayısı tanımlama sırasında belirlenir ve
-     * sonradan değiştirilemez. Diziye yeni eleman eklenemez,
-     * diziden eleman çıkarılamaz.
+    /* Dizinin eleman sayÄ±sÄ± tanÄ±mlama sÄ±rasÄ±nda belirlenir ve
+     * sonradan deÄŸiÅŸtirilemez. Diziye yeni eleman eklenemez,
+     * diziden eleman Ã§Ä±karÄ±lamaz.
      *
-     * Kaç eleman gerekeceği önceden bilinmiyorsa dizi, gerekebilecek
-     * en fazla eleman sayısıyla tanımlanır. Kullanılan eleman sayısı
-     * ayrı bir değişkende tutulur. */
+     * KaÃ§ eleman gerekeceÄŸi Ã¶nceden bilinmiyorsa dizi, gerekebilecek
+     * en fazla eleman sayÄ±sÄ±yla tanÄ±mlanÄ±r. KullanÄ±lan eleman sayÄ±sÄ±
+     * ayrÄ± bir deÄŸiÅŸkende tutulur. */
     const int KAPASITE = 5;
 
     int sayilar[KAPASITE];
-    int adet = 0; // Diziye yerleştirilen sayı adedi
+    int adet = 0; // Diziye yerleÅŸtirilen sayÄ± adedi
     int sayi;
 
     do
     {
-        cout << "Bir sayı giriniz (bitirmek için 0): ";
+        cout << "Bir sayÄ± giriniz (bitirmek iÃ§in 0): ";
         cin >> sayi;
 
         if (sayi != 0)
         {
-            // Sayı adet indisli elemana yerleştirilir, sonra adet 1 artırılır
+            // SayÄ± adet indisli elemana yerleÅŸtirilir, sonra adet 1 artÄ±rÄ±lÄ±r
             sayilar[adet++] = sayi;
         }
     } while (sayi != 0 && adet < KAPASITE);
 
     if (adet == KAPASITE)
-        cout << "Dizi doldu. Daha fazla sayı eklenemez." << endl;
+        cout << "Dizi doldu. Daha fazla sayÄ± eklenemez." << endl;
 
-    cout << "Girilen sayılar: ";
+    cout << "Girilen sayÄ±lar: ";
 
     for (int i = 0; i < adet; i++)
     {
@@ -41,9 +43,9 @@ int main(int argc, char** argv)
     }
     cout << endl;
 
-    /* Dizi 5 elemanlıdır, ancak yalnızca ilk adet tane elemanı
-     * kullanılır. Daha fazla sayı saklamak için KAPASITE değeri
-     * büyütülmeli ve program yeniden derlenmelidir. */
+    /* Dizi 5 elemanlÄ±dÄ±r, ancak yalnÄ±zca ilk adet tane elemanÄ±
+     * kullanÄ±lÄ±r. Daha fazla sayÄ± saklamak iÃ§in KAPASITE deÄŸeri
+     * bÃ¼yÃ¼tÃ¼lmeli ve program yeniden derlenmelidir. */
 
     return 0;
 }

@@ -1,11 +1,13 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv) {
-	setlocale(LC_ALL, "Turkish");
+	SetConsoleCP(CP_UTF8);
+	SetConsoleOutputCP(CP_UTF8);
 	
-	/* char veri tipinin sakladığı sayı arttırıp azaltılarak
-	 * sakladığı karakter değiştirilebilir. */
+	/* char veri tipinin sakladÄ±ÄŸÄ± sayÄ± arttÄ±rÄ±p azaltÄ±larak
+	 * sakladÄ±ÄŸÄ± karakter deÄŸiÅŸtirilebilir. */
 	
 	char karakter = 'A';
 	cout << karakter << endl;

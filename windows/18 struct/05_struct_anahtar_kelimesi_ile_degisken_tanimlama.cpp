@@ -1,4 +1,5 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 struct urun
@@ -9,17 +10,18 @@ struct urun
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* Yapı türünde değişken tanımlarken
-     * struct anahtar sözcüğü de kullanılabilir. */
+    /* YapÄ± tÃ¼rÃ¼nde deÄŸiÅŸken tanÄ±mlarken
+     * struct anahtar sÃ¶zcÃ¼ÄŸÃ¼ de kullanÄ±labilir. */
     struct urun buzdolabi;
 
     buzdolabi.kod = 101;
     buzdolabi.fiyat = 25000.0;
 
-    cout << "Ürün kodu: " << buzdolabi.kod << endl;
-    cout << "Ürün fiyatı: " << buzdolabi.fiyat << endl;
+    cout << "ÃœrÃ¼n kodu: " << buzdolabi.kod << endl;
+    cout << "ÃœrÃ¼n fiyatÄ±: " << buzdolabi.fiyat << endl;
 
     return 0;
 }

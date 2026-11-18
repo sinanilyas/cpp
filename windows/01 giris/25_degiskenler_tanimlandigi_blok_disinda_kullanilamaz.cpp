@@ -1,17 +1,19 @@
 #include <iostream>
+#include <windows.h>
 
 using namespace std;
 
 int main(int argc, char** argv) {
-	setlocale(LC_ALL, "Turkish");
+	SetConsoleCP(CP_UTF8);
+	SetConsoleOutputCP(CP_UTF8);
 
 	{
 		int sayi = 5;
 	}
 	
-	// HATA: sayi deðiþkeni tanýmlandýðý bloðun dýþýnda kullanýlamaz
-	// çünkü blok sona erdiði an hafýzadan silinir
-	cout << "Sayý: " << sayi << endl;
+	// HATA: sayi deÄŸiÅŸkeni tanÄ±mlandÄ±ÄŸÄ± bloÄŸun dÄ±ÅŸÄ±nda kullanÄ±lamaz
+	// Ã§Ã¼nkÃ¼ blok sona erdiÄŸi an hafÄ±zadan silinir
+	cout << "SayÄ±: " << sayi << endl;
 	
 	return 0;
 }

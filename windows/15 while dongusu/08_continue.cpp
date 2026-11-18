@@ -1,9 +1,11 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int sayac = 0;
 
@@ -11,7 +13,7 @@ int main(int argc, char** argv)
     {
         sayac++;
 
-        // Çift sayýlarda kalan iþlemler atlanýr.
+        // Ã‡ift sayÄ±larda kalan iÅŸlemler atlanÄ±r.
         if (sayac % 2 == 0) continue;
 
         cout << sayac << endl;

@@ -1,19 +1,21 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int mevsimNo;
 
-    cout << "Mevsim numarasýný giriniz (1-4): ";
+    cout << "Mevsim numarasÄ±nÄ± giriniz (1-4): ";
     cin >> mevsimNo;
 
     switch (mevsimNo)
     {
         case 1:
-            cout << "Ýlkbahar" << endl;
+            cout << "Ä°lkbahar" << endl;
             break;
         case 2:
             cout << "Yaz" << endl;
@@ -22,11 +24,11 @@ int main(int argc, char** argv)
             cout << "Sonbahar" << endl;
             break;
         case 4:
-            cout << "Kýþ" << endl;
+            cout << "KÄ±ÅŸ" << endl;
             break;
     }
 
-    /* 1,2,3,4 haricinde bir deðer girilirse hiçbir þey yapmaz */
+    /* 1,2,3,4 haricinde bir deÄŸer girilirse hiÃ§bir ÅŸey yapmaz */
 
     return 0;
 }

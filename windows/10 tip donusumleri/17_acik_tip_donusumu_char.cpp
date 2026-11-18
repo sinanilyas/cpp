@@ -1,19 +1,21 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     char karakter = 'A';
 
     cout << karakter << endl; // A
     cout << static_cast<int>(karakter) << endl; // 65
 
-    /* Bazý durumlarda, istenilen sonucu elde etmek için
-     * açýk tip dönüþümü yapmak gerekir.
-     * Örneðin cout, char tipindeki deðerleri karakter olarak yazdýrýr.
-     * Sayýsal karþýlýðýný yazdýrmak için açýk dönüþüm yapýlabilir. */
+    /* BazÄ± durumlarda, istenilen sonucu elde etmek iÃ§in
+     * aÃ§Ä±k tip dÃ¶nÃ¼ÅŸÃ¼mÃ¼ yapmak gerekir.
+     * Ã–rneÄŸin cout, char tipindeki deÄŸerleri karakter olarak yazdÄ±rÄ±r.
+     * SayÄ±sal karÅŸÄ±lÄ±ÄŸÄ±nÄ± yazdÄ±rmak iÃ§in aÃ§Ä±k dÃ¶nÃ¼ÅŸÃ¼m yapÄ±labilir. */
 
     return 0;
 }

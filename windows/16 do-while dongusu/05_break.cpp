@@ -1,14 +1,16 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int sayi = 1;
 
-    /* break komutu çalıştırıldığında döngü,
-     * koşul kontrol edilmeden sonlandırılır. */
+    /* break komutu Ã§alÄ±ÅŸtÄ±rÄ±ldÄ±ÄŸÄ±nda dÃ¶ngÃ¼,
+     * koÅŸul kontrol edilmeden sonlandÄ±rÄ±lÄ±r. */
 
     do
     {
@@ -19,7 +21,7 @@ int main(int argc, char** argv)
 
     } while (sayi <= 10);
 
-    cout << "Döngü sona erdi." << endl;
+    cout << "DÃ¶ngÃ¼ sona erdi." << endl;
 
     return 0;
 }

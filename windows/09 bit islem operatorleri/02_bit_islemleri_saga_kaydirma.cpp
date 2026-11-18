@@ -1,26 +1,28 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv) {
-	setlocale(LC_ALL, "Turkish");
+	SetConsoleCP(CP_UTF8);
+	SetConsoleOutputCP(CP_UTF8);
 
 	int sonuc;
 	
-	/* 1 bit saða kaydýrýldýðýnda sayý 2'ye bölünür ve varsa kalan atýlýr */
+	/* 1 bit saÄŸa kaydÄ±rÄ±ldÄ±ÄŸÄ±nda sayÄ± 2'ye bÃ¶lÃ¼nÃ¼r ve varsa kalan atÄ±lÄ±r */
 
 	// Eski: 00000000000000000000000000000101 (5)
 	// Yeni: 00000000000000000000000000000010 (2)
 	sonuc = 5 >> 1;
 	cout << sonuc << endl; // 2
 	
-	/* 2 bit saða kaydýrýldýðýnda sayý 2x2=4'e bölünür ve varsa kalan atýlýr */
+	/* 2 bit saÄŸa kaydÄ±rÄ±ldÄ±ÄŸÄ±nda sayÄ± 2x2=4'e bÃ¶lÃ¼nÃ¼r ve varsa kalan atÄ±lÄ±r */
 	
 	// Eski: 00000000000000000000000000000101 (5)
 	// Yeni: 00000000000000000000000000000001 (1)
 	sonuc = 5 >> 2;
 	cout << sonuc << endl; // 1
 	
-	/* 3 bit saða kaydýrýldýðýnda sayý 2x2x2=8'e bölünür ve varsa kalan atýlýr */
+	/* 3 bit saÄŸa kaydÄ±rÄ±ldÄ±ÄŸÄ±nda sayÄ± 2x2x2=8'e bÃ¶lÃ¼nÃ¼r ve varsa kalan atÄ±lÄ±r */
 	
 	// Eski: 00000000000000000000000000000101 (5)
 	// Yeni: 00000000000000000000000000000000 (0)

@@ -1,20 +1,22 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int secim;
 
-    // Kullanıcı çıkış yapana kadar menü tekrar gösterilir.
+    // KullanÄ±cÄ± Ã§Ä±kÄ±ÅŸ yapana kadar menÃ¼ tekrar gÃ¶sterilir.
     while (true)
     {
         cout << endl;
-        cout << "1. Merhaba yazdır" << endl;
-        cout << "2. İyi günler yazdır" << endl;
-        cout << "0. Çıkış" << endl;
-        cout << "Seçiminiz: ";
+        cout << "1. Merhaba yazdÄ±r" << endl;
+        cout << "2. Ä°yi gÃ¼nler yazdÄ±r" << endl;
+        cout << "0. Ã‡Ä±kÄ±ÅŸ" << endl;
+        cout << "SeÃ§iminiz: ";
         cin >> secim;
 
         switch (secim)
@@ -23,19 +25,19 @@ int main(int argc, char** argv)
                 cout << "Merhaba!" << endl;
                 break;
             case 2:
-                cout << "İyi günler!" << endl;
+                cout << "Ä°yi gÃ¼nler!" << endl;
                 break;
             case 0:
                 cout << "Program sona erdi." << endl;
                 break;
             default:
-                cout << "Geçersiz seçim!" << endl;
+                cout << "GeÃ§ersiz seÃ§im!" << endl;
         }
 
-        /* switch içindeki break yalnızca switch'i sonlandırır,
-         * while döngüsünü sonlandırmaz. */
+        /* switch iÃ§indeki break yalnÄ±zca switch'i sonlandÄ±rÄ±r,
+         * while dÃ¶ngÃ¼sÃ¼nÃ¼ sonlandÄ±rmaz. */
 
-        // Seçim 0 ise while döngüsü sonlandırılır
+        // SeÃ§im 0 ise while dÃ¶ngÃ¼sÃ¼ sonlandÄ±rÄ±lÄ±r
         if (secim == 0) break;
     }
 

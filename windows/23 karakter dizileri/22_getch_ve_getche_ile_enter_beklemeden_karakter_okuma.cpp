@@ -1,37 +1,39 @@
 #include <iostream>
-#include <conio.h> // _getch ve _getche için
+#include <conio.h> // _getch ve _getche iÃ§in
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* cin ile okumada program, kullanıcı Enter tuşuna basana kadar bekler.
-     * conio.h içindeki _getch ve _getche fonksiyonları ise klavyeden tek
-     * bir karakter okur ve Enter tuşunu beklemez.
+    /* cin ile okumada program, kullanÄ±cÄ± Enter tuÅŸuna basana kadar bekler.
+     * conio.h iÃ§indeki _getch ve _getche fonksiyonlarÄ± ise klavyeden tek
+     * bir karakter okur ve Enter tuÅŸunu beklemez.
      *
-     * _getch : Basılan tuşu ekranda göstermez.
-     * _getche: Basılan tuşu ekranda gösterir (sondaki e harfi: echo).
+     * _getch : BasÄ±lan tuÅŸu ekranda gÃ¶stermez.
+     * _getche: BasÄ±lan tuÅŸu ekranda gÃ¶sterir (sondaki e harfi: echo).
      *
-     * Bazı derleyicilerde getch ve getche adları da kullanılabilir.
-     * Bu adlar eskimiş kabul edildiği için bazı derleyiciler uyarı ya da
-     * hata verir; bu durumda _getch ve _getche kullanılır.
+     * BazÄ± derleyicilerde getch ve getche adlarÄ± da kullanÄ±labilir.
+     * Bu adlar eskimiÅŸ kabul edildiÄŸi iÃ§in bazÄ± derleyiciler uyarÄ± ya da
+     * hata verir; bu durumda _getch ve _getche kullanÄ±lÄ±r.
      *
-     * conio.h standart C++ kütüphanesinin bir parçası değildir. Her
-     * derleyicide ve işletim sisteminde bulunmaz. */
+     * conio.h standart C++ kÃ¼tÃ¼phanesinin bir parÃ§asÄ± deÄŸildir. Her
+     * derleyicide ve iÅŸletim sisteminde bulunmaz. */
 
-    cout << "Bir tuşa basınız (ekranda görünmeyecek): ";
+    cout << "Bir tuÅŸa basÄ±nÄ±z (ekranda gÃ¶rÃ¼nmeyecek): ";
     char tus1 = _getch();
-    cout << endl << "Basılan tuş: " << tus1 << endl;
+    cout << endl << "BasÄ±lan tuÅŸ: " << tus1 << endl;
 
-    cout << "Bir tuşa daha basınız (ekranda görünecek): ";
+    cout << "Bir tuÅŸa daha basÄ±nÄ±z (ekranda gÃ¶rÃ¼necek): ";
     char tus2 = _getche();
-    cout << endl << "Basılan tuş: " << tus2 << endl;
+    cout << endl << "BasÄ±lan tuÅŸ: " << tus2 << endl;
 
-    /* Dönen değer kullanılmadan yalnızca bir tuşa basılması da beklenebilir.
-     * Şifre girişi gibi karakterlerin ekranda görünmemesi gereken yerlerde
-     * de _getch kullanılır. */
-    cout << "Çıkmak için bir tuşa basınız...";
+    /* DÃ¶nen deÄŸer kullanÄ±lmadan yalnÄ±zca bir tuÅŸa basÄ±lmasÄ± da beklenebilir.
+     * Åifre giriÅŸi gibi karakterlerin ekranda gÃ¶rÃ¼nmemesi gereken yerlerde
+     * de _getch kullanÄ±lÄ±r. */
+    cout << "Ã‡Ä±kmak iÃ§in bir tuÅŸa basÄ±nÄ±z...";
     _getch();
 
     return 0;

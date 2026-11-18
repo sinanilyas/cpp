@@ -1,13 +1,15 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* for döngüsünün başlatma bölümü boş bırakılabilir.
-     * Bu durumda değişken döngüden önce tanımlanabilir.
-     * Başlatma bölümü boş olsa bile ; işareti kullanılmalıdır. */
+    /* for dÃ¶ngÃ¼sÃ¼nÃ¼n baÅŸlatma bÃ¶lÃ¼mÃ¼ boÅŸ bÄ±rakÄ±labilir.
+     * Bu durumda deÄŸiÅŸken dÃ¶ngÃ¼den Ã¶nce tanÄ±mlanabilir.
+     * BaÅŸlatma bÃ¶lÃ¼mÃ¼ boÅŸ olsa bile ; iÅŸareti kullanÄ±lmalÄ±dÄ±r. */
 
     int i = 1;
 
@@ -16,7 +18,7 @@ int main(int argc, char** argv)
         cout << i << endl;
     }
 
-    // Ekrana sırasıyla 1, 2, 3, 4 ve 5 yazdırılır.
+    // Ekrana sÄ±rasÄ±yla 1, 2, 3, 4 ve 5 yazdÄ±rÄ±lÄ±r.
 
     return 0;
 }

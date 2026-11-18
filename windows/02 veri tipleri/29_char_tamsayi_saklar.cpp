@@ -1,11 +1,13 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv) {
-	setlocale(LC_ALL, "Turkish");
+	SetConsoleCP(CP_UTF8);
+	SetConsoleOutputCP(CP_UTF8);
 	
-	/* char veri tipi karakterleri arka planda tamsayı olarak saklar.
-	 * Bu yüzden char tipli değişkenlere direkt bir tamsayı değeri atanabilir. */
+	/* char veri tipi karakterleri arka planda tamsayÄ± olarak saklar.
+	 * Bu yÃ¼zden char tipli deÄŸiÅŸkenlere direkt bir tamsayÄ± deÄŸeri atanabilir. */
 	
 	char karakter = 65;
 

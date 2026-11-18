@@ -1,4 +1,5 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 enum durum
@@ -12,11 +13,12 @@ enum durum
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* Farklı enum elemanları aynı sayısal değere sahip olabilir.
-     * teslimEdildi ve tamamlandi aynı değere (3) sahiptir.
-     * Bu nedenle birbirine eşit kabul edilir. */
+    /* FarklÄ± enum elemanlarÄ± aynÄ± sayÄ±sal deÄŸere sahip olabilir.
+     * teslimEdildi ve tamamlandi aynÄ± deÄŸere (3) sahiptir.
+     * Bu nedenle birbirine eÅŸit kabul edilir. */
 
     cout << teslimEdildi << endl; // 3
     cout << tamamlandi << endl;   // 3

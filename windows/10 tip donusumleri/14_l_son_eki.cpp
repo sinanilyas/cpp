@@ -1,12 +1,14 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* L son eki bir tamsayının sonuna eklenirse long int,
-     * bir ondalıklı sayının sonuna eklenirse long double tipinde oluşturulur */
+    /* L son eki bir tamsayÄ±nÄ±n sonuna eklenirse long int,
+     * bir ondalÄ±klÄ± sayÄ±nÄ±n sonuna eklenirse long double tipinde oluÅŸturulur */
 
     long s1 = 5L; // long int
     long double s2 = 5.2L; // long double

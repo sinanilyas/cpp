@@ -1,13 +1,15 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* break komutu, döngü koşulu hâlâ doğru olsa bile
-     * döngüyü hemen sonlandırmak için kullanılır.
-     * Program döngüden sonraki komuttan devam eder. */
+    /* break komutu, dÃ¶ngÃ¼ koÅŸulu hÃ¢lÃ¢ doÄŸru olsa bile
+     * dÃ¶ngÃ¼yÃ¼ hemen sonlandÄ±rmak iÃ§in kullanÄ±lÄ±r.
+     * Program dÃ¶ngÃ¼den sonraki komuttan devam eder. */
 
     for (int i = 1; i <= 10; i++)
     {
@@ -16,9 +18,9 @@ int main(int argc, char** argv)
         cout << i << endl;
     }
 
-    // Ekrana 1, 2, 3, 4 ve 5 yazdırılır.
+    // Ekrana 1, 2, 3, 4 ve 5 yazdÄ±rÄ±lÄ±r.
 
-    cout << "Döngü sona erdi." << endl;
+    cout << "DÃ¶ngÃ¼ sona erdi." << endl;
 
     return 0;
 }

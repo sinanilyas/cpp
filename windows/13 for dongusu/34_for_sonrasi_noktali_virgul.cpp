@@ -1,20 +1,22 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* for döngüsünün sonuna yanlışlıkla ; konulursa
-     * döngünün gövdesi boş olur.
-     * Bu nedenle cout komutu döngüye dâhil edilmez
-     * ve döngü tamamlandıktan sonra yalnızca bir kez çalıştırılır.
+    /* for dÃ¶ngÃ¼sÃ¼nÃ¼n sonuna yanlÄ±ÅŸlÄ±kla ; konulursa
+     * dÃ¶ngÃ¼nÃ¼n gÃ¶vdesi boÅŸ olur.
+     * Bu nedenle cout komutu dÃ¶ngÃ¼ye dÃ¢hil edilmez
+     * ve dÃ¶ngÃ¼ tamamlandÄ±ktan sonra yalnÄ±zca bir kez Ã§alÄ±ÅŸtÄ±rÄ±lÄ±r.
      */
 
     for (int i = 1; i <= 5; i++);
         cout << "Merhaba" << endl;
 
-    /* Yalnızca bir kez Merhaba yazılır. */
+    /* YalnÄ±zca bir kez Merhaba yazÄ±lÄ±r. */
 
     return 0;
 }

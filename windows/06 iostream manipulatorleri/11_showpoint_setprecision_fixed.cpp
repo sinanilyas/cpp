@@ -1,12 +1,14 @@
 #include <iostream>
-#include <iomanip> // setprecision için gerekli
+#include <iomanip> // setprecision iÃ§in gerekli
+#include <windows.h>
 
 using namespace std;
 
 int main(int argc, char** argv) {
-	setlocale(LC_ALL, "Turkish");
+	SetConsoleCP(CP_UTF8);
+	SetConsoleOutputCP(CP_UTF8);
 	
-	// Virgülden sonra 4 hane göster,
+	// VirgÃ¼lden sonra 4 hane gÃ¶ster,
 	// 4 haneden az ise 0 ekleyerek tamamla
 	cout << showpoint << setprecision(4) << fixed;
 	

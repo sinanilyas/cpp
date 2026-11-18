@@ -1,16 +1,18 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    srand(time(0)); // Her çalıştırmada farklı sayılar üretilmesi için
+    srand(time(0)); // Her Ã§alÄ±ÅŸtÄ±rmada farklÄ± sayÄ±lar Ã¼retilmesi iÃ§in
 
-    /* Bir sayının 100'e bölümünden kalan 0 ile 99 arasındadır.
-     * Bu nedenle rand() % 100 ifadesi 0-99 arasında bir sayı üretir. */
+    /* Bir sayÄ±nÄ±n 100'e bÃ¶lÃ¼mÃ¼nden kalan 0 ile 99 arasÄ±ndadÄ±r.
+     * Bu nedenle rand() % 100 ifadesi 0-99 arasÄ±nda bir sayÄ± Ã¼retir. */
 
     for (int i = 1; i <= 10; i++)
     {

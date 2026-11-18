@@ -1,24 +1,26 @@
 #include <iostream>
 #include <ctime>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     /* time(0) veya time(NULL), 01.01.1970 00:00:00'dan (UTC)
-     * bu yana geçen saniye sayısını verir.
-     * time() fonksiyonunu kullanmak için <ctime> dosyası
+     * bu yana geÃ§en saniye sayÄ±sÄ±nÄ± verir.
+     * time() fonksiyonunu kullanmak iÃ§in <ctime> dosyasÄ±
      * programa dahil edilmelidir. */
 
-    cout << time(0) << endl;    // Örneğin 15.11.2026 12:17'de 1794734220
-    cout << time(NULL) << endl; // time(0) ile aynı değer
+    cout << time(0) << endl;    // Ã–rneÄŸin 15.11.2026 12:17'de 1794734220
+    cout << time(NULL) << endl; // time(0) ile aynÄ± deÄŸer
 
-    // Geçen süre yaklaşık olarak yıla çevrilirse
+    // GeÃ§en sÃ¼re yaklaÅŸÄ±k olarak yÄ±la Ã§evrilirse
     cout << time(0) / (365 * 24 * 60 * 60) << endl; // 56 (1970 + 56 = 2026)
 
-    /* Bu değer her saniye 1 artar. Bu yüzden program
-     * her çalıştırıldığında farklı bir değer elde edilir. */
+    /* Bu deÄŸer her saniye 1 artar. Bu yÃ¼zden program
+     * her Ã§alÄ±ÅŸtÄ±rÄ±ldÄ±ÄŸÄ±nda farklÄ± bir deÄŸer elde edilir. */
 
     return 0;
 }

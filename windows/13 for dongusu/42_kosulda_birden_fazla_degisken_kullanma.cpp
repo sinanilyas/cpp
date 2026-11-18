@@ -1,13 +1,15 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* Döngü koşulunda birden fazla değişken kullanılabilir.
-     * Bu örnekte i artırılırken j azaltılır.
-     * i değeri j değerinden küçük olduğu sürece döngü çalışır. */
+    /* DÃ¶ngÃ¼ koÅŸulunda birden fazla deÄŸiÅŸken kullanÄ±labilir.
+     * Bu Ã¶rnekte i artÄ±rÄ±lÄ±rken j azaltÄ±lÄ±r.
+     * i deÄŸeri j deÄŸerinden kÃ¼Ã§Ã¼k olduÄŸu sÃ¼rece dÃ¶ngÃ¼ Ã§alÄ±ÅŸÄ±r. */
 
     for (int i = 1, j = 9; i < j; i++, j--)
     {

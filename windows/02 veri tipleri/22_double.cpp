@@ -1,12 +1,14 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv) {
-	setlocale(LC_ALL, "Turkish");
+	SetConsoleCP(CP_UTF8);
+	SetConsoleOutputCP(CP_UTF8);
 	
-	/* double veri tipi float'a göre daha fazla anlamlı basamak saklayabilir
-	 * ancak diğer tüm kayan noktalı veri tipleri gibi double da verilen
-	 * sayıyı birebir aynı şekilde saklayacağını garanti etmez. */
+	/* double veri tipi float'a gÃ¶re daha fazla anlamlÄ± basamak saklayabilir
+	 * ancak diÄŸer tÃ¼m kayan noktalÄ± veri tipleri gibi double da verilen
+	 * sayÄ±yÄ± birebir aynÄ± ÅŸekilde saklayacaÄŸÄ±nÄ± garanti etmez. */
 	
 	double s1 = 1234.5678; 
 	double s2 = 0.0000009;

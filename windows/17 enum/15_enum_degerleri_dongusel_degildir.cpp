@@ -1,22 +1,24 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 enum gun {pts = 1, sal, car, per, cum, cts, paz};
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     gun bugun = paz;
     gun yarin = static_cast<gun>(paz + 1); // 8
 
-    /* 8 değeri geçerli aralığın dışındadır. Böyle bir durumda
-     * program 8 yazdırabilir, beklenmedik bir sonuç üretebilir
-     * veya farklı şekilde davranabilir.
-     * C++ hiçbir sonucu garanti etmez. */
+    /* 8 deÄŸeri geÃ§erli aralÄ±ÄŸÄ±n dÄ±ÅŸÄ±ndadÄ±r. BÃ¶yle bir durumda
+     * program 8 yazdÄ±rabilir, beklenmedik bir sonuÃ§ Ã¼retebilir
+     * veya farklÄ± ÅŸekilde davranabilir.
+     * C++ hiÃ§bir sonucu garanti etmez. */
 
-    cout << "Bugün: " << bugun << endl; // 7
-    cout << "Yarın: " << yarin << endl; // Belirsiz davranış
+    cout << "BugÃ¼n: " << bugun << endl; // 7
+    cout << "YarÄ±n: " << yarin << endl; // Belirsiz davranÄ±ÅŸ
 
     return 0;
 }

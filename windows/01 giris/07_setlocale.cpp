@@ -1,10 +1,12 @@
 #include <iostream>
+#include <windows.h>
 
 int main(int argc, char** argv) {
-	// Türkçe karakterlerin düzgün görüntülenmesi için
-	setlocale(LC_ALL, "Turkish");
+	// TÃ¼rkÃ§e karakterlerin dÃ¼zgÃ¼n gÃ¶rÃ¼ntÃ¼lenmesi iÃ§in
+	SetConsoleCP(CP_UTF8);
+	SetConsoleOutputCP(CP_UTF8);
 	
-	std::cout << "Yazdığım ilk C++ programı.";
+	std::cout << "YazdÄ±ÄŸÄ±m ilk C++ programÄ±.";
 	
 	return 0;
 }

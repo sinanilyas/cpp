@@ -1,13 +1,15 @@
 #include <iostream>
-#include <iomanip> // setprecision için gerekli
+#include <iomanip> // setprecision iÃ§in gerekli
+#include <windows.h>
 
 using namespace std;
 
 int main(int argc, char** argv) {
-	setlocale(LC_ALL, "Turkish");
+	SetConsoleCP(CP_UTF8);
+	SetConsoleOutputCP(CP_UTF8);
 	
-	// Toplam 4 anlamlı basamak göster,
-	// eksik basamakları sondaki sıfırlarla tamamla
+	// Toplam 4 anlamlÄ± basamak gÃ¶ster,
+	// eksik basamaklarÄ± sondaki sÄ±fÄ±rlarla tamamla
 	cout << showpoint << setprecision(4);
 	
 	cout << 5.0 << endl;      // 5.000

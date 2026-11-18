@@ -1,30 +1,32 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int sayilar[] = {72, 98, 29, 87, 66, 13};
     int elemanSayisi = sizeof(sayilar) / sizeof(sayilar[0]);
 
-    cout << "Baþlangýç: ";
+    cout << "BaÅŸlangÄ±Ã§: ";
     for (int k = 0; k < elemanSayisi; k++)
     {
         cout << sayilar[k] << " ";
     }
     cout << endl;
 
-    /* Seçmeli sýralama (selection sort):
-     * Her turda dizinin henüz sýralanmamýþ kýsmýndaki en küçük eleman
-     * bulunur ve bu kýsmýn ilk elemanýyla yer deðiþtirilir.
-     * 1. turda en küçük eleman 0 indisli konuma, 2. turda kalanlarýn
-     * en küçüðü 1 indisli konuma yerleþtirilir ve bu böyle devam eder.
-     * Son eleman kendiliðinden yerine oturduðu için n elemanlý dizi
-     * n - 1 turda sýralanýr. */
+    /* SeÃ§meli sÄ±ralama (selection sort):
+     * Her turda dizinin henÃ¼z sÄ±ralanmamÄ±ÅŸ kÄ±smÄ±ndaki en kÃ¼Ã§Ã¼k eleman
+     * bulunur ve bu kÄ±smÄ±n ilk elemanÄ±yla yer deÄŸiÅŸtirilir.
+     * 1. turda en kÃ¼Ã§Ã¼k eleman 0 indisli konuma, 2. turda kalanlarÄ±n
+     * en kÃ¼Ã§Ã¼ÄŸÃ¼ 1 indisli konuma yerleÅŸtirilir ve bu bÃ¶yle devam eder.
+     * Son eleman kendiliÄŸinden yerine oturduÄŸu iÃ§in n elemanlÄ± dizi
+     * n - 1 turda sÄ±ralanÄ±r. */
     for (int i = 0; i < elemanSayisi - 1; i++)
     {
-        // i indisinden baþlayan kýsýmdaki en küçük elemanýn indisi bulunur
+        // i indisinden baÅŸlayan kÄ±sÄ±mdaki en kÃ¼Ã§Ã¼k elemanÄ±n indisi bulunur
         int enKucukIndis = i;
 
         for (int j = i + 1; j < elemanSayisi; j++)
@@ -33,12 +35,12 @@ int main(int argc, char** argv)
                 enKucukIndis = j;
         }
 
-        // En küçük eleman ile i indisli elemanýn yeri deðiþtirilir
+        // En kÃ¼Ã§Ã¼k eleman ile i indisli elemanÄ±n yeri deÄŸiÅŸtirilir
         int gecici = sayilar[i];
         sayilar[i] = sayilar[enKucukIndis];
         sayilar[enKucukIndis] = gecici;
 
-        // Her turdan sonra dizinin durumu yazdýrýlýr
+        // Her turdan sonra dizinin durumu yazdÄ±rÄ±lÄ±r
         cout << i + 1 << ". tur: ";
         for (int k = 0; k < elemanSayisi; k++)
         {
@@ -47,18 +49,18 @@ int main(int argc, char** argv)
         cout << endl;
     }
 
-    /* Ekran çýktýsý:
-     * Baþlangýç: 72 98 29 87 66 13
+    /* Ekran Ã§Ä±ktÄ±sÄ±:
+     * BaÅŸlangÄ±Ã§: 72 98 29 87 66 13
      * 1. tur: 13 98 29 87 66 72
      * 2. tur: 13 29 98 87 66 72
      * 3. tur: 13 29 66 87 98 72
      * 4. tur: 13 29 66 72 98 87
      * 5. tur: 13 29 66 72 87 98
      *
-     * Dizinin sýralanmýþ kýsmý baþtan itibaren her turda bir eleman büyür.
+     * Dizinin sÄ±ralanmÄ±ÅŸ kÄ±smÄ± baÅŸtan itibaren her turda bir eleman bÃ¼yÃ¼r.
      *
-     * Büyükten küçüðe sýralamak için her turda en küçük yerine
-     * en büyük eleman aranýr: if (sayilar[j] > sayilar[enBuyukIndis]) */
+     * BÃ¼yÃ¼kten kÃ¼Ã§Ã¼ÄŸe sÄ±ralamak iÃ§in her turda en kÃ¼Ã§Ã¼k yerine
+     * en bÃ¼yÃ¼k eleman aranÄ±r: if (sayilar[j] > sayilar[enBuyukIndis]) */
 
     return 0;
 }

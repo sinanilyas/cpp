@@ -1,22 +1,24 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int mevsimNo;
 
-    cout << "Mevsim numarasını giriniz (1-4): ";
+    cout << "Mevsim numarasÄ±nÄ± giriniz (1-4): ";
     cin >> mevsimNo;
 
-    /* Eğer kullanıcı 1-4 dışında bir sayı girerse
-     * hiçbir case eşleşmez ve default çalıştırılır. */
+    /* EÄŸer kullanÄ±cÄ± 1-4 dÄ±ÅŸÄ±nda bir sayÄ± girerse
+     * hiÃ§bir case eÅŸleÅŸmez ve default Ã§alÄ±ÅŸtÄ±rÄ±lÄ±r. */
 
     switch (mevsimNo)
     {
         case 1:
-            cout << "İlkbahar" << endl;
+            cout << "Ä°lkbahar" << endl;
             break;
         case 2:
             cout << "Yaz" << endl;
@@ -25,10 +27,10 @@ int main(int argc, char** argv)
             cout << "Sonbahar" << endl;
             break;
         case 4:
-            cout << "Kış" << endl;
+            cout << "KÄ±ÅŸ" << endl;
             break;
         default:
-            cout << "Geçersiz mevsim numarası!" << endl;
+            cout << "GeÃ§ersiz mevsim numarasÄ±!" << endl;
             break;
     }
 

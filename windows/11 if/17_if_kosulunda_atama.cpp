@@ -1,22 +1,24 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int sayi = 0;
 
     /* HATALI KULLANIM:
-     * Önce atama yapýlýr, sonra sayi deðiþkenin deðerinin
-     * true olup olmadýðý kontrol edilir. */
+     * Ã–nce atama yapÄ±lÄ±r, sonra sayi deÄŸiÅŸkenin deÄŸerinin
+     * true olup olmadÄ±ÄŸÄ± kontrol edilir. */
 
     if (sayi = 0)
-        cout << "Koþul doðrudur." << endl;
+        cout << "KoÅŸul doÄŸrudur." << endl;
     else
-        cout << "Koþul yanlýþtýr." << endl;
+        cout << "KoÅŸul yanlÄ±ÅŸtÄ±r." << endl;
 
-    cout << "Sayý: " << sayi << endl; // 0
+    cout << "SayÄ±: " << sayi << endl; // 0
 
     return 0;
 }

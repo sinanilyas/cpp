@@ -1,23 +1,25 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int sayi;
 
-    cout << "Bir tamsayý giriniz: ";
+    cout << "Bir tamsayÄ± giriniz: ";
     cin >> sayi;
 
-    // Çoklu koþulun tamamýnýn tersi alýnýr.
+    // Ã‡oklu koÅŸulun tamamÄ±nÄ±n tersi alÄ±nÄ±r.
     if (!(sayi >= 10 && sayi <= 20))
-        cout << "Sayý 10-20 aralýðýnýn dýþýndadýr." << endl;
+        cout << "SayÄ± 10-20 aralÄ±ÄŸÄ±nÄ±n dÄ±ÅŸÄ±ndadÄ±r." << endl;
 
-    // Çoklu koþulun tersi, karþýlaþtýrma operatörleri
-    // ve mantýksal operatörler tersine çevrilerek de yazýlabilir.
+    // Ã‡oklu koÅŸulun tersi, karÅŸÄ±laÅŸtÄ±rma operatÃ¶rleri
+    // ve mantÄ±ksal operatÃ¶rler tersine Ã§evrilerek de yazÄ±labilir.
     if (sayi < 10 || sayi > 20)
-        cout << "Sayý 10-20 aralýðýnýn dýþýndadýr." << endl;
+        cout << "SayÄ± 10-20 aralÄ±ÄŸÄ±nÄ±n dÄ±ÅŸÄ±ndadÄ±r." << endl;
 
     return 0;
 }

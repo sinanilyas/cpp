@@ -1,18 +1,20 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* Sabit sayının sırasıyla int, long ve long long tiplerine
-     * sığıp sığmadığına bakılır. Bu tiplerden ilk hangisine sığarsa
-     * sabit sayı o tipte oluşturulur. */
+    /* Sabit sayÄ±nÄ±n sÄ±rasÄ±yla int, long ve long long tiplerine
+     * sÄ±ÄŸÄ±p sÄ±ÄŸmadÄ±ÄŸÄ±na bakÄ±lÄ±r. Bu tiplerden ilk hangisine sÄ±ÄŸarsa
+     * sabit sayÄ± o tipte oluÅŸturulur. */
 
-    // 5 int tipindedir, long long tipine dönüştürülür
+    // 5 int tipindedir, long long tipine dÃ¶nÃ¼ÅŸtÃ¼rÃ¼lÃ¼r
     long long s1 = 5;
 
-    // Windows platformlarında 5000000000 long long tipindedir, dönüşüm yapılmaz
+    // Windows platformlarÄ±nda 5000000000 long long tipindedir, dÃ¶nÃ¼ÅŸÃ¼m yapÄ±lmaz
     long long s2 = 5000000000;
 
     return 0;

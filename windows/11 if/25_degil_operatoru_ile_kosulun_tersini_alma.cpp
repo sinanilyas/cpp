@@ -1,20 +1,22 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int sayi;
 
-    cout << "Bir tamsayý giriniz: ";
+    cout << "Bir tamsayÄ± giriniz: ";
     cin >> sayi;
 
-    // Sayý pozitifse koþul true olur.
-    if (sayi > 0) cout << "Sayý pozitiftir." << endl;
+    // SayÄ± pozitifse koÅŸul true olur.
+    if (sayi > 0) cout << "SayÄ± pozitiftir." << endl;
 
-    // ! operatörü koþulun mantýksal tersini alýr.
-    if (!(sayi > 0)) cout << "Sayý pozitif deðildir." << endl;
+    // ! operatÃ¶rÃ¼ koÅŸulun mantÄ±ksal tersini alÄ±r.
+    if (!(sayi > 0)) cout << "SayÄ± pozitif deÄŸildir." << endl;
 
     return 0;
 }

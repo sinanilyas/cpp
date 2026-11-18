@@ -1,13 +1,15 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* Döngü değişkeninin değeri döngü gövdesinde de değiştirilebilir.
-     * Ancak bu durum döngünün çalışma mantığını
-     * takip etmeyi zorlaştırdığı için tavsiye edilmez. */
+    /* DÃ¶ngÃ¼ deÄŸiÅŸkeninin deÄŸeri dÃ¶ngÃ¼ gÃ¶vdesinde de deÄŸiÅŸtirilebilir.
+     * Ancak bu durum dÃ¶ngÃ¼nÃ¼n Ã§alÄ±ÅŸma mantÄ±ÄŸÄ±nÄ±
+     * takip etmeyi zorlaÅŸtÄ±rdÄ±ÄŸÄ± iÃ§in tavsiye edilmez. */
 
     for (int i = 0; i < 10; i++)
     {
@@ -15,8 +17,8 @@ int main(int argc, char** argv)
         i++;
     }
 
-    /* i değişkeni hem döngü gövdesinde hem de artış bölümünde
-     * artırıldığı için ekrana 0, 2, 4, 6 ve 8 yazdırılır. */
+    /* i deÄŸiÅŸkeni hem dÃ¶ngÃ¼ gÃ¶vdesinde hem de artÄ±ÅŸ bÃ¶lÃ¼mÃ¼nde
+     * artÄ±rÄ±ldÄ±ÄŸÄ± iÃ§in ekrana 0, 2, 4, 6 ve 8 yazdÄ±rÄ±lÄ±r. */
 
     return 0;
 }

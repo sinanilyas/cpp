@@ -1,12 +1,14 @@
 #include <iostream>
-#include <iomanip> // setprecision için gerekli
+#include <iomanip> // setprecision iÃ§in gerekli
+#include <windows.h>
 
 using namespace std;
 
 int main(int argc, char** argv) {
-	setlocale(LC_ALL, "Turkish");
+	SetConsoleCP(CP_UTF8);
+	SetConsoleOutputCP(CP_UTF8);
 	
-	// fixed kullanılmıyorsa toplam 3 anlamlı basamak gösterilir
+	// fixed kullanÄ±lmÄ±yorsa toplam 3 anlamlÄ± basamak gÃ¶sterilir
 	cout << setprecision(3);
 		
 	cout << "fixed olmadan setprecision(3)" << endl;
@@ -15,7 +17,7 @@ int main(int argc, char** argv) {
 	cout << 123.456 << endl;     // 123
 	cout << 0.0123456 << endl;   // 0.0123
 	
-	// fixed ile birlikte kullanılırsa virgülden sonra 3 basamak gösterilir
+	// fixed ile birlikte kullanÄ±lÄ±rsa virgÃ¼lden sonra 3 basamak gÃ¶sterilir
 	cout << fixed << setprecision(3);
 
 	cout << endl;

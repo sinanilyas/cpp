@@ -1,11 +1,13 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-	setlocale(LC_ALL, "Turkish");
+	SetConsoleCP(CP_UTF8);
+	SetConsoleOutputCP(CP_UTF8);
 
-    // HATA: 2'li sayı sisteminde yalnızca 0 ve 1 rakamları kullanılabilir
+    // HATA: 2'li sayÄ± sisteminde yalnÄ±zca 0 ve 1 rakamlarÄ± kullanÄ±labilir
     int sayi = 0b15;
 
 	return 0;

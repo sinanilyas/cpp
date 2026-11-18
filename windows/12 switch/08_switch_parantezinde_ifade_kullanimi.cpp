@@ -1,30 +1,32 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int sayi;
 
-    cout << "Bir tamsayı giriniz: ";
+    cout << "Bir tamsayÄ± giriniz: ";
     cin >> sayi;
 
-    /* switch içerisinde yalnızca değişkenler değil,
-     * sonuçları tamsayı olan ifadeler de kullanılabilir.
-     * Örneğin kullanıcı 14 girerse 14 % 3 = 2 olduğundan
-     * case 2 çalıştırılır. */
+    /* switch iÃ§erisinde yalnÄ±zca deÄŸiÅŸkenler deÄŸil,
+     * sonuÃ§larÄ± tamsayÄ± olan ifadeler de kullanÄ±labilir.
+     * Ã–rneÄŸin kullanÄ±cÄ± 14 girerse 14 % 3 = 2 olduÄŸundan
+     * case 2 Ã§alÄ±ÅŸtÄ±rÄ±lÄ±r. */
 
     switch (sayi % 3)
     {
         case 0:
-            cout << "Sayı 3'e tam bölünür." << endl;
+            cout << "SayÄ± 3'e tam bÃ¶lÃ¼nÃ¼r." << endl;
             break;
         case 1:
-            cout << "Bölümden kalan 1'dir." << endl;
+            cout << "BÃ¶lÃ¼mden kalan 1'dir." << endl;
             break;
         case 2:
-            cout << "Bölümden kalan 2'dir." << endl;
+            cout << "BÃ¶lÃ¼mden kalan 2'dir." << endl;
             break;
     }
 

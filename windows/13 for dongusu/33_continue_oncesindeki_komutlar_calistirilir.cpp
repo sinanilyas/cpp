@@ -1,21 +1,23 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* continue komutundan önceki komutlar normal şekilde çalıştırılır.
-     * continue komutuyla karşılaşıldığında ise döngü gövdesindeki
-     * sonraki komutlar atlanır ve bir sonraki tekrara geçilir. */
+    /* continue komutundan Ã¶nceki komutlar normal ÅŸekilde Ã§alÄ±ÅŸtÄ±rÄ±lÄ±r.
+     * continue komutuyla karÅŸÄ±laÅŸÄ±ldÄ±ÄŸÄ±nda ise dÃ¶ngÃ¼ gÃ¶vdesindeki
+     * sonraki komutlar atlanÄ±r ve bir sonraki tekrara geÃ§ilir. */
 
     for (int i = 1; i <= 5; i++)
     {
-        cout << "Başlangıç: " << i << endl;
+        cout << "BaÅŸlangÄ±Ã§: " << i << endl;
 
         if (i == 3) continue;
 
-        cout << "Bitiş: " << i << endl;
+        cout << "BitiÅŸ: " << i << endl;
     }
 
     return 0;

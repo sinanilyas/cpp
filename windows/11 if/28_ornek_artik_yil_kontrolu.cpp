@@ -1,27 +1,29 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* Bir yılın artık yıl olması için aşağıdaki koşullardan
-     * birini sağlaması gerekir:
-     *     400'e tam bölünmesi.
-     *     4'e tam bölünmesi ancak 100'e tam bölünmemesi.
+    /* Bir yÄ±lÄ±n artÄ±k yÄ±l olmasÄ± iÃ§in aÅŸaÄŸÄ±daki koÅŸullardan
+     * birini saÄŸlamasÄ± gerekir:
+     *     400'e tam bÃ¶lÃ¼nmesi.
+     *     4'e tam bÃ¶lÃ¼nmesi ancak 100'e tam bÃ¶lÃ¼nmemesi.
      */
 
     int yil;
 
-    cout << "Bir yıl giriniz: ";
+    cout << "Bir yÄ±l giriniz: ";
     cin >> yil;
 
-    // Yıl 400'e tam bölünüyorsa veya
-    // 4'e tam bölünüp 100'e tam bölünmüyorsa artık yıldır.
+    // YÄ±l 400'e tam bÃ¶lÃ¼nÃ¼yorsa veya
+    // 4'e tam bÃ¶lÃ¼nÃ¼p 100'e tam bÃ¶lÃ¼nmÃ¼yorsa artÄ±k yÄ±ldÄ±r.
     if (yil % 400 == 0 || (yil % 4 == 0 && yil % 100 != 0))
-        cout << "Artık yıldır." << endl;
+        cout << "ArtÄ±k yÄ±ldÄ±r." << endl;
     else
-        cout << "Artık yıl değildir." << endl;
+        cout << "ArtÄ±k yÄ±l deÄŸildir." << endl;
 
     return 0;
 }

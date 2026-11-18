@@ -1,22 +1,24 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int sayi;
 
-    cout << "Bir tamsayý giriniz: ";
+    cout << "Bir tamsayÄ± giriniz: ";
     cin >> sayi;
 
-    /* Yalnýzca ilk komut koþula baðlýdýr. */
+    /* YalnÄ±zca ilk komut koÅŸula baÄŸlÄ±dÄ±r. */
 
     if (sayi > 0)
-        cout << "Sayý pozitiftir." << endl;
-        cout << "Sayý sýfýrdan büyüktür." << endl;
+        cout << "SayÄ± pozitiftir." << endl;
+        cout << "SayÄ± sÄ±fÄ±rdan bÃ¼yÃ¼ktÃ¼r." << endl;
 
-    /* Ýkinci cout koþuldan baðýmsýz olarak çalýþtýrýlýr. */
+    /* Ä°kinci cout koÅŸuldan baÄŸÄ±msÄ±z olarak Ã§alÄ±ÅŸtÄ±rÄ±lÄ±r. */
 
     return 0;
 }

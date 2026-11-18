@@ -1,9 +1,11 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     typedef int tamsayi;
 
@@ -11,8 +13,8 @@ int main(int argc, char** argv)
     tamsayi sayi2 = 20;
 
 	// tamsayi, int veri tipinin alternatif ismidir.
-	// Farklı veri tipleri olmadıkları için aralarında
-	// tip dönüşümü yapılmasına gerek yoktur.
+	// FarklÄ± veri tipleri olmadÄ±klarÄ± iÃ§in aralarÄ±nda
+	// tip dÃ¶nÃ¼ÅŸÃ¼mÃ¼ yapÄ±lmasÄ±na gerek yoktur.
     int toplam1 = sayi1 + sayi2;
     tamsayi toplam2 = sayi1 + sayi2;
     

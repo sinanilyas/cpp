@@ -1,23 +1,25 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int sayi1, sayi2;
 
-    cout << "Birinci sayýyý giriniz: ";
+    cout << "Birinci sayÄ±yÄ± giriniz: ";
     cin >> sayi1;
 
-    cout << "Ýkinci sayýyý giriniz: ";
+    cout << "Ä°kinci sayÄ±yÄ± giriniz: ";
     cin >> sayi2;
 
-    // Koþul doðru ise büyük deðiþkenine sayi1,
-    // deðilse sayi2 atanýr
+    // KoÅŸul doÄŸru ise bÃ¼yÃ¼k deÄŸiÅŸkenine sayi1,
+    // deÄŸilse sayi2 atanÄ±r
     int buyuk = (sayi1 > sayi2) ? sayi1 : sayi2;
 
-    /* Yukarýdaki ifade aþaðýdaki ifade ile eþdeðerdir:
+    /* YukarÄ±daki ifade aÅŸaÄŸÄ±daki ifade ile eÅŸdeÄŸerdir:
      *
      * if (sayi1 > sayi2)
      *     buyuk = sayi1;
@@ -25,7 +27,7 @@ int main(int argc, char** argv)
      *     buyuk = sayi2;
      */
 
-    cout << "Büyük sayý: " << buyuk << endl;
+    cout << "BÃ¼yÃ¼k sayÄ±: " << buyuk << endl;
 
     return 0;
 }

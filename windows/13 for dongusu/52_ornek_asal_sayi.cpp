@@ -1,25 +1,27 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* Asal sayılar, 1'den büyük ve yalnızca 1'e ve
-     * kendisine kalansız bölünebilen tamsayılardır.
-     * Sayının başka bir böleni bulunursa break komutuyla
-     * döngü sonlandırılır. */
+    /* Asal sayÄ±lar, 1'den bÃ¼yÃ¼k ve yalnÄ±zca 1'e ve
+     * kendisine kalansÄ±z bÃ¶lÃ¼nebilen tamsayÄ±lardÄ±r.
+     * SayÄ±nÄ±n baÅŸka bir bÃ¶leni bulunursa break komutuyla
+     * dÃ¶ngÃ¼ sonlandÄ±rÄ±lÄ±r. */
 
     int sayi;
     bool asal = true;
 
-    cout << "Bir tamsayı giriniz: ";
+    cout << "Bir tamsayÄ± giriniz: ";
     cin >> sayi;
 
-	// 0 ve 1 asal sayı değildir
+	// 0 ve 1 asal sayÄ± deÄŸildir
     if (sayi < 2) asal = false;
 
-	/* 2 asal sayıdır, döngü hiç çalışmadan atlanır */
+	/* 2 asal sayÄ±dÄ±r, dÃ¶ngÃ¼ hiÃ§ Ã§alÄ±ÅŸmadan atlanÄ±r */
 
     for (int i = 2; i < sayi; i++)
     {
@@ -31,9 +33,9 @@ int main(int argc, char** argv)
     }
 
     if (asal)
-        cout << sayi << " asal sayıdır." << endl;
+        cout << sayi << " asal sayÄ±dÄ±r." << endl;
     else
-        cout << sayi << " asal sayı değildir." << endl;
+        cout << sayi << " asal sayÄ± deÄŸildir." << endl;
 
     return 0;
 }

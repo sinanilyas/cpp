@@ -1,12 +1,14 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv) {
-	setlocale(LC_ALL, "Turkish");
+	SetConsoleCP(CP_UTF8);
+	SetConsoleOutputCP(CP_UTF8);
 	
 	int sayi = 7;
 	
-	// int tipli sayi değişkeninin boyutu (hafızada kaç byte yer kapladığı) yazdırılır
+	// int tipli sayi deÄŸiÅŸkeninin boyutu (hafÄ±zada kaÃ§ byte yer kapladÄ±ÄŸÄ±) yazdÄ±rÄ±lÄ±r
 	cout << sizeof(sayi) << endl;
 	
 	return 0;

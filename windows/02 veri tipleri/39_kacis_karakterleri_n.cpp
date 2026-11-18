@@ -1,13 +1,15 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv) {
-	setlocale(LC_ALL, "Turkish");
+	SetConsoleCP(CP_UTF8);
+	SetConsoleOutputCP(CP_UTF8);
 	
-	/* '\n' (10) alt satıra geçer */
+	/* '\n' (10) alt satÄ±ra geÃ§er */
 	
-	// "Silgi" yazılır, imleç alt satıra geçer.
-	// "Dergi" yazılır.
+	// "Silgi" yazÄ±lÄ±r, imleÃ§ alt satÄ±ra geÃ§er.
+	// "Dergi" yazÄ±lÄ±r.
 	cout << "Silgi\nDergi" << endl;
 	
 	return 0;

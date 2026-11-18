@@ -1,4 +1,5 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 struct urun
@@ -9,13 +10,14 @@ struct urun
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* struct ile yalnızca yeni bir veri tipi tanımlanır.
-     * Bu tanımlama bellekte bir değişken oluşturmaz. */
+    /* struct ile yalnÄ±zca yeni bir veri tipi tanÄ±mlanÄ±r.
+     * Bu tanÄ±mlama bellekte bir deÄŸiÅŸken oluÅŸturmaz. */
 
-    kod = 101;       // HATA: kod değişkeni tanımlı değil
-    fiyat = 25000.0; // HATA: fiyat değişkeni tanımlı değil
+    kod = 101;       // HATA: kod deÄŸiÅŸkeni tanÄ±mlÄ± deÄŸil
+    fiyat = 25000.0; // HATA: fiyat deÄŸiÅŸkeni tanÄ±mlÄ± deÄŸil
 
     return 0;
 }

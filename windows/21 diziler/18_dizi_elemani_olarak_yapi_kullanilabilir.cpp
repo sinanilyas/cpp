@@ -1,4 +1,5 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 struct ogrenci
@@ -10,40 +11,41 @@ struct ogrenci
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* Dizinin elemanları yapı türünde olabilir. Aşağıdaki dizinin
-     * her elemanı bir ogrenci yapısıdır ve numara, vize ve final
-     * üyelerine sahiptir. Böylece her öğrencinin bilgileri bir arada
-     * tutulur. Numaralar, vize notları ve final notları için üç ayrı
-     * dizi tanımlamaya gerek kalmaz.
+    /* Dizinin elemanlarÄ± yapÄ± tÃ¼rÃ¼nde olabilir. AÅŸaÄŸÄ±daki dizinin
+     * her elemanÄ± bir ogrenci yapÄ±sÄ±dÄ±r ve numara, vize ve final
+     * Ã¼yelerine sahiptir. BÃ¶ylece her Ã¶ÄŸrencinin bilgileri bir arada
+     * tutulur. Numaralar, vize notlarÄ± ve final notlarÄ± iÃ§in Ã¼Ã§ ayrÄ±
+     * dizi tanÄ±mlamaya gerek kalmaz.
      *
-     * Her elemanın başlangıç değerleri ayrı küme parantezleri
-     * içinde yazılır. */
+     * Her elemanÄ±n baÅŸlangÄ±Ã§ deÄŸerleri ayrÄ± kÃ¼me parantezleri
+     * iÃ§inde yazÄ±lÄ±r. */
     ogrenci ogrenciler[3] = {{101, 60, 70}, {102, 45, 80}, {103, 90, 85}};
 
-    /* Bir elemanın üyesine erişmek için önce indis, sonra nokta (.)
-     * operatörü ve üye adı yazılır. */
+    /* Bir elemanÄ±n Ã¼yesine eriÅŸmek iÃ§in Ã¶nce indis, sonra nokta (.)
+     * operatÃ¶rÃ¼ ve Ã¼ye adÄ± yazÄ±lÄ±r. */
     cout << ogrenciler[1].numara << endl; // 102
     cout << ogrenciler[1].vize << endl;   // 45
 
-    // Üyelerin değerleri değiştirilebilir.
+    // Ãœyelerin deÄŸerleri deÄŸiÅŸtirilebilir.
     ogrenciler[1].vize = 50;
 
-    // sizeof yapı dizilerinde de eleman sayısını bulmak için kullanılabilir.
+    // sizeof yapÄ± dizilerinde de eleman sayÄ±sÄ±nÄ± bulmak iÃ§in kullanÄ±labilir.
     int ogrenciSayisi = sizeof(ogrenciler) / sizeof(ogrenciler[0]);
 
     for (int i = 0; i < ogrenciSayisi; i++)
     {
         double ortalama = ogrenciler[i].vize * 0.4 + ogrenciler[i].final * 0.6;
 
-        cout << ogrenciler[i].numara << " numaralı öğrencinin ortalaması: " << ortalama << endl;
+        cout << ogrenciler[i].numara << " numaralÄ± Ã¶ÄŸrencinin ortalamasÄ±: " << ortalama << endl;
     }
 
-    /* Ekran çıktısı:
-     * 101 numaralı öğrencinin ortalaması: 66
-     * 102 numaralı öğrencinin ortalaması: 68
-     * 103 numaralı öğrencinin ortalaması: 87
+    /* Ekran Ã§Ä±ktÄ±sÄ±:
+     * 101 numaralÄ± Ã¶ÄŸrencinin ortalamasÄ±: 66
+     * 102 numaralÄ± Ã¶ÄŸrencinin ortalamasÄ±: 68
+     * 103 numaralÄ± Ã¶ÄŸrencinin ortalamasÄ±: 87
      */
 
     return 0;

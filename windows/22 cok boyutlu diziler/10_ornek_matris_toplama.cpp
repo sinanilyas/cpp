@@ -1,14 +1,16 @@
 #include <iostream>
 #include <iomanip>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* İki matrisin toplanabilmesi için satır ve sütun sayıları aynı
-     * olmalıdır. Toplam matrisin her elemanı, iki matrisin aynı
-     * konumdaki (aynı indisli) elemanlarının toplamıdır:
+    /* Ä°ki matrisin toplanabilmesi iÃ§in satÄ±r ve sÃ¼tun sayÄ±larÄ± aynÄ±
+     * olmalÄ±dÄ±r. Toplam matrisin her elemanÄ±, iki matrisin aynÄ±
+     * konumdaki (aynÄ± indisli) elemanlarÄ±nÄ±n toplamÄ±dÄ±r:
      *
      *     toplam[i][j] = matris1[i][j] + matris2[i][j] */
     const int SATIR = 3;
@@ -28,7 +30,7 @@ int main(int argc, char** argv)
 
     cout << "Toplam matris:" << endl;
 
-    // Her eleman setw ile 4 karakterlik alana yazılır, sütunlar hizalanır.
+    // Her eleman setw ile 4 karakterlik alana yazÄ±lÄ±r, sÃ¼tunlar hizalanÄ±r.
     for (int i = 0; i < SATIR; i++)
     {
         for (int j = 0; j < SUTUN; j++)
@@ -39,7 +41,7 @@ int main(int argc, char** argv)
         cout << endl;
     }
 
-    /* Ekran çıktısı:
+    /* Ekran Ã§Ä±ktÄ±sÄ±:
      * Toplam matris:
      *   11  22
      *   33  44
@@ -47,8 +49,8 @@ int main(int argc, char** argv)
      */
 
     /* Matrisler topluca toplanamaz. toplam = matris1 + matris2;
-     * yazılırsa program derlenmez. Elemanlar döngüyle tek tek
-     * toplanmalıdır. */
+     * yazÄ±lÄ±rsa program derlenmez. Elemanlar dÃ¶ngÃ¼yle tek tek
+     * toplanmalÄ±dÄ±r. */
 
     return 0;
 }

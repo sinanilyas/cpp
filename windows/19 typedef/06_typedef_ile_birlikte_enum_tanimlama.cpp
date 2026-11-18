@@ -1,8 +1,9 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
-/* typedef ile enum tanýmlama ve alternatif isim verme.
- * gun ismi, tanýmlanan enum tipini ifade eder. */
+/* typedef ile enum tanÄ±mlama ve alternatif isim verme.
+ * gun ismi, tanÄ±mlanan enum tipini ifade eder. */
 typedef enum
 {
     pts, sal, car, per, cum, cts, paz
@@ -10,7 +11,8 @@ typedef enum
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     gun bugun = car;
 

@@ -1,31 +1,33 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     const int MAX = 30;
     int yas;
     char adSoyad[MAX];
 
-    cout << "Yaşınızı giriniz: ";
+    cout << "YaÅŸÄ±nÄ±zÄ± giriniz: ";
     cin >> yas;
 
-    cout << "Adınızı ve soyadınızı giriniz: ";
+    cout << "AdÄ±nÄ±zÄ± ve soyadÄ±nÄ±zÄ± giriniz: ";
     cin.get(adSoyad, MAX); // MANTIK HATASI: Tamponda kalan Enter karakteri okunur
 
-    cout << "Yaş: " << yas << endl;
+    cout << "YaÅŸ: " << yas << endl;
     cout << "Ad soyad: " << adSoyad << endl;
 
-    /* cin >> yas, yaş değerini okur ama Enter karakterini ('\n') girdi
-     * tamponunda bırakır. cin.get tamponda bekleyen bu Enter karakterini
-     * görünce hemen durur. Kullanıcı ad soyad giremeden program devam eder
-     * ve adSoyad dizisine boş bir metin okunur.
+    /* cin >> yas, yaÅŸ deÄŸerini okur ama Enter karakterini ('\n') girdi
+     * tamponunda bÄ±rakÄ±r. cin.get tamponda bekleyen bu Enter karakterini
+     * gÃ¶rÃ¼nce hemen durur. KullanÄ±cÄ± ad soyad giremeden program devam eder
+     * ve adSoyad dizisine boÅŸ bir metin okunur.
      *
-     * Ekran çıktısı (yaş olarak 20 girildiğinde):
-     * Yaşınızı giriniz: 20
-     * Adınızı ve soyadınızı giriniz: Yaş: 20
+     * Ekran Ã§Ä±ktÄ±sÄ± (yaÅŸ olarak 20 girildiÄŸinde):
+     * YaÅŸÄ±nÄ±zÄ± giriniz: 20
+     * AdÄ±nÄ±zÄ± ve soyadÄ±nÄ±zÄ± giriniz: YaÅŸ: 20
      * Ad soyad:
      */
 

@@ -1,24 +1,26 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int sayi = 17;
     int bolen = 0;
 
-    // HATA: Sýfýra bölümden kalan hesaplanamaz
+    // HATA: SÄ±fÄ±ra bÃ¶lÃ¼mden kalan hesaplanamaz
     sayi %= bolen;
 
     cout << sayi << endl;
 
-    /* Yukarýdaki iþlem aþaðýdaki iþlemle eþdeðerdir:
+    /* YukarÄ±daki iÅŸlem aÅŸaÄŸÄ±daki iÅŸlemle eÅŸdeÄŸerdir:
      *
      * sayi = sayi % bolen;
      *
-     * Sýfýra bölümden kalan hesaplanamaz.
-     * Program çalýþma sýrasýnda hata vererek sonlanabilir.
+     * SÄ±fÄ±ra bÃ¶lÃ¼mden kalan hesaplanamaz.
+     * Program Ã§alÄ±ÅŸma sÄ±rasÄ±nda hata vererek sonlanabilir.
      */
 
     return 0;

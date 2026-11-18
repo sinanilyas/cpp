@@ -1,27 +1,29 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* Döngü kullanılarak girilen sayılar karşılaştırılabilir.
-     * İlk sayı en büyük kabul edilir.
-     * Sonraki adımlarda daha büyük bir sayı girilirse
-     * en büyük değer güncellenir. */
+    /* DÃ¶ngÃ¼ kullanÄ±larak girilen sayÄ±lar karÅŸÄ±laÅŸtÄ±rÄ±labilir.
+     * Ä°lk sayÄ± en bÃ¼yÃ¼k kabul edilir.
+     * Sonraki adÄ±mlarda daha bÃ¼yÃ¼k bir sayÄ± girilirse
+     * en bÃ¼yÃ¼k deÄŸer gÃ¼ncellenir. */
 
     int sayi, enBuyuk;
 
     for (int i = 1; i <= 5; i++)
     {
-        cout << i << ". sayıyı giriniz: ";
+        cout << i << ". sayÄ±yÄ± giriniz: ";
         cin >> sayi;
 
         if (i == 1) enBuyuk = sayi;
         else if (sayi > enBuyuk) enBuyuk = sayi;
     }
 
-    cout << "En büyük sayı: " << enBuyuk << endl;
+    cout << "En bÃ¼yÃ¼k sayÄ±: " << enBuyuk << endl;
 
     return 0;
 }

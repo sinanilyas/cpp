@@ -1,19 +1,21 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* Fibonacci dizisinde ilk iki sayı 0 ve 1'dir.
-     * Sonraki her sayı kendisinden önceki iki sayının toplamıdır.
-     * Örnek: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34...
+    /* Fibonacci dizisinde ilk iki sayÄ± 0 ve 1'dir.
+     * Sonraki her sayÄ± kendisinden Ã¶nceki iki sayÄ±nÄ±n toplamÄ±dÄ±r.
+     * Ã–rnek: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34...
      */
 
     int adet;
     long long siradaki = 0, birSonraki = 1;
 
-    cout << "Kaç Fibonacci sayısı yazdırılsın (1-47)? ";
+    cout << "KaÃ§ Fibonacci sayÄ±sÄ± yazdÄ±rÄ±lsÄ±n (1-47)? ";
     cin >> adet;
 
     for (int i = 1; i <= adet; i++)
@@ -22,7 +24,7 @@ int main(int argc, char** argv)
 
         long long ikiSonraki = siradaki + birSonraki;
 
-        // Sonraki adım için kaydırma yapılıyor
+        // Sonraki adÄ±m iÃ§in kaydÄ±rma yapÄ±lÄ±yor
         siradaki = birSonraki;
         birSonraki = ikiSonraki;
     }

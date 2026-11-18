@@ -1,38 +1,40 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     srand(time(0));
 
-    /* Her zar sonucunun kaç kez geldiği bir dizide sayılır.
+    /* Her zar sonucunun kaÃ§ kez geldiÄŸi bir dizide sayÄ±lÄ±r.
      * sayaclar[0] 1'lerin, sayaclar[1] 2'lerin, ..., sayaclar[5]
-     * 6'ların sayısını tutar. Bütün sayaçlar başlangıçta 0'dır. */
+     * 6'larÄ±n sayÄ±sÄ±nÄ± tutar. BÃ¼tÃ¼n sayaÃ§lar baÅŸlangÄ±Ã§ta 0'dÄ±r. */
     int sayaclar[6] = {};
 
     for (int i = 1; i <= 6000; i++)
     {
         int zar = rand() % 6 + 1;
 
-        // Zar değerinden 1 çıkarılarak indis bulunur ve o sayaç artırılır
+        // Zar deÄŸerinden 1 Ã§Ä±karÄ±larak indis bulunur ve o sayaÃ§ artÄ±rÄ±lÄ±r
         sayaclar[zar - 1]++;
     }
 
     for (int i = 0; i < 6; i++)
     {
-        cout << i + 1 << " gelme sayısı: " << sayaclar[i] << endl;
+        cout << i + 1 << " gelme sayÄ±sÄ±: " << sayaclar[i] << endl;
     }
 
-    // Örneğin 1 gelme sayısı: 1012
+    // Ã–rneÄŸin 1 gelme sayÄ±sÄ±: 1012
 
-    /* Altı ayrı sayaç değişkeni ve switch kullanmak yerine tek bir
-     * dizi ve sayaclar[zar - 1]++ satırı yeterli olur.
-     * Zar yerine 1-100 arasında sayı üretilseydi yalnızca
-     * 100 elemanlı bir dizi tanımlamak yeterli olurdu. */
+    /* AltÄ± ayrÄ± sayaÃ§ deÄŸiÅŸkeni ve switch kullanmak yerine tek bir
+     * dizi ve sayaclar[zar - 1]++ satÄ±rÄ± yeterli olur.
+     * Zar yerine 1-100 arasÄ±nda sayÄ± Ã¼retilseydi yalnÄ±zca
+     * 100 elemanlÄ± bir dizi tanÄ±mlamak yeterli olurdu. */
 
     return 0;
 }

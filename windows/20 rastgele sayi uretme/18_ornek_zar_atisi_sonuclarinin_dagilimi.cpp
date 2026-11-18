@@ -1,17 +1,19 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     srand(time(0));
 
     int sayac1 = 0, sayac2 = 0, sayac3 = 0, sayac4 = 0, sayac5 = 0, sayac6 = 0;
 
-    // Zar 6000 kez atılır ve her sonucun kaç kez geldiği sayılır
+    // Zar 6000 kez atÄ±lÄ±r ve her sonucun kaÃ§ kez geldiÄŸi sayÄ±lÄ±r
     for (int i = 1; i <= 6000; i++)
     {
         int zar = rand() % 6 + 1;
@@ -39,17 +41,17 @@ int main(int argc, char** argv)
         }
     }
 
-    cout << "1 gelme sayısı: " << sayac1 << endl;
-    cout << "2 gelme sayısı: " << sayac2 << endl;
-    cout << "3 gelme sayısı: " << sayac3 << endl;
-    cout << "4 gelme sayısı: " << sayac4 << endl;
-    cout << "5 gelme sayısı: " << sayac5 << endl;
-    cout << "6 gelme sayısı: " << sayac6 << endl;
+    cout << "1 gelme sayÄ±sÄ±: " << sayac1 << endl;
+    cout << "2 gelme sayÄ±sÄ±: " << sayac2 << endl;
+    cout << "3 gelme sayÄ±sÄ±: " << sayac3 << endl;
+    cout << "4 gelme sayÄ±sÄ±: " << sayac4 << endl;
+    cout << "5 gelme sayÄ±sÄ±: " << sayac5 << endl;
+    cout << "6 gelme sayÄ±sÄ±: " << sayac6 << endl;
 
-    /* Rastgele sayılar aralıktaki her değeri yaklaşık olarak
-     * eşit sıklıkta üretir. Bu yüzden her sonuç yaklaşık
+    /* Rastgele sayÄ±lar aralÄ±ktaki her deÄŸeri yaklaÅŸÄ±k olarak
+     * eÅŸit sÄ±klÄ±kta Ã¼retir. Bu yÃ¼zden her sonuÃ§ yaklaÅŸÄ±k
      * 1000 kez (6000 / 6) gelir.
-     * Atış sayısı arttıkça her sonucun oranı 1/6'ya daha çok yaklaşır. */
+     * AtÄ±ÅŸ sayÄ±sÄ± arttÄ±kÃ§a her sonucun oranÄ± 1/6'ya daha Ã§ok yaklaÅŸÄ±r. */
 
     return 0;
 }

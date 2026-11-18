@@ -1,11 +1,13 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-	setlocale(LC_ALL, "Turkish");
+	SetConsoleCP(CP_UTF8);
+	SetConsoleOutputCP(CP_UTF8);
 
-	/* Farklı sayı sistemlerindeki sabit sayılar aritmetik işlemlerde de kullanılabilir. */
+	/* FarklÄ± sayÄ± sistemlerindeki sabit sayÄ±lar aritmetik iÅŸlemlerde de kullanÄ±labilir. */
 
 	int toplam = 0xA + 0b1010 + 012 + 10; // 10 + 10 + 10 + 10
 

@@ -1,13 +1,15 @@
 #include <iostream>
+#include <windows.h>
 
-// Her kullanýmda std::cout, std::endl vb. yazmamak için
+// Her kullanÄ±mda std::cout, std::endl vb. yazmamak iÃ§in
 using namespace std;
 
 int main(int argc, char** argv) {
-	setlocale(LC_ALL, "Turkish");
+	SetConsoleCP(CP_UTF8);
+	SetConsoleOutputCP(CP_UTF8);
 	
-	cout << "Satýr 1" << endl;
-	cout << "Satýr 2" << endl;
+	cout << "SatÄ±r 1" << endl;
+	cout << "SatÄ±r 2" << endl;
 	
 	return 0;
 }

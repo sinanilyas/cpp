@@ -1,14 +1,16 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv) {
-	setlocale(LC_ALL, "Turkish");
+	SetConsoleCP(CP_UTF8);
+	SetConsoleOutputCP(CP_UTF8);
 	
-	short s1 = -32768; // Saklayabileceği en küçük değer
-	short s2 = 32767;  // Saklayabileceği en büyük değer
+	short s1 = -32768; // SaklayabileceÄŸi en kÃ¼Ã§Ã¼k deÄŸer
+	short s2 = 32767;  // SaklayabileceÄŸi en bÃ¼yÃ¼k deÄŸer
 	
-	cout << "Sayı 1: " << s1 << endl
-	     << "Sayı 2: " << s2 << endl;
+	cout << "SayÄ± 1: " << s1 << endl
+	     << "SayÄ± 2: " << s2 << endl;
 	
 	return 0;
 }

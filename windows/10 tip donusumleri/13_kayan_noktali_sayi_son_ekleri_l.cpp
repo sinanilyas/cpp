@@ -1,11 +1,13 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* Ondalıklı sabit sayıların long double tipinde oluşturulması için
+    /* OndalÄ±klÄ± sabit sayÄ±larÄ±n long double tipinde oluÅŸturulmasÄ± iÃ§in
      * l veya L son eki eklenir. */
 
     long double s1 = 5.2L;

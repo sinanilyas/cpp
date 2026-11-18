@@ -1,18 +1,20 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv) {
-	setlocale(LC_ALL, "Turkish");
+	SetConsoleCP(CP_UTF8);
+	SetConsoleOutputCP(CP_UTF8);
 	
 	short s1 = 6;
-	short int s2 = 7;         // int yazmak zorunlu deðildir
-	signed short s3 = 8;      // signed yazmak zorunlu deðildir
+	short int s2 = 7;         // int yazmak zorunlu deÄŸildir
+	signed short s3 = 8;      // signed yazmak zorunlu deÄŸildir
 	signed short int s4 = 9;
 	
-	cout << "Sayý 1: " << s1 << endl;
-	cout << "Sayý 2: " << s2 << endl;
-	cout << "Sayý 3: " << s3 << endl;
-	cout << "Sayý 4: " << s4 << endl;
+	cout << "SayÄ± 1: " << s1 << endl;
+	cout << "SayÄ± 2: " << s2 << endl;
+	cout << "SayÄ± 3: " << s3 << endl;
+	cout << "SayÄ± 4: " << s4 << endl;
 	
 	return 0;
 }

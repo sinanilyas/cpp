@@ -1,4 +1,5 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 struct yil_ici_notlari
@@ -15,11 +16,12 @@ struct sinav
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     sinav ogrenci;
 
-    // Ýç içe yapýlarýn üyelerine nokta (.) operatörüyle eriþilir.
+    // Ä°Ã§ iÃ§e yapÄ±larÄ±n Ã¼yelerine nokta (.) operatÃ¶rÃ¼yle eriÅŸilir.
     ogrenci.yil_ici.vize1 = 70;
     ogrenci.yil_ici.vize2 = 80;
     ogrenci.final = 90;

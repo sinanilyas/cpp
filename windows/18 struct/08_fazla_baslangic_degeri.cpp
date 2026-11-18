@@ -1,4 +1,5 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 struct urun
@@ -9,16 +10,17 @@ struct urun
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* Fazla başlangıç değeri verilirse hata oluşur,
+    /* Fazla baÅŸlangÄ±Ã§ deÄŸeri verilirse hata oluÅŸur,
      * program derlenmez */
 
-    // HATA: Üye sayısından fazla başlangıç değeri verilmiş
+    // HATA: Ãœye sayÄ±sÄ±ndan fazla baÅŸlangÄ±Ã§ deÄŸeri verilmiÅŸ
     urun buzdolabi = {101, 25000.0, 5};
 
-    cout << "Ürün kodu: " << buzdolabi.kod << endl;
-    cout << "Ürün fiyatı: " << buzdolabi.fiyat << endl;
+    cout << "ÃœrÃ¼n kodu: " << buzdolabi.kod << endl;
+    cout << "ÃœrÃ¼n fiyatÄ±: " << buzdolabi.fiyat << endl;
 
     return 0;
 }

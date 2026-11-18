@@ -1,13 +1,15 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     bool aktif = true;
 
-    /* Aþaðýdaki iki if ayný anlama gelir. */
+    /* AÅŸaÄŸÄ±daki iki if aynÄ± anlama gelir. */
 
     if (aktif) cout << "Sistem aktiftir." << endl;
 

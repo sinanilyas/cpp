@@ -1,22 +1,24 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* cout, ilk null karakterini gördüğü yerde yazdırmayı bırakır.
-     * null karakteri dizinin ortasındaysa sonraki karakterler
-     * yazdırılmaz. */
+    /* cout, ilk null karakterini gÃ¶rdÃ¼ÄŸÃ¼ yerde yazdÄ±rmayÄ± bÄ±rakÄ±r.
+     * null karakteri dizinin ortasÄ±ndaysa sonraki karakterler
+     * yazdÄ±rÄ±lmaz. */
     char ad[] = {'A', '\0', 'i'};
 
     cout << ad << endl; // A
 
-    // Yazdırılmayan karakterler dizide durmaya devam eder.
+    // YazdÄ±rÄ±lmayan karakterler dizide durmaya devam eder.
     cout << ad[2] << endl; // i
 
-    /* Son eleman null karakteri olmasa da cout dizinin dışına taşmaz,
-     * çünkü daha önce bir null karakteri vardır. */
+    /* Son eleman null karakteri olmasa da cout dizinin dÄ±ÅŸÄ±na taÅŸmaz,
+     * Ã§Ã¼nkÃ¼ daha Ã¶nce bir null karakteri vardÄ±r. */
 
     return 0;
 }

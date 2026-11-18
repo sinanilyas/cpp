@@ -1,13 +1,15 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* İç döngünün başlangıç değeri dış döngünün değişkenine
-     * bağlı olarak değiştirilebilir.
-     * Böylece her satırda yazdırılan karakter sayısı azaltılabilir. */
+    /* Ä°Ã§ dÃ¶ngÃ¼nÃ¼n baÅŸlangÄ±Ã§ deÄŸeri dÄ±ÅŸ dÃ¶ngÃ¼nÃ¼n deÄŸiÅŸkenine
+     * baÄŸlÄ± olarak deÄŸiÅŸtirilebilir.
+     * BÃ¶ylece her satÄ±rda yazdÄ±rÄ±lan karakter sayÄ±sÄ± azaltÄ±labilir. */
 
     for (int i = 1; i <= 5; i++)
     {

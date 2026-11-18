@@ -1,14 +1,16 @@
 #include <iostream>
-#include <iomanip> // setw için gerekli
+#include <iomanip> // setw iÃ§in gerekli
+#include <windows.h>
 
 using namespace std;
 
 int main(int argc, char** argv) {
-	setlocale(LC_ALL, "Turkish");
+	SetConsoleCP(CP_UTF8);
+	SetConsoleOutputCP(CP_UTF8);
 	
 	cout << left << setw(10) << "Elif" << right << setw(5) << 9 << endl;
 	cout << left << setw(10) << "Mustafa" << right << setw(5) << 100 << endl;
-	cout << left << setw(10) << "Ayþe" << right << setw(5) << 85 << endl;
+	cout << left << setw(10) << "AyÅŸe" << right << setw(5) << 85 << endl;
 	
 	return 0;
 }

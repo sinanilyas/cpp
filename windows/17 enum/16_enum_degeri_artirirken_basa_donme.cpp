@@ -1,23 +1,25 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 enum gun {pts = 1, sal, car, per, cum, cts, paz};
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     gun bugun = paz;
     gun yarin;
 
-    /* Günün değeri 1 artırılarak yarın hesaplanır.
-     * Ancak pazar gününden sonra pazartesi gelmelidir. */
+    /* GÃ¼nÃ¼n deÄŸeri 1 artÄ±rÄ±larak yarÄ±n hesaplanÄ±r.
+     * Ancak pazar gÃ¼nÃ¼nden sonra pazartesi gelmelidir. */
 
     if (bugun == paz) yarin = pts;
     else yarin = static_cast<gun>(bugun + 1);
 
-    cout << "Bugün: " << bugun << endl; // 7
-    cout << "Yarın: " << yarin << endl; // 1
+    cout << "BugÃ¼n: " << bugun << endl; // 7
+    cout << "YarÄ±n: " << yarin << endl; // 1
 
     return 0;
 }

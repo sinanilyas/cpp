@@ -1,14 +1,16 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* Başlangıç değerleri verilirse ilk boyutun eleman sayısı
-     * (satır sayısı) yazılmayabilir. Derleyici, verilen değerlere
-     * bakarak satır sayısını kendisi belirler. */
-    int matris[][2] = {{1, 2}, {3, 4}, {5, 6}, {7, 8}}; // 4 satırlı matris
+    /* BaÅŸlangÄ±Ã§ deÄŸerleri verilirse ilk boyutun eleman sayÄ±sÄ±
+     * (satÄ±r sayÄ±sÄ±) yazÄ±lmayabilir. Derleyici, verilen deÄŸerlere
+     * bakarak satÄ±r sayÄ±sÄ±nÄ± kendisi belirler. */
+    int matris[][2] = {{1, 2}, {3, 4}, {5, 6}, {7, 8}}; // 4 satÄ±rlÄ± matris
 
     cout << sizeof(matris) << endl; // Genellikle 32: 4 * 2 * 4 bayt
 
@@ -22,21 +24,21 @@ int main(int argc, char** argv)
         cout << endl;
     }
 
-    /* Ekran çıktısı (sizeof satırından sonra):
+    /* Ekran Ã§Ä±ktÄ±sÄ± (sizeof satÄ±rÄ±ndan sonra):
      * 1 2
      * 3 4
      * 5 6
      * 7 8
      */
 
-    /* Yalnızca ilk boyutun eleman sayısı yazılmayabilir. Diğer
-     * boyutların eleman sayıları yazılmak zorundadır, çünkü derleyici
-     * bir satırda kaç eleman olduğunu bilmelidir.
+    /* YalnÄ±zca ilk boyutun eleman sayÄ±sÄ± yazÄ±lmayabilir. DiÄŸer
+     * boyutlarÄ±n eleman sayÄ±larÄ± yazÄ±lmak zorundadÄ±r, Ã§Ã¼nkÃ¼ derleyici
+     * bir satÄ±rda kaÃ§ eleman olduÄŸunu bilmelidir.
      *
      *     int matris[][] = {{1, 2}, {3, 4}};
      *     int matris[2][] = {{1, 2}, {3, 4}};
      *
-     * Bu iki tanımlamada da program derlenmez. */
+     * Bu iki tanÄ±mlamada da program derlenmez. */
 
     return 0;
 }

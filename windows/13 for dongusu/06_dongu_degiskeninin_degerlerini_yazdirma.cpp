@@ -1,19 +1,21 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* Döngü değişkeninin değeri her tekrarda değişir.
-     * Bu değişken döngü gövdesinde kullanılabilir. */
+    /* DÃ¶ngÃ¼ deÄŸiÅŸkeninin deÄŸeri her tekrarda deÄŸiÅŸir.
+     * Bu deÄŸiÅŸken dÃ¶ngÃ¼ gÃ¶vdesinde kullanÄ±labilir. */
 
     for (int i = 0; i < 5; i++)
     {
         cout << i << endl;
     }
 
-    // Ekrana sırasıyla 0, 1, 2, 3 ve 4 yazdırılır.
+    // Ekrana sÄ±rasÄ±yla 0, 1, 2, 3 ve 4 yazdÄ±rÄ±lÄ±r.
 
     return 0;
 }

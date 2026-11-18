@@ -1,36 +1,38 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int secim;
 
-    /* Menü en az bir kez gösterilir.
-     * Kullanıcı 0 seçeneğini seçene kadar
-     * menü tekrar gösterilmeye devam edilir. */
+    /* MenÃ¼ en az bir kez gÃ¶sterilir.
+     * KullanÄ±cÄ± 0 seÃ§eneÄŸini seÃ§ene kadar
+     * menÃ¼ tekrar gÃ¶sterilmeye devam edilir. */
 
     do
     {
         cout << endl;
-        cout << "--- MENÜ ---" << endl;
-        cout << "1. Merhaba yazdır" << endl;
-        cout << "2. Hoşça kal yazdır" << endl;
-        cout << "0. Çıkış" << endl;
-        cout << "Seçiminiz: ";
+        cout << "--- MENÃœ ---" << endl;
+        cout << "1. Merhaba yazdÄ±r" << endl;
+        cout << "2. HoÅŸÃ§a kal yazdÄ±r" << endl;
+        cout << "0. Ã‡Ä±kÄ±ÅŸ" << endl;
+        cout << "SeÃ§iminiz: ";
         cin >> secim;
 
         if (secim == 1)
             cout << "Merhaba!" << endl;
         else if (secim == 2)
-            cout << "Hoşça kal!" << endl;
+            cout << "HoÅŸÃ§a kal!" << endl;
         else if (secim != 0)
-            cout << "Geçersiz seçim!" << endl;
+            cout << "GeÃ§ersiz seÃ§im!" << endl;
 
     } while (secim != 0);
 
-    cout << "Program sonlandırıldı." << endl;
+    cout << "Program sonlandÄ±rÄ±ldÄ±." << endl;
 
     return 0;
 }

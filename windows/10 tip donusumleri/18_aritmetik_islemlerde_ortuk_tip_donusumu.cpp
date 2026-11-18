@@ -1,15 +1,17 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* Aritmetik işlemler sırasında da örtük tür dönüşümü yapılabilir.
-     * Farklı sayısal tipler arasında işlem yapıldığında, genellikle
-     * daha küçük tipteki değer daha büyük tipe dönüştürülür.
-     * Bu örnekte int tipindeki s1, double tipine dönüştürülür
-     * ve toplama işlemi double tipinde gerçekleştirilir. */
+    /* Aritmetik iÅŸlemler sÄ±rasÄ±nda da Ã¶rtÃ¼k tÃ¼r dÃ¶nÃ¼ÅŸÃ¼mÃ¼ yapÄ±labilir.
+     * FarklÄ± sayÄ±sal tipler arasÄ±nda iÅŸlem yapÄ±ldÄ±ÄŸÄ±nda, genellikle
+     * daha kÃ¼Ã§Ã¼k tipteki deÄŸer daha bÃ¼yÃ¼k tipe dÃ¶nÃ¼ÅŸtÃ¼rÃ¼lÃ¼r.
+     * Bu Ã¶rnekte int tipindeki s1, double tipine dÃ¶nÃ¼ÅŸtÃ¼rÃ¼lÃ¼r
+     * ve toplama iÅŸlemi double tipinde gerÃ§ekleÅŸtirilir. */
 
     int s1 = 5;
     double s2 = 2.5;

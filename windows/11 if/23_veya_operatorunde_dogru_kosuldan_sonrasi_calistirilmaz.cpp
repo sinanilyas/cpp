@@ -1,27 +1,29 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int sayi;
 
-    cout << "Bir tamsayý giriniz: ";
+    cout << "Bir tamsayÄ± giriniz: ";
     cin >> sayi;
 
-    /* Ýlk koþul true ise ikinci koþul ne olursa olsun
-     * sonuç true olacaktýr. Bu yüzden ilk koþulun true
-     * olmasý durumunda ikinci koþul hiç kontrol edilmez.
+    /* Ä°lk koÅŸul true ise ikinci koÅŸul ne olursa olsun
+     * sonuÃ§ true olacaktÄ±r. Bu yÃ¼zden ilk koÅŸulun true
+     * olmasÄ± durumunda ikinci koÅŸul hiÃ§ kontrol edilmez.
      */
 
-    // Kullanýcý 0 girdiðinde sayi == 0 koþulu true olur.
-    // Bu nedenle 100 / sayi iþlemi yapýlmaz
-    // ve sýfýra bölme hatasý önlenir.
+    // KullanÄ±cÄ± 0 girdiÄŸinde sayi == 0 koÅŸulu true olur.
+    // Bu nedenle 100 / sayi iÅŸlemi yapÄ±lmaz
+    // ve sÄ±fÄ±ra bÃ¶lme hatasÄ± Ã¶nlenir.
     if (sayi == 0 || 100 / sayi > 10)
-        cout << "Koþul doðrudur." << endl;
+        cout << "KoÅŸul doÄŸrudur." << endl;
     else
-        cout << "Koþul yanlýþtýr." << endl;
+        cout << "KoÅŸul yanlÄ±ÅŸtÄ±r." << endl;
 
     return 0;
 }

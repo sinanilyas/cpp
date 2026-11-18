@@ -1,9 +1,11 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int yas[3];
 
@@ -13,18 +15,18 @@ int main(int argc, char** argv)
 
     int a = 1;
 
-    /* yas[a++] ifadesinde ++ işleci a değişkenine uygulanır.
-     * Sonek kullanıldığı için önce a'nın mevcut değeri indis olarak
-     * kullanılır, ardından a 1 artırılır.
-     * Dizi elemanlarının değeri değişmez. */
+    /* yas[a++] ifadesinde ++ iÅŸleci a deÄŸiÅŸkenine uygulanÄ±r.
+     * Sonek kullanÄ±ldÄ±ÄŸÄ± iÃ§in Ã¶nce a'nÄ±n mevcut deÄŸeri indis olarak
+     * kullanÄ±lÄ±r, ardÄ±ndan a 1 artÄ±rÄ±lÄ±r.
+     * Dizi elemanlarÄ±nÄ±n deÄŸeri deÄŸiÅŸmez. */
     cout << yas[a++] << endl; // 20
     cout << a << endl;        // 2
     cout << yas[a] << endl;   // 25
 
     cout << yas[0] << " " << yas[1] << " " << yas[2] << endl; // 18 20 25
 
-    /* yas[++a] yazılsaydı önek kullanıldığı için önce a 1 artırılır,
-     * sonra yeni indisteki elemana erişilirdi. */
+    /* yas[++a] yazÄ±lsaydÄ± Ã¶nek kullanÄ±ldÄ±ÄŸÄ± iÃ§in Ã¶nce a 1 artÄ±rÄ±lÄ±r,
+     * sonra yeni indisteki elemana eriÅŸilirdi. */
 
     return 0;
 }

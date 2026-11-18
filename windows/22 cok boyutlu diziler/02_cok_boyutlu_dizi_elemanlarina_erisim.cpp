@@ -1,23 +1,25 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int matris[3][2];
 
-    /* Elemanlara, her boyut için ayrı köşeli parantez içine yazılan
-     * indislerle erişilir: matris[satir][sutun]
-     * İlk indis satırı, ikinci indis sütunu gösterir. İki indis de
-     * 0'dan başlar.
+    /* Elemanlara, her boyut iÃ§in ayrÄ± kÃ¶ÅŸeli parantez iÃ§ine yazÄ±lan
+     * indislerle eriÅŸilir: matris[satir][sutun]
+     * Ä°lk indis satÄ±rÄ±, ikinci indis sÃ¼tunu gÃ¶sterir. Ä°ki indis de
+     * 0'dan baÅŸlar.
      *
-     *              0. sütun       1. sütun
-     *  0. satır    matris[0][0]   matris[0][1]
-     *  1. satır    matris[1][0]   matris[1][1]
-     *  2. satır    matris[2][0]   matris[2][1]
+     *              0. sÃ¼tun       1. sÃ¼tun
+     *  0. satÄ±r    matris[0][0]   matris[0][1]
+     *  1. satÄ±r    matris[1][0]   matris[1][1]
+     *  2. satÄ±r    matris[2][0]   matris[2][1]
      *
-     * Tanımlamadaki [3][2] satır ve sütun sayısını gösterir. Son
+     * TanÄ±mlamadaki [3][2] satÄ±r ve sÃ¼tun sayÄ±sÄ±nÄ± gÃ¶sterir. Son
      * eleman matris[2][1]'dir, matris[3][2] diye bir eleman yoktur. */
 
     matris[0][0] = 10;
@@ -30,15 +32,15 @@ int main(int argc, char** argv)
     cout << matris[0][1] << endl; // 20
     cout << matris[2][0] << endl; // 50
 
-    // Elemanlar sıradan değişkenler gibi kullanılabilir.
+    // Elemanlar sÄ±radan deÄŸiÅŸkenler gibi kullanÄ±labilir.
     matris[1][1] = matris[0][0] + matris[2][1];
     matris[2][0]++;
 
     cout << matris[1][1] << endl; // 70
     cout << matris[2][0] << endl; // 51
 
-    /* Her indis ayrı köşeli parantez içine yazılır.
-     * matris[1, 0] yazımı matris[1][0] anlamına gelmez. */
+    /* Her indis ayrÄ± kÃ¶ÅŸeli parantez iÃ§ine yazÄ±lÄ±r.
+     * matris[1, 0] yazÄ±mÄ± matris[1][0] anlamÄ±na gelmez. */
 
     return 0;
 }

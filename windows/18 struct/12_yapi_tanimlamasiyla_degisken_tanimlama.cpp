@@ -1,8 +1,9 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
-/* Yapı tanımlamasının sonunda değişken adı yazılarak
- * aynı zamanda bu türde bir değişken oluşturulabilir. */
+/* YapÄ± tanÄ±mlamasÄ±nÄ±n sonunda deÄŸiÅŸken adÄ± yazÄ±larak
+ * aynÄ± zamanda bu tÃ¼rde bir deÄŸiÅŸken oluÅŸturulabilir. */
 struct urun
 {
     int kod;
@@ -11,7 +12,8 @@ struct urun
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     buzdolabi.kod = 101;
     buzdolabi.fiyat = 25000.0;

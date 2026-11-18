@@ -1,12 +1,14 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* Küme parantezleri boş bırakılarak tüm elemanlara
-     * başlangıç değeri olarak 0 verilebilir. */
+    /* KÃ¼me parantezleri boÅŸ bÄ±rakÄ±larak tÃ¼m elemanlara
+     * baÅŸlangÄ±Ã§ deÄŸeri olarak 0 verilebilir. */
     int sayilar[5] = {};
 
     for (int i = 0; i < 5; i++)
@@ -15,7 +17,7 @@ int main(int argc, char** argv)
     }
     cout << endl;
 
-    // Ekrana 0 0 0 0 0 yazdırılır.
+    // Ekrana 0 0 0 0 0 yazdÄ±rÄ±lÄ±r.
 
     return 0;
 }

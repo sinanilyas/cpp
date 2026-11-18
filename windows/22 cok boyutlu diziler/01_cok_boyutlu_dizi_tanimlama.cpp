@@ -1,32 +1,34 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* Elemanlarına birden fazla indisle erişilen dizilere çok boyutlu
-     * dizi denir. İki boyutlu bir dizi, satırlardan ve sütunlardan
-     * oluşan bir tablo (matris) gibi düşünülebilir.
+    /* ElemanlarÄ±na birden fazla indisle eriÅŸilen dizilere Ã§ok boyutlu
+     * dizi denir. Ä°ki boyutlu bir dizi, satÄ±rlardan ve sÃ¼tunlardan
+     * oluÅŸan bir tablo (matris) gibi dÃ¼ÅŸÃ¼nÃ¼lebilir.
      *
-     * Tanımlama biçimi:  tip diziAdi[satirSayisi][sutunSayisi];
+     * TanÄ±mlama biÃ§imi:  tip diziAdi[satirSayisi][sutunSayisi];
      *
-     * Aşağıdaki tanımlama 3 satır ve 2 sütundan oluşan, toplam
-     * 3 * 2 = 6 tane int değer saklayabilen matris adında bir dizi
-     * oluşturur. */
+     * AÅŸaÄŸÄ±daki tanÄ±mlama 3 satÄ±r ve 2 sÃ¼tundan oluÅŸan, toplam
+     * 3 * 2 = 6 tane int deÄŸer saklayabilen matris adÄ±nda bir dizi
+     * oluÅŸturur. */
     int matris[3][2];
 
-    /* Bütün elemanlar için bellekte art arda yer ayrılır:
+    /* BÃ¼tÃ¼n elemanlar iÃ§in bellekte art arda yer ayrÄ±lÄ±r:
      * 3 * 2 * sizeof(int) bayt. */
     cout << sizeof(matris) << endl; // Genellikle 24
 
-    // Farklı tiplerde ve boyutlarda çok boyutlu diziler de tanımlanabilir.
-    double tablo[4][5]; // 4 satır, 5 sütun, 20 eleman
+    // FarklÄ± tiplerde ve boyutlarda Ã§ok boyutlu diziler de tanÄ±mlanabilir.
+    double tablo[4][5]; // 4 satÄ±r, 5 sÃ¼tun, 20 eleman
 
     cout << sizeof(tablo) << endl; // Genellikle 160
 
-    /* Başlangıç değeri verilmediği için bu dizilerin elemanları
-     * belirsiz değerler içerir. */
+    /* BaÅŸlangÄ±Ã§ deÄŸeri verilmediÄŸi iÃ§in bu dizilerin elemanlarÄ±
+     * belirsiz deÄŸerler iÃ§erir. */
 
     return 0;
 }

@@ -1,10 +1,12 @@
 #include <iostream>
-#define KATSAYI 4.5 // C stili sabit tanýmlama
+#include <windows.h>
+#define KATSAYI 4.5 // C stili sabit tanÄ±mlama
 
 using namespace std;
 
 int main(int argc, char** argv) {
-	setlocale(LC_ALL, "Turkish");
+	SetConsoleCP(CP_UTF8);
+	SetConsoleOutputCP(CP_UTF8);
 
 	cout << KATSAYI << endl;
 

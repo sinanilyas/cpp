@@ -1,18 +1,20 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-	setlocale(LC_ALL, "Turkish");
+	SetConsoleCP(CP_UTF8);
+	SetConsoleOutputCP(CP_UTF8);
 
     int sayi = 0x10;
 
-    /* C++ dilinde başına 0x veya 0X eklenerek yazılan tamsayı sabitleri
-     * 16'lı sayı sisteminde yorumlanır.
-     * Bu gösterimde yalnızca 0-F arasındaki rakamlar kullanılabilir.
+    /* C++ dilinde baÅŸÄ±na 0x veya 0X eklenerek yazÄ±lan tamsayÄ± sabitleri
+     * 16'lÄ± sayÄ± sisteminde yorumlanÄ±r.
+     * Bu gÃ¶sterimde yalnÄ±zca 0-F arasÄ±ndaki rakamlar kullanÄ±labilir.
      *
-     * 16'lı sayı sistemindeki F sayısı
-     * 10'lu sayı sisteminde 15'e karşılık gelir.
+     * 16'lÄ± sayÄ± sistemindeki F sayÄ±sÄ±
+     * 10'lu sayÄ± sisteminde 15'e karÅŸÄ±lÄ±k gelir.
      * (1xF) = 15 */
 
     cout << sayi << endl; // 15

@@ -1,28 +1,30 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int a = 10;
     int b = 20;
 
-    // Bileþik atama operatörleri saðdan sola deðerlendirilir.
+    // BileÅŸik atama operatÃ¶rleri saÄŸdan sola deÄŸerlendirilir.
     a += b += 5;
 
     cout << a << endl; // 35
     cout << b << endl; // 25
 
-    /* Yukarýdaki iþlem aþaðýdaki iþlemlerle eþdeðerdir:
+    /* YukarÄ±daki iÅŸlem aÅŸaÄŸÄ±daki iÅŸlemlerle eÅŸdeÄŸerdir:
      *
      * b += 5;
      * a += b;
      *
-     * Önce b deðiþkenine 5 eklenir ve b = 25 olur.
-     * Ardýndan a deðiþkenine b eklenir ve a = 35 olur.
+     * Ã–nce b deÄŸiÅŸkenine 5 eklenir ve b = 25 olur.
+     * ArdÄ±ndan a deÄŸiÅŸkenine b eklenir ve a = 35 olur.
      *
-     * Bileþik atama operatörleri saðdan sola birleþir.
+     * BileÅŸik atama operatÃ¶rleri saÄŸdan sola birleÅŸir.
      */
 
     return 0;

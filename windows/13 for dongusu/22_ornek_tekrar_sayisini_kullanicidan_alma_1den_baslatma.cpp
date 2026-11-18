@@ -1,17 +1,19 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int adet;
 
-    cout << "Kaç kez Merhaba yazdýrýlsýn? ";
+    cout << "KaÃ§ kez Merhaba yazdÄ±rÄ±lsÄ±n? ";
     cin >> adet;
 
-    /* i 1'den baþlatýldýðýnda <= kullanýlarak adet dâhil edilir
-     * ve cout içinde i yazdýrýlýr. */
+    /* i 1'den baÅŸlatÄ±ldÄ±ÄŸÄ±nda <= kullanÄ±larak adet dÃ¢hil edilir
+     * ve cout iÃ§inde i yazdÄ±rÄ±lÄ±r. */
 
     for (int i = 1; i <= adet; i++)
     {

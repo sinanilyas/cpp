@@ -1,16 +1,18 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
-// enum elemanlarına farklı değerler atanabilir.
+// enum elemanlarÄ±na farklÄ± deÄŸerler atanabilir.
 enum gun {pts = 1, sal, car = 10, per, cum = 20, cts, paz};
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* enum elemanlarına ayrı ayrı değerler verilebilir.
-     * Değer belirtilmeyen elemanlar, bir önceki
-     * elemanın değerinden 1 fazla değer alır. */
+    /* enum elemanlarÄ±na ayrÄ± ayrÄ± deÄŸerler verilebilir.
+     * DeÄŸer belirtilmeyen elemanlar, bir Ã¶nceki
+     * elemanÄ±n deÄŸerinden 1 fazla deÄŸer alÄ±r. */
 
     cout << pts << endl; // 1
     cout << sal << endl; // 2

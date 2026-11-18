@@ -1,20 +1,22 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* Döngü deðiþkeninin deðeri her tekrarda azaltýlabilir.
-     * Bunun için artýþ bölümünde i-- kullanýlabilir.
-     * Böylece döngü geriye doðru saydýrýlabilir. */
+    /* DÃ¶ngÃ¼ deÄŸiÅŸkeninin deÄŸeri her tekrarda azaltÄ±labilir.
+     * Bunun iÃ§in artÄ±ÅŸ bÃ¶lÃ¼mÃ¼nde i-- kullanÄ±labilir.
+     * BÃ¶ylece dÃ¶ngÃ¼ geriye doÄŸru saydÄ±rÄ±labilir. */
 
     for (int i = 10; i >= 1; i--)
     {
         cout << i << endl;
     }
 
-    // Ekrana sýrasýyla 10, 9, 8, ... , 2 ve 1 yazdýrýlýr.
+    // Ekrana sÄ±rasÄ±yla 10, 9, 8, ... , 2 ve 1 yazdÄ±rÄ±lÄ±r.
 
     return 0;
 }

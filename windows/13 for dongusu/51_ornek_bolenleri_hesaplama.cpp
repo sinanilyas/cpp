@@ -1,18 +1,20 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* Bir sayının pozitif bölenleri, o sayıyı
-     * kalansız bölen pozitif tamsayılardır.
-     * Döngü içerisinde % operatörü kullanılarak
-     * bölenler bulunabilir. */
+    /* Bir sayÄ±nÄ±n pozitif bÃ¶lenleri, o sayÄ±yÄ±
+     * kalansÄ±z bÃ¶len pozitif tamsayÄ±lardÄ±r.
+     * DÃ¶ngÃ¼ iÃ§erisinde % operatÃ¶rÃ¼ kullanÄ±larak
+     * bÃ¶lenler bulunabilir. */
 
     int sayi;
 
-    cout << "Pozitif bir tamsayı giriniz: ";
+    cout << "Pozitif bir tamsayÄ± giriniz: ";
     cin >> sayi;
 
     for (int i = 1; i <= sayi; i++)

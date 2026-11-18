@@ -1,22 +1,24 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* Bir sayının pozitif tamsayı kuvveti, sayının
-     * kendisiyle tekrar tekrar çarpılmasıyla hesaplanabilir.
-     * Örneğin 2 üssü 4 = 2 * 2 * 2 * 2 = 16
-     * Herhangi bir sayının 0. kuvveti 1'dir (0 üssü 0 hariç). */
+    /* Bir sayÄ±nÄ±n pozitif tamsayÄ± kuvveti, sayÄ±nÄ±n
+     * kendisiyle tekrar tekrar Ã§arpÄ±lmasÄ±yla hesaplanabilir.
+     * Ã–rneÄŸin 2 Ã¼ssÃ¼ 4 = 2 * 2 * 2 * 2 = 16
+     * Herhangi bir sayÄ±nÄ±n 0. kuvveti 1'dir (0 Ã¼ssÃ¼ 0 hariÃ§). */
 
     double taban, sonuc = 1;
     int us;
 
-    cout << "Taban değerini giriniz: ";
+    cout << "Taban deÄŸerini giriniz: ";
     cin >> taban;
 
-    cout << "Üs değerini giriniz (0 veya pozitif): ";
+    cout << "Ãœs deÄŸerini giriniz (0 veya pozitif): ";
     cin >> us;
 
     for (int i = 1; i <= us; i++)
@@ -24,7 +26,7 @@ int main(int argc, char** argv)
         sonuc *= taban;
     }
 
-    cout << "Sonuç: " << sonuc << endl;
+    cout << "SonuÃ§: " << sonuc << endl;
 
     return 0;
 }

@@ -1,14 +1,16 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* Dizinin eleman sayýsý için bir sabit tanýmlanabilir.
-     * Dizi tanýmlamasýnda ve döngülerde bu sabit kullanýlýr.
-     * Eleman sayýsý deðiþtirilmek istendiðinde yalnýzca sabitin
-     * deðerini deðiþtirmek yeterlidir. */
+    /* Dizinin eleman sayï¿½sï¿½ iï¿½in bir sabit tanï¿½mlanabilir.
+     * Dizi tanï¿½mlamasï¿½nda ve dï¿½ngï¿½lerde bu sabit kullanï¿½lï¿½r.
+     * Eleman sayï¿½sï¿½ deï¿½iï¿½tirilmek istendiï¿½inde yalnï¿½zca sabitin
+     * deï¿½erini deï¿½iï¿½tirmek yeterlidir. */
     const int BOYUT = 5;
 
     int kareler[BOYUT];
@@ -24,7 +26,7 @@ int main(int argc, char** argv)
     }
     cout << endl;
 
-    // Ekrana 0 1 4 9 16 yazdýrýlýr.
+    // Ekrana 0 1 4 9 16 yazdï¿½rï¿½lï¿½r.
 
     return 0;
 }

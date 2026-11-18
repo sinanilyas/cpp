@@ -1,13 +1,15 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv) {
-	setlocale(LC_ALL, "Turkish");
+	SetConsoleCP(CP_UTF8);
+	SetConsoleOutputCP(CP_UTF8);
 	
-	/* '\r' (13) satır başına döner */
+	/* '\r' (13) satÄ±r baÅŸÄ±na dÃ¶ner */
 	
-	// "Silgi" yazılır, imleç satırın başına döner.
-	// "Der" ilk üç karakterin üzerine yazılır.
+	// "Silgi" yazÄ±lÄ±r, imleÃ§ satÄ±rÄ±n baÅŸÄ±na dÃ¶ner.
+	// "Der" ilk Ã¼Ã§ karakterin Ã¼zerine yazÄ±lÄ±r.
 	cout << "Silgi\rDer" << endl; // Dergi
 	
 	return 0;

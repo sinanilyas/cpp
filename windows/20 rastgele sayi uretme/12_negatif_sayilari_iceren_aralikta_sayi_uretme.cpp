@@ -1,17 +1,19 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     srand(time(0));
 
-    /* -10 ile 10 arasında, 0 da dahil 21 farklı sayı vardır.
-     * rand() % 21 ifadesi 0-20 arasında bir sayı üretir.
-     * Sonuçtan 10 çıkarılırsa -10 ile 10 arasında bir sayı elde edilir. */
+    /* -10 ile 10 arasÄ±nda, 0 da dahil 21 farklÄ± sayÄ± vardÄ±r.
+     * rand() % 21 ifadesi 0-20 arasÄ±nda bir sayÄ± Ã¼retir.
+     * SonuÃ§tan 10 Ã§Ä±karÄ±lÄ±rsa -10 ile 10 arasÄ±nda bir sayÄ± elde edilir. */
 
     for (int i = 1; i <= 10; i++)
     {

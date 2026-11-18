@@ -1,12 +1,14 @@
-// \n ile yeni satýr oluþturma
+// \n ile yeni satÄ±r oluÅŸturma
 
 #include <iostream>
+#include <windows.h>
 
 int main(int argc, char** argv) {
-	setlocale(LC_ALL, "Turkish");
+	SetConsoleCP(CP_UTF8);
+	SetConsoleOutputCP(CP_UTF8);
 	
-	std::cout << "Satýr 1\nSatýr 2\n";
-	std::cout << "Satýr 3";
+	std::cout << "SatÄ±r 1\nSatÄ±r 2\n";
+	std::cout << "SatÄ±r 3";
 	
 	return 0;
 }

@@ -1,17 +1,19 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* Döngünün tekrar sayısı sabit olmak zorunda değildir.
-     * Kullanıcıdan alınan bir değer de döngü koşulunda
-     * kullanılabilir. */
+    /* DÃ¶ngÃ¼nÃ¼n tekrar sayÄ±sÄ± sabit olmak zorunda deÄŸildir.
+     * KullanÄ±cÄ±dan alÄ±nan bir deÄŸer de dÃ¶ngÃ¼ koÅŸulunda
+     * kullanÄ±labilir. */
 
     int adet;
 
-    cout << "Kaç kez Merhaba yazdırılsın? ";
+    cout << "KaÃ§ kez Merhaba yazdÄ±rÄ±lsÄ±n? ";
     cin >> adet;
 
     for (int i = 0; i < adet; i++)

@@ -1,7 +1,7 @@
-int main() /* Bu bir açıklamadır */ {
-	/* Açıklamalar
-	bu şekilde
-	birden çok satıra
-	bölünebilir */
+int main() /* Bu bir aÃ§Ä±klamadÄ±r */ {
+	/* AÃ§Ä±klamalar
+	bu ÅŸekilde
+	birden Ã§ok satÄ±ra
+	bÃ¶lÃ¼nebilir */
 }
 

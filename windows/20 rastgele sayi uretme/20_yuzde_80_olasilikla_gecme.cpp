@@ -1,37 +1,39 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     srand(time(0));
 
-    /* rand() % 100 ifadesi 0-99 arasýnda 100 farklý sayý üretir.
-     * Bunlardan 80 tanesi (0-79) 80'den küçüktür.
-     * Bu nedenle rand() % 100 < 80 koþulunun doðru olma olasýlýðý %80'dir.
-     * Örneðin %35 olasýlýk için rand() % 100 < 35 yazýlabilir. */
+    /* rand() % 100 ifadesi 0-99 arasÄ±nda 100 farklÄ± sayÄ± Ã¼retir.
+     * Bunlardan 80 tanesi (0-79) 80'den kÃ¼Ã§Ã¼ktÃ¼r.
+     * Bu nedenle rand() % 100 < 80 koÅŸulunun doÄŸru olma olasÄ±lÄ±ÄŸÄ± %80'dir.
+     * Ã–rneÄŸin %35 olasÄ±lÄ±k iÃ§in rand() % 100 < 35 yazÄ±labilir. */
 
     int gecenSayisi = 0;
 
     for (int i = 1; i <= 10; i++)
     {
-        // %80 ihtimalle if koþulu doðru olur
+        // %80 ihtimalle if koÅŸulu doÄŸru olur
         if (rand() % 100 < 80)
         {
-            cout << i << ". öðrenci geçti." << endl;
+            cout << i << ". Ã¶ÄŸrenci geÃ§ti." << endl;
             gecenSayisi++;
         }
-        // %20 ihtimalle else bloðu çalýþýr
+        // %20 ihtimalle else bloÄŸu Ã§alÄ±ÅŸÄ±r
         else
-            cout << i << ". öðrenci kaldý." << endl;
+            cout << i << ". Ã¶ÄŸrenci kaldÄ±." << endl;
     }
 
-    cout << "Geçen öðrenci sayýsý: " << gecenSayisi << endl; // Genellikle 8'e yakýn
+    cout << "GeÃ§en Ã¶ÄŸrenci sayÄ±sÄ±: " << gecenSayisi << endl; // Genellikle 8'e yakÄ±n
 
-    /* Öðrenci sayýsý arttýkça geçenlerin oraný %80'e daha çok yaklaþýr. */
+    /* Ã–ÄŸrenci sayÄ±sÄ± arttÄ±kÃ§a geÃ§enlerin oranÄ± %80'e daha Ã§ok yaklaÅŸÄ±r. */
 
     return 0;
 }

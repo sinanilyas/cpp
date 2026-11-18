@@ -1,26 +1,28 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     srand(time(0));
 
-    /* rand() ile üretilen sayı RAND_MAX'a bölünürse
-     * 0.0 ile 1.0 arasında ondalıklı bir sayı elde edilir. */
+    /* rand() ile Ã¼retilen sayÄ± RAND_MAX'a bÃ¶lÃ¼nÃ¼rse
+     * 0.0 ile 1.0 arasÄ±nda ondalÄ±klÄ± bir sayÄ± elde edilir. */
 
-    // İki tamsayı bölündüğü için sonuç da tamsayı olur.
+    // Ä°ki tamsayÄ± bÃ¶lÃ¼ndÃ¼ÄŸÃ¼ iÃ§in sonuÃ§ da tamsayÄ± olur.
     cout << rand() / RAND_MAX << endl; // Neredeyse her zaman 0
 
-    // Sayılardan biri double tipine dönüştürülürse sonuç double olur.
+    // SayÄ±lardan biri double tipine dÃ¶nÃ¼ÅŸtÃ¼rÃ¼lÃ¼rse sonuÃ§ double olur.
     double sayi = static_cast<double>(rand()) / RAND_MAX;
-    cout << sayi << endl; // Örneğin 0.718162
+    cout << sayi << endl; // Ã–rneÄŸin 0.718162
 
-    // 0.0-1.0 arasındaki sayı 10 ile çarpılırsa 0.0-10.0 arasında sayı elde edilir.
-    cout << sayi * 10 << endl; // Örneğin 7.18162
+    // 0.0-1.0 arasÄ±ndaki sayÄ± 10 ile Ã§arpÄ±lÄ±rsa 0.0-10.0 arasÄ±nda sayÄ± elde edilir.
+    cout << sayi * 10 << endl; // Ã–rneÄŸin 7.18162
 
     return 0;
 }

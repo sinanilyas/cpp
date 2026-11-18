@@ -1,22 +1,24 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int notlar[3] = {70, 85, 90};
     int yedek[3];
 
-    /* Bir dizi, atama iþleciyle baþka bir diziye kopyalanamaz.
-     * Yapý deðiþkenlerinin aksine diziler topluca atanamaz. */
+    /* Bir dizi, atama iÅŸleciyle baÅŸka bir diziye kopyalanamaz.
+     * YapÄ± deÄŸiÅŸkenlerinin aksine diziler topluca atanamaz. */
 
-    // HATA: Dizi baþka bir diziye atanamaz.
+    // HATA: Dizi baÅŸka bir diziye atanamaz.
     yedek = notlar;
 
     cout << yedek[0] << endl;
 
-    /* Elemanlar döngü ile tek tek kopyalanmalýdýr:
+    /* Elemanlar dÃ¶ngÃ¼ ile tek tek kopyalanmalÄ±dÄ±r:
      *
      *     for (int i = 0; i < 3; i++)
      *     {

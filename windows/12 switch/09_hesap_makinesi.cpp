@@ -1,45 +1,47 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     double sayi1, sayi2;
     char islem;
 
-    cout << "Birinci sayıyı giriniz: ";
+    cout << "Birinci sayÄ±yÄ± giriniz: ";
     cin >> sayi1;
 
-    cout << "İkinci sayıyı giriniz: ";
+    cout << "Ä°kinci sayÄ±yÄ± giriniz: ";
     cin >> sayi2;
 
-    cout << "İşlem seçiniz (+, -, *, /): ";
+    cout << "Ä°ÅŸlem seÃ§iniz (+, -, *, /): ";
     cin >> islem;
 
-    /* Kullanıcının seçtiği işleme göre
-     * iki sayı üzerinde hesaplama yapılır.
-     * Örneğin kullanıcı * girerse sayılar çarpılır. */
+    /* KullanÄ±cÄ±nÄ±n seÃ§tiÄŸi iÅŸleme gÃ¶re
+     * iki sayÄ± Ã¼zerinde hesaplama yapÄ±lÄ±r.
+     * Ã–rneÄŸin kullanÄ±cÄ± * girerse sayÄ±lar Ã§arpÄ±lÄ±r. */
 
     switch (islem)
     {
         case '+':
-            cout << "Sonuç: " << sayi1 + sayi2 << endl;
+            cout << "SonuÃ§: " << sayi1 + sayi2 << endl;
             break;
         case '-':
-            cout << "Sonuç: " << sayi1 - sayi2 << endl;
+            cout << "SonuÃ§: " << sayi1 - sayi2 << endl;
             break;
         case '*':
-            cout << "Sonuç: " << sayi1 * sayi2 << endl;
+            cout << "SonuÃ§: " << sayi1 * sayi2 << endl;
             break;
         case '/':
             if (sayi2 != 0.0)
-                cout << "Sonuç: " << sayi1 / sayi2 << endl;
+                cout << "SonuÃ§: " << sayi1 / sayi2 << endl;
             else
-                cout << "Sıfıra bölme yapılamaz!" << endl;
+                cout << "SÄ±fÄ±ra bÃ¶lme yapÄ±lamaz!" << endl;
             break;
         default:
-            cout << "Geçersiz işlem!" << endl;
+            cout << "GeÃ§ersiz iÅŸlem!" << endl;
             break;
     }
 

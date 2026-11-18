@@ -1,20 +1,22 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int sayi;
 
-    cout << "Bir tamsayı giriniz: ";
+    cout << "Bir tamsayÄ± giriniz: ";
     cin >> sayi;
 
-    // Üç koşuldan en az biri doğruysa if komutu çalıştırılır.
+    // ÃœÃ§ koÅŸuldan en az biri doÄŸruysa if komutu Ã§alÄ±ÅŸtÄ±rÄ±lÄ±r.
     if (sayi == 1 || sayi == 2 || sayi == 3)
-        cout << "Sayı 1, 2 veya 3'tür." << endl;
+        cout << "SayÄ± 1, 2 veya 3'tÃ¼r." << endl;
     else
-        cout << "Sayı 1, 2 veya 3 değildir." << endl;
+        cout << "SayÄ± 1, 2 veya 3 deÄŸildir." << endl;
 
     return 0;
 }

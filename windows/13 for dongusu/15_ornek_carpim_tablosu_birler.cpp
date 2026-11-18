@@ -1,12 +1,14 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* Döngü değişkeni kullanılarak çarpım tablosu
-     * gibi düzenli çıktılar oluşturulabilir. */
+    /* DÃ¶ngÃ¼ deÄŸiÅŸkeni kullanÄ±larak Ã§arpÄ±m tablosu
+     * gibi dÃ¼zenli Ã§Ä±ktÄ±lar oluÅŸturulabilir. */
 
     for (int i = 1; i <= 10; i++)
     {

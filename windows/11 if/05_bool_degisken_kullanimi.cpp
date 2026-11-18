@@ -1,18 +1,20 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     bool aktif = true;
 
-    // aktif değişkeninin değeri true olduğu için komut çalıştırılır.
+    // aktif deÄŸiÅŸkeninin deÄŸeri true olduÄŸu iÃ§in komut Ã§alÄ±ÅŸtÄ±rÄ±lÄ±r.
     if (aktif) cout << "Sistem aktiftir." << endl;
 
     aktif = false;
 
-    // aktif değişkeninin değeri false olduğu için komut çalıştırılmaz.
+    // aktif deÄŸiÅŸkeninin deÄŸeri false olduÄŸu iÃ§in komut Ã§alÄ±ÅŸtÄ±rÄ±lmaz.
     if (aktif) cout << "Sistem aktiftir." << endl;
 
     cout << "Program sona erdi." << endl;

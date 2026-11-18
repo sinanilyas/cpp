@@ -1,17 +1,19 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int degerler[] = {3, 7, 2, 5, 4};
     int elemanSayisi = sizeof(degerler) / sizeof(degerler[0]);
 
-    /* Dış döngü dizinin elemanlarını sırayla dolaşır ve her eleman
-     * için bir satır oluşturur. İç döngü, sıradaki elemanın değeri
-     * kadar yan yana yıldız yazar. İç döngünün kaç kez döneceğini
-     * dizi elemanının değeri belirler. */
+    /* DÄ±ÅŸ dÃ¶ngÃ¼ dizinin elemanlarÄ±nÄ± sÄ±rayla dolaÅŸÄ±r ve her eleman
+     * iÃ§in bir satÄ±r oluÅŸturur. Ä°Ã§ dÃ¶ngÃ¼, sÄ±radaki elemanÄ±n deÄŸeri
+     * kadar yan yana yÄ±ldÄ±z yazar. Ä°Ã§ dÃ¶ngÃ¼nÃ¼n kaÃ§ kez dÃ¶neceÄŸini
+     * dizi elemanÄ±nÄ±n deÄŸeri belirler. */
     for (int i = 0; i < elemanSayisi; i++)
     {
         cout << degerler[i] << ": ";
@@ -21,11 +23,11 @@ int main(int argc, char** argv)
             cout << "*";
         }
 
-        // İç döngü tamamlandığında alt satıra geçilir.
+        // Ä°Ã§ dÃ¶ngÃ¼ tamamlandÄ±ÄŸÄ±nda alt satÄ±ra geÃ§ilir.
         cout << endl;
     }
 
-    /* Ekran çıktısı:
+    /* Ekran Ã§Ä±ktÄ±sÄ±:
      * 3: ***
      * 7: *******
      * 2: **

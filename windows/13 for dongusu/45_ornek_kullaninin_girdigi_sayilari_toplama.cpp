@@ -1,24 +1,26 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* Döngü içerisinde kullanıcıdan tekrar tekrar değer alınabilir.
-     * Bu örnekte kullanıcıdan alınan 5 tamsayının toplamı hesaplanır. */
+    /* DÃ¶ngÃ¼ iÃ§erisinde kullanÄ±cÄ±dan tekrar tekrar deÄŸer alÄ±nabilir.
+     * Bu Ã¶rnekte kullanÄ±cÄ±dan alÄ±nan 5 tamsayÄ±nÄ±n toplamÄ± hesaplanÄ±r. */
 
     int sayi, toplam = 0;
 
     for (int i = 1; i <= 5; i++)
     {
-        cout << i << ". sayıyı giriniz: ";
+        cout << i << ". sayÄ±yÄ± giriniz: ";
         cin >> sayi;
 
         toplam += sayi;
     }
 
-    cout << "Sayıların toplamı: " << toplam << endl;
+    cout << "SayÄ±larÄ±n toplamÄ±: " << toplam << endl;
 
     return 0;
 }

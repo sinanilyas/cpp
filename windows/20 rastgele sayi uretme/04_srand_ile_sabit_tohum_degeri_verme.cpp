@@ -1,17 +1,19 @@
 #include <iostream>
 #include <cstdlib>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* rand() fonksiyonu, tohum değeri (seed) adı verilen bir
-     * başlangıç sayısından yola çıkarak hesapladığı sayıları üretir.
-     * srand() fonksiyonu bu tohum değerini belirler.
+    /* rand() fonksiyonu, tohum deÄŸeri (seed) adÄ± verilen bir
+     * baÅŸlangÄ±Ã§ sayÄ±sÄ±ndan yola Ã§Ä±karak hesapladÄ±ÄŸÄ± sayÄ±larÄ± Ã¼retir.
+     * srand() fonksiyonu bu tohum deÄŸerini belirler.
      *
-     * srand() hiç çağrılmazsa tohum değeri 1 kabul edilir.
-     * Önceki örneklerde hep aynı sayıların üretilmesinin nedeni budur. */
+     * srand() hiÃ§ Ã§aÄŸrÄ±lmazsa tohum deÄŸeri 1 kabul edilir.
+     * Ã–nceki Ã¶rneklerde hep aynÄ± sayÄ±larÄ±n Ã¼retilmesinin nedeni budur. */
 
     srand(5);
 
@@ -20,15 +22,15 @@ int main(int argc, char** argv)
         cout << rand() << endl;
     }
 
-    /* Tohum değeri 1'den farklı olduğu için srand() kullanılmayan
-     * örneklerden farklı sayılar üretilir.
+    /* Tohum deÄŸeri 1'den farklÄ± olduÄŸu iÃ§in srand() kullanÄ±lmayan
+     * Ã¶rneklerden farklÄ± sayÄ±lar Ã¼retilir.
      * Genellikle: 54, 28693, 12255, 24449, 27660
      *
-     * srand(5) yerine srand(1) yazılırsa srand() kullanılmayan
-     * örneklerdeki sayıların aynısı üretilir.
+     * srand(5) yerine srand(1) yazÄ±lÄ±rsa srand() kullanÄ±lmayan
+     * Ã¶rneklerdeki sayÄ±larÄ±n aynÄ±sÄ± Ã¼retilir.
      *
-     * Ancak srand() fonksiyonuna sabit bir sayı verildiği için
-     * program her çalıştırıldığında yine aynı sayılar üretilir. */
+     * Ancak srand() fonksiyonuna sabit bir sayÄ± verildiÄŸi iÃ§in
+     * program her Ã§alÄ±ÅŸtÄ±rÄ±ldÄ±ÄŸÄ±nda yine aynÄ± sayÄ±lar Ã¼retilir. */
 
     return 0;
 }

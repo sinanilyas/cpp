@@ -1,18 +1,20 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int sayi = -5;
 
-    // Karþýlaþtýrmanýn sonucu tersine çevrilir.
-    if (!(sayi > 0)) cout << "Birinci koþul doðrudur." << endl;
+    // KarÅŸÄ±laÅŸtÄ±rmanÄ±n sonucu tersine Ã§evrilir.
+    if (!(sayi > 0)) cout << "Birinci koÅŸul doÄŸrudur." << endl;
 
-    // Önce sayi'nin mantýksal deðeri tersine çevrilir,
-    // sonra karþýlaþtýrma yapýlýr
-    if (!sayi > 0) cout << "Ýkinci koþul doðrudur." << endl;
+    // Ã–nce sayi'nin mantÄ±ksal deÄŸeri tersine Ã§evrilir,
+    // sonra karÅŸÄ±laÅŸtÄ±rma yapÄ±lÄ±r
+    if (!sayi > 0) cout << "Ä°kinci koÅŸul doÄŸrudur." << endl;
 
     return 0;
 }

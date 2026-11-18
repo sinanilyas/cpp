@@ -1,22 +1,24 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     double sayi = 2.5;
 
     /* HATA: switch ifadesinde
-     * float ve double kullanýlamaz. */
+     * float ve double kullanÄ±lamaz. */
 
-    switch (sayi) // HATA: double tipi kullanýlamaz.
+    switch (sayi) // HATA: double tipi kullanÄ±lamaz.
     {
         case 1:
             cout << "Bir" << endl;
             break;
         case 2:
-            cout << "Ýki" << endl;
+            cout << "Ä°ki" << endl;
             break;
     }
 

@@ -1,14 +1,16 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* Eleman sayısından fazla başlangıç değeri verilirse
+    /* Eleman sayÄ±sÄ±ndan fazla baÅŸlangÄ±Ã§ deÄŸeri verilirse
      * program derlenmez. */
 
-    // HATA: Dizinin eleman sayısından fazla başlangıç değeri verilmiş
+    // HATA: Dizinin eleman sayÄ±sÄ±ndan fazla baÅŸlangÄ±Ã§ deÄŸeri verilmiÅŸ
     int sayilar[3] = {10, 20, 30, 40};
 
     cout << sayilar[0] << endl;

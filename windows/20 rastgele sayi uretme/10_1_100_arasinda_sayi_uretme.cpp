@@ -1,20 +1,22 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     srand(time(0));
 
-    /* rand() % 100 ifadesi 0-99 arasında bir sayı üretir.
-     * Sonuca 1 eklenirse aralık 1 kaydırılır ve
-     * 1-100 arasında bir sayı elde edilir.
+    /* rand() % 100 ifadesi 0-99 arasÄ±nda bir sayÄ± Ã¼retir.
+     * Sonuca 1 eklenirse aralÄ±k 1 kaydÄ±rÄ±lÄ±r ve
+     * 1-100 arasÄ±nda bir sayÄ± elde edilir.
      *
-     * % işleminin önceliği + işleminden yüksek olduğu için
-     * önce mod alınır, sonra 1 eklenir. Parantez gerekmez. */
+     * % iÅŸleminin Ã¶nceliÄŸi + iÅŸleminden yÃ¼ksek olduÄŸu iÃ§in
+     * Ã¶nce mod alÄ±nÄ±r, sonra 1 eklenir. Parantez gerekmez. */
 
     for (int i = 1; i <= 10; i++)
     {

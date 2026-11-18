@@ -1,18 +1,20 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 enum gun {pts = 1, sal, car, per, cum, cts, paz};
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    // enum anahtar kelimesi kullanılarak değişken tanımlandı.
+    // enum anahtar kelimesi kullanÄ±larak deÄŸiÅŸken tanÄ±mlandÄ±.
     enum gun bugun = pts;
 
-    /* C++ dilinde enum tipli değişken tanımlanırken
-     * enum anahtar kelimesinin yazılması zorunlu değildir.
-     * Her iki tanımlama da geçerlidir. */
+    /* C++ dilinde enum tipli deÄŸiÅŸken tanÄ±mlanÄ±rken
+     * enum anahtar kelimesinin yazÄ±lmasÄ± zorunlu deÄŸildir.
+     * Her iki tanÄ±mlama da geÃ§erlidir. */
     gun yarin = sal;
 
     cout << bugun << endl; // 1

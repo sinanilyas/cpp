@@ -1,15 +1,17 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int sayi = 0;
 
-    /* continue komutu çalıştırıldığında döngü gövdesindeki
-     * kalan komutlar atlanır ve koşul kontrol edilir.
-     * Koşul doğruysa döngü tekrar çalıştırılır. */
+    /* continue komutu Ã§alÄ±ÅŸtÄ±rÄ±ldÄ±ÄŸÄ±nda dÃ¶ngÃ¼ gÃ¶vdesindeki
+     * kalan komutlar atlanÄ±r ve koÅŸul kontrol edilir.
+     * KoÅŸul doÄŸruysa dÃ¶ngÃ¼ tekrar Ã§alÄ±ÅŸtÄ±rÄ±lÄ±r. */
 
     do
     {

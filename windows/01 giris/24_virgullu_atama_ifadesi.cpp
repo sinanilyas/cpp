@@ -1,19 +1,21 @@
 #include <iostream>
+#include <windows.h>
 
 using namespace std;
 
 int main(int argc, char** argv) {
-	setlocale(LC_ALL, "Turkish");
+	SetConsoleCP(CP_UTF8);
+	SetConsoleOutputCP(CP_UTF8);
 
 	int s1, s2, s3;
 	
-	// Tüm değişkenlere 6 değeri atanır,
-	// 7 ve 8 değerleri dikkate alınmaz
+	// TÃ¼m deÄŸiÅŸkenlere 6 deÄŸeri atanÄ±r,
+	// 7 ve 8 deÄŸerleri dikkate alÄ±nmaz
 	s1 = s2 = s3 = 6, 7, 8;
 	
-	cout << "Sayı 1: " << s1 << endl;
-	cout << "Sayı 2: " << s2 << endl;
-	cout << "Sayı 3: " << s3 << endl;
+	cout << "SayÄ± 1: " << s1 << endl;
+	cout << "SayÄ± 2: " << s2 << endl;
+	cout << "SayÄ± 3: " << s3 << endl;
 	
 	return 0;
 }

@@ -1,21 +1,23 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int sayi, toplam = 0;
 
-    cout << "Bir sayý giriniz (Çýkýþ için 0): ";
+    cout << "Bir sayÄ± giriniz (Ã‡Ä±kÄ±ÅŸ iÃ§in 0): ";
     cin >> sayi;
 
-    // Kullanýcý 0 girene kadar sayýlar toplanýr.
+    // KullanÄ±cÄ± 0 girene kadar sayÄ±lar toplanÄ±r.
     while (sayi != 0)
     {
         toplam += sayi;
 
-        cout << "Bir sayý giriniz (Çýkýþ için 0): ";
+        cout << "Bir sayÄ± giriniz (Ã‡Ä±kÄ±ÅŸ iÃ§in 0): ";
         cin >> sayi;
     }
 

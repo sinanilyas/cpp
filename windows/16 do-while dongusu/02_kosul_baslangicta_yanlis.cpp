@@ -1,15 +1,17 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int sayi = 10;
 
-    /* do-while döngüsünde koşul en son kontrol edilir.
-     * Bu nedenle koşul başlangıçta yanlış olsa bile
-     * döngü gövdesi en az bir kez çalıştırılır. */
+    /* do-while dÃ¶ngÃ¼sÃ¼nde koÅŸul en son kontrol edilir.
+     * Bu nedenle koÅŸul baÅŸlangÄ±Ã§ta yanlÄ±ÅŸ olsa bile
+     * dÃ¶ngÃ¼ gÃ¶vdesi en az bir kez Ã§alÄ±ÅŸtÄ±rÄ±lÄ±r. */
 
     do
     {

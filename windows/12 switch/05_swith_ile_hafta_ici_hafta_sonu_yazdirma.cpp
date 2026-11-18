@@ -1,18 +1,20 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int gunNo;
 
-    cout << "Haftanın gün numarasını giriniz (1-7): ";
+    cout << "HaftanÄ±n gÃ¼n numarasÄ±nÄ± giriniz (1-7): ";
     cin >> gunNo;
 
-    /* Birden fazla case aynı komutları çalıştırabilir.
-     * Örneğin kullanıcı 1, 2, 3, 4 veya 5 girerse
-     * ekrana "Hafta içi" yazdırılır. */
+    /* Birden fazla case aynÄ± komutlarÄ± Ã§alÄ±ÅŸtÄ±rabilir.
+     * Ã–rneÄŸin kullanÄ±cÄ± 1, 2, 3, 4 veya 5 girerse
+     * ekrana "Hafta iÃ§i" yazdÄ±rÄ±lÄ±r. */
 
     switch (gunNo)
     {
@@ -21,14 +23,14 @@ int main(int argc, char** argv)
         case 3:
         case 4:
         case 5:
-            cout << "Hafta içi" << endl;
+            cout << "Hafta iÃ§i" << endl;
             break;
         case 6:
         case 7:
             cout << "Hafta sonu" << endl;
             break;
         default:
-            cout << "Geçersiz gün numarası!" << endl;
+            cout << "GeÃ§ersiz gÃ¼n numarasÄ±!" << endl;
             break;
     }
 

@@ -1,18 +1,20 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     char harfNotu;
 
     cout << "Harf notunuzu giriniz (A-F): ";
     cin >> harfNotu;
 
-    /* switch yalnızca tamsayılarla değil,
-     * char tipindeki değerlerle de kullanılabilir.
-     * Örneğin kullanıcı B girerse "İyi" yazdırılır. */
+    /* switch yalnÄ±zca tamsayÄ±larla deÄŸil,
+     * char tipindeki deÄŸerlerle de kullanÄ±labilir.
+     * Ã–rneÄŸin kullanÄ±cÄ± B girerse "Ä°yi" yazdÄ±rÄ±lÄ±r. */
 
     switch (harfNotu)
     {
@@ -20,19 +22,19 @@ int main(int argc, char** argv)
             cout << "Pekiyi" << endl;
             break;
         case 'B':
-            cout << "İyi" << endl;
+            cout << "Ä°yi" << endl;
             break;
         case 'C':
             cout << "Orta" << endl;
             break;
         case 'D':
-            cout << "Geçer" << endl;
+            cout << "GeÃ§er" << endl;
             break;
         case 'F':
-            cout << "Başarısız" << endl;
+            cout << "BaÅŸarÄ±sÄ±z" << endl;
             break;
         default:
-            cout << "Geçersiz harf notu!" << endl;
+            cout << "GeÃ§ersiz harf notu!" << endl;
             break;
     }
 

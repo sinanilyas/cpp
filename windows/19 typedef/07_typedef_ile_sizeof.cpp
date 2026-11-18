@@ -1,15 +1,17 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     typedef int tamsayi;
 
-    /* typedef yeni bir veri tipi oluþturmaz.
+    /* typedef yeni bir veri tipi oluÅŸturmaz.
      * Bu nedenle orijinal veri tipi ile alternatif ismin
-     * bellekte kapladýðý alan aynýdýr. */
+     * bellekte kapladÄ±ÄŸÄ± alan aynÄ±dÄ±r. */
 
     cout << sizeof(int) << endl;     // 4
     cout << sizeof(tamsayi) << endl; // 4

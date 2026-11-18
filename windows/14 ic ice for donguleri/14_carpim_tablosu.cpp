@@ -1,14 +1,16 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
-    /* İç içe döngüler kullanılarak 1'den 10'a kadar
-     * tüm sayıların çarpım tabloları oluşturulabilir.
-     * Dış döngü çarpım tablosu oluşturulacak sayıyı,
-     * iç döngü ise çarpılacağı sayıları belirler. */
+    /* Ä°Ã§ iÃ§e dÃ¶ngÃ¼ler kullanÄ±larak 1'den 10'a kadar
+     * tÃ¼m sayÄ±larÄ±n Ã§arpÄ±m tablolarÄ± oluÅŸturulabilir.
+     * DÄ±ÅŸ dÃ¶ngÃ¼ Ã§arpÄ±m tablosu oluÅŸturulacak sayÄ±yÄ±,
+     * iÃ§ dÃ¶ngÃ¼ ise Ã§arpÄ±lacaÄŸÄ± sayÄ±larÄ± belirler. */
 
     for (int i = 1; i <= 10; i++)
     {

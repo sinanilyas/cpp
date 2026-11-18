@@ -1,17 +1,19 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    setlocale(LC_ALL, "Turkish");
+    SetConsoleCP(CP_UTF8);
+    SetConsoleOutputCP(CP_UTF8);
 
     int sayac = 1;
 
-    // Koşul doğru olduğu sürece döngü tekrarlanır.
+    // KoÅŸul doÄŸru olduÄŸu sÃ¼rece dÃ¶ngÃ¼ tekrarlanÄ±r.
     while (sayac <= 10)
     {
         cout << sayac << endl;
-        sayac++; // Sayaç artırılmazsa döngü sonsuza kadar devam eder.
+        sayac++; // SayaÃ§ artÄ±rÄ±lmazsa dÃ¶ngÃ¼ sonsuza kadar devam eder.
     }
 
     return 0;
