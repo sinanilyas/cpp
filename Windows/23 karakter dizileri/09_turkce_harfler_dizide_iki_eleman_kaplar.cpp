@@ -9,8 +9,8 @@ int main(int argc, char** argv)
 
     /* Örnek programlar UTF-8 kodlamasıyla kaydedilmiştir. Bu kodlamada
      * Türkçe harfler (ç, ğ, ı, ö, ş, ü...) karakter dizisinde birer değil
-     * ikişer eleman yer kaplar. Bu nedenle sizeof Türkçe harfli
-     * metinlerde harf sayısından büyük sonuç verir. */
+     * ikişer eleman yer kaplar. Bu nedenle "Şule", "Sule"den bir eleman
+     * fazla yer kaplar. */
     char ad1[] = "Sule";
     char ad2[] = "Şule";
 
