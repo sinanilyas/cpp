@@ -1,0 +1,46 @@
+# Windows klasöründe değişiklik olan her push'tan sonra Linux-macOS
+# klasörünü yeniden üretir ve sonucu aynı branch'e gönderir.
+# Dönüştürme kuralları .github/scripts/linux_macos_uret.py dosyasındadır.
+
+name: Linux-macOS örneklerini üret
+
+on:
+  push:
+    branches: ['**']
+    paths:
+      - 'Windows/**'
+      - '.github/scripts/linux_macos_uret.py'
+      - '.github/workflows/linux-macos-uret.yml'
+  # Actions sekmesinden elle çalıştırmak için.
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# Art arda yapılan push'larda çalışmalar sırayla yapılır.
+concurrency:
+  group: linux-macos-uret-${{ github.ref }}
+
+jobs:
+  uret:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repoyu al
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.ref }}
+
+      - name: Linux-macOS klasörünü üret
+        run: python3 .github/scripts/linux_macos_uret.py
+
+      - name: Değişiklik varsa commit et ve gönder
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A Linux-macOS
+          if git diff --cached --quiet; then
+            echo "Linux-macOS klasöründe değişiklik yok."
+          else
+            git commit -m "Linux-macOS klasörünü güncelle ($(git rev-parse --short HEAD))"
+            git push
+          fi
