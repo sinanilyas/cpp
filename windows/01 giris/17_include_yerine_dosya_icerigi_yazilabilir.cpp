@@ -95,8 +95,6 @@ int main(int argc, char** argv) {
 	
 	cout << "Satır 1" << endl;
 	cout << "Satır 2" << endl;
-
-	system("pause");
 	
 	return 0;
 }

@@ -7,10 +7,10 @@ int main(int argc, char** argv)
     SetConsoleCP(CP_UTF8);
     SetConsoleOutputCP(CP_UTF8);
 
-    /* Dizinin eleman say�s� i�in bir sabit tan�mlanabilir.
-     * Dizi tan�mlamas�nda ve d�ng�lerde bu sabit kullan�l�r.
-     * Eleman say�s� de�i�tirilmek istendi�inde yaln�zca sabitin
-     * de�erini de�i�tirmek yeterlidir. */
+    /* Dizinin eleman sayısı için bir sabit tanımlanabilir.
+     * Dizi tanımlamasında ve döngülerde bu sabit kullanılır.
+     * Eleman sayısı değiştirilmek istendiğinde yalnızca sabitin
+     * değerini değiştirmek yeterlidir. */
     const int BOYUT = 5;
 
     int kareler[BOYUT];
@@ -26,7 +26,7 @@ int main(int argc, char** argv)
     }
     cout << endl;
 
-    // Ekrana 0 1 4 9 16 yazd�r�l�r.
+    // Ekrana 0 1 4 9 16 yazdırılır.
 
     return 0;
 }

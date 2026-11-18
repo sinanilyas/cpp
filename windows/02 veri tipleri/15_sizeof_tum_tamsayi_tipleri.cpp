@@ -11,8 +11,6 @@ int main(int argc, char** argv) {
 	cout << sizeof(long) << endl;      // 64 bit Windows: 4 byte
 	cout << sizeof(long long) << endl; // 64 bit Windows: 8 byte
 
-	cout <<
-
 	return 0;
 }
 
