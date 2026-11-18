@@ -16,7 +16,7 @@ Programlamaya Giriş dersinde kullanmak üzere hazırladığım C++ örnekleri.
 |---|---|---|
 | [Code::Blocks](https://www.codeblocks.org/downloads/binaries/) | Windows, Linux | Windows'ta adında `mingw` geçen kurulum dosyası indirilmelidir. Derleyici bu kurulum dosyası ile birlikte kurulur. |
 | [Visual Studio Community](https://visualstudio.microsoft.com/vs/community/) | Windows | Kurulumda "C++ ile masaüstü geliştirme" seçilmelidir. |
-| [Dev-C++](https://github.com/Embarcadero/Dev-Cpp/releases) | Windows | Embarcadero sürümünü kullanın. Eski Orwell sürümü UTF-8 dosyalarda sorun çıkarabilir. |
+| [Dev-C++](https://github.com/Embarcadero/Dev-Cpp/releases) | Windows | Embarcadero sürümünü kullanınız. Eski Orwell sürümü UTF-8 dosyalarda sorun çıkarabilir. |
 | [VS Code](https://code.visualstudio.com/) | Windows, Linux, macOS | C/C++ eklentisi ve derleyici ayrıca kurulmalıdır. |
 | [CLion](https://www.jetbrains.com/clion/) | Windows, Linux, macOS | Ticari olmayan kullanım için ücretsizdir. |
 
