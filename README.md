@@ -14,7 +14,7 @@ Programlamaya Giriş dersinde kullanmak üzere hazırladığım C++ örnekleri.
 
 | IDE | Sistem | Not |
 |---|---|---|
-| [Code::Blocks](https://www.codeblocks.org/downloads/binaries/) | Windows, Linux | Windows'ta adında `mingw` geçen kurulum dosyası indirilmelidir. Bu dosya derleyiciyi de kurar. |
+| [Code::Blocks](https://www.codeblocks.org/downloads/binaries/) | Windows, Linux | Windows'ta adında `mingw` ve `setup` geçen kurulum dosyası indirilmelidir. Bu dosya derleyiciyi de kurar. |
 | [Visual Studio Community](https://visualstudio.microsoft.com/vs/community/) | Windows | Kurulumda "C++ ile masaüstü geliştirme" seçilmelidir. Türkçe karakterlerin doğru görünmesi için proje özelliklerinde C/C++ > Komut Satırı > Ek Seçenekler alanına `/utf-8` yazılmalıdır. |
 | [Dev-C++](https://github.com/Embarcadero/Dev-Cpp/releases) | Windows | Dev-C++'ın farklı sürümleri vardır. Örnekler UTF-8 kodlamasıyla kaydedildiği için UTF-8 desteği olan Embarcadero sürümü önerilir. Diğer sürümlerde Türkçe karakterler bozuk görünebilir. Adında `TDM-GCC` ve `Setup` geçen kurulum dosyası indirilmelidir. Bu dosya derleyiciyi de kurar. |
 | [VS Code](https://code.visualstudio.com/) | Windows, Linux, macOS | C/C++ eklentisi ve derleyici ayrıca kurulmalıdır. |
