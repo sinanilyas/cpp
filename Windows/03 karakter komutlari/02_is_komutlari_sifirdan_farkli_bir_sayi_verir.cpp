@@ -12,8 +12,9 @@ int main(int argc, char** argv)
      * tamsayı, yanlışsa 0 verir. Koşul doğru olduğunda verilen sayı her
      * zaman 1 değildir. Sayı işletim sistemine ve derleyiciye göre
      * değişebilir. */
-    cout << isalpha('R') << endl; // Örneğin Windows'ta 257, Linux'ta 1024
-    cout << isalpha('r') << endl; // Örneğin Windows'ta 258, Linux'ta 1024
+
+    cout << isalpha('R') << endl; // 0'dan farklı bir sayı
+    cout << isalpha('r') << endl; // 0'dan farklı bir sayı
     cout << isalpha('7') << endl; // 0
 
     /* bool tipi 0 dışındaki bütün sayıları 1 olarak sakladığı için sonuç
