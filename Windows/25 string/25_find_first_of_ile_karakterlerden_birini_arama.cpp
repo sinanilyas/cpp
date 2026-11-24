@@ -16,9 +16,5 @@ int main(int argc, char** argv)
      * döndürülür. */
     cout << sehir.find_first_of("yr") << endl; // 4 (önce 'r' bulunur)
 
-    // find ise "yr" metninin tamamını arar.
-    // Sakarya'da "yr" geçmediği için string::npos döndürür.
-    cout << boolalpha << (sehir.find("yr") == string::npos) << endl; // true
-
     return 0;
 }

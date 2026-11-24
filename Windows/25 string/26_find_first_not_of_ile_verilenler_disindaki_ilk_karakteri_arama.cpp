@@ -23,7 +23,7 @@ int main(int argc, char** argv)
 
     if (numara.find_first_not_of("0123456789") == string::npos)
     {
-        cout << numara << " pozitif bir sayıdır." << endl;
+        cout << numara << " yalnızca rakamlardan oluşuyor" << endl;
     }
 
     return 0;
