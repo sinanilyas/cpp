@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cctype>
 #include <windows.h>
 using namespace std;
 
@@ -14,22 +15,18 @@ int main(int argc, char** argv)
      * gelene kadar döner. Böylece metnin uzunluğu bilinmeden bütün
      * karakterler dolaşılır.
      *
-     * Küçük harfler ASCII tablosunda büyük harflerden 32 ('a' - 'A')
-     * sonraki konumda yer alır. Küçük bir harften bu fark çıkarılırsa harfin
-     * büyüğü elde edilir. Harf olmayan karakterler değiştirilmez. */
-    for (int i = 0; metin[i] != '\0'; i++)
+     * Her karakter toupper ile büyük harfe çevrilir. toupper harf olmayan
+     * karakterleri değiştirmediği için karakterin küçük harf olup olmadığını
+     * ayrıca sınamaya gerek yoktur. */
+
+    int i = 0;
+    while(metin[i] != '\0')
     {
-        // Küçük harf ise
-        if (metin[i] >= 'a' && metin[i] <= 'z')
-        {
-            metin[i] -= 'a' - 'A';
-        }
+        metin[i] = toupper(metin[i]);
+        i++;
     }
 
     cout << metin << endl; // MERHABA DUNYA, NASILSIN?
-
-    /* Türkçe harfler (ç, ğ, ı, ö, ş, ü) a-z aralığında
-     * olmadığı için bu örnekte dönüştürülmez. */
 
     return 0;
 }
