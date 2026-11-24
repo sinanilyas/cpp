@@ -8,7 +8,8 @@ int main(int argc, char** argv)
     SetConsoleCP(CP_UTF8);
     SetConsoleOutputCP(CP_UTF8);
 
-    /* cin ile okumada program, kullanıcı Enter tuşuna basana kadar bekler.
+    /* cin ve cin.get ile okuma yapılırken
+     * kullanıcı Enter tuşuna basana kadar beklenir.
      * conio.h içindeki _getch ve _getche fonksiyonları ise klavyeden tek
      * bir karakter okur ve Enter tuşunu beklemez.
      *
@@ -34,7 +35,7 @@ int main(int argc, char** argv)
     /* Dönen değer kullanılmadan yalnızca bir tuşa basılması da beklenebilir.
      * Şifre girişi gibi karakterlerin ekranda görünmemesi gereken yerlerde
      * de _getch kullanılır. */
-    cout << "Çıkmak için bir tuşa basınız...";
+    cout << "Devam etmek için bir tuşa basınız...";
     _getch();
 
     return 0;

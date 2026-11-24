@@ -22,21 +22,10 @@ int main(int argc, char** argv)
     char ad4[] = "Zeynep";
     char ad5[] = "ali";
 
-    cout << strcmp(ad1, ad2) << endl; // 0
-    cout << strcmp(ad1, ad3) << endl; // Pozitif bir sayı: 'i' (105) > 'e' (101)
-    cout << strcmp(ad1, ad4) << endl; // Negatif bir sayı: 'A' (65) < 'Z' (90)
-    cout << strcmp(ad1, ad5) << endl; // Negatif bir sayı: 'A' (65) < 'a' (97)
-
-    // Büyük harfler küçük harflerden önce geldiği için "Ali" ile "ali" aynı değildir.
-
-    // İki metnin aynı olup olmadığı strcmp sonucunun 0 olmasıyla anlaşılır.
-    if (strcmp(ad1, ad2) == 0)
-    {
-        cout << "Metinler aynı" << endl;
-    }
-
-    /* ad1 == ad2 yazılırsa metinler aynı olsa bile sonuç false olur.
-     * Bunun nedeni ileride işaretçiler konusunda anlatılacaktır. */
+    cout << strcmp(ad1, ad2) << endl; // 0 (Metinler aynı)
+    cout << strcmp(ad1, ad3) << endl; // Pozitif bir sayı (Ali, Aleyna'dan sonra gelir)
+    cout << strcmp(ad1, ad4) << endl; // Negatif bir sayı (Ali, Zeynep'ten önce gelir)
+    cout << strcmp(ad1, ad5) << endl; // Negatif bir sayı (büyük harfler küçük harflerden önce gelir)
 
     return 0;
 }

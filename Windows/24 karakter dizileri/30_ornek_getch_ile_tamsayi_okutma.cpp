@@ -26,7 +26,9 @@ int main(int argc, char** argv)
 
     while (true)
     {
-        // Türkçe harflerde isdigit fonksiyonuna negatif sayı verilmemesi için unsigned char kullanılıyor
+        /* Türkçe harflerin baytları 127'den büyüktür ve char tipinde negatif
+         * sayı olarak saklanır. isdigit komutuna negatif sayı verilmemesi için
+         * karakter unsigned char tipinde saklanıyor. */
         unsigned char karakter = _getch();
 
         bool enterMi = karakter == '\r';

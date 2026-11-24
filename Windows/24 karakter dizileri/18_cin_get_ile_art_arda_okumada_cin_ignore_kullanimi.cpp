@@ -17,8 +17,10 @@ int main(int argc, char** argv)
     /* cin.get de Enter karakterini tamponda bırakır. Hatta metin kırpılmışsa
      * okunmayan karakterler de tamponda kalır. cin.ignore(1000, '\n')
      * her iki durumda da tampondaki karakterleri Enter karakterine kadar
-     * (Enter dahil, en fazla 1000 karakter) atar. cin >> ile okumadan
+     * (Enter dahil, en fazla 1000 karakter) atar. cin >> ile okuma işleminden
      * sonra da aynı satır kullanılır. */
+
+    // Tampondaki karakterleri Enter dahil at (en fazla 1000 karakter)
     cin.ignore(1000, '\n');
 
     cout << "Soyadınızı giriniz: ";

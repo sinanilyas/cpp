@@ -17,12 +17,6 @@ int main(int argc, char** argv)
 
     cout << ad << endl; // Ali
 
-    for (int i = 0; i < 4; i++)
-    {
-        cout << static_cast<int>(ad[i]) << " ";
-    }
-    cout << endl; // 65 108 105 0
-
     /* Tek tırnak tek bir karakteri, çift tırnak ise bir metni gösterir.
      * 'A' bir char değeridir. "A" ise 'A' ve '\0' karakterlerinden oluşan
      * 2 elemanlı bir metindir. */

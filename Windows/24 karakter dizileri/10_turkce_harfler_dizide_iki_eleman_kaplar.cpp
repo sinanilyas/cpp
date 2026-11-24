@@ -17,9 +17,10 @@ int main(int argc, char** argv)
     cout << sizeof(ad1) << endl; // 5
     cout << sizeof(ad2) << endl; // 6
 
-    /* Aynı nedenle diziye daha az Türkçe harf sığar ve Türkçe harfli
-     * metinlerde setw ile yapılan hizalama kayabilir. Tek bir char
-     * değişkenine Türkçe harf atanması da beklenen sonucu vermez. */
+    /* Bu nedenle,
+     * - Diziye İngiliz alfabesindeki harflere göre daha az Türkçe harf sığar.
+     * - Türkçe harfli metinlerde setw ile yapılan hizalama kayabilir.
+     * - Bir char değişkenine Türkçe harf atanması beklenen sonucu vermez. */
 
     return 0;
 }

@@ -14,11 +14,5 @@ int main(int argc, char** argv)
 
     cout << ad << endl; // A
 
-    // Yazdırılmayan karakterler dizide durmaya devam eder.
-    cout << ad[2] << endl; // i
-
-    /* Son eleman null karakteri olmasa da cout dizinin dışına taşmaz,
-     * çünkü daha önce bir null karakteri vardır. */
-
     return 0;
 }

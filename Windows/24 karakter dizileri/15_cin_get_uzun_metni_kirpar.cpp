@@ -21,9 +21,7 @@ int main(int argc, char** argv)
 
     /* Ali          -> Ali
      * Abdurrahman  -> Abdur
-     *
-     * Okunmayan karakterler girdi tamponunda kalır.
-     * MAX yerine sizeof(ad) de yazılabilir: cin.get(ad, sizeof(ad)); */
+     */
 
     return 0;
 }

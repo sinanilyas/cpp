@@ -15,7 +15,7 @@ int main(int argc, char** argv)
      * sonuna null karakteri otomatik olarak eklenir. */
     cin >> ad;
 
-    cout << "Merhaba " << ad << endl;
+    cout << "Adınız: " << ad << endl;
 
     /* cin, bir boşluk karakterine (boşluk, sekme, Enter) gelince
      * okumayı keser. Baştaki boşluklar atlanır. Girilen metne göre
@@ -24,9 +24,7 @@ int main(int argc, char** argv)
      * Ahmet         -> Ahmet
      *    Ahmet      -> Ahmet
      * Ahmet Kaya    -> Ahmet
-     *
-     * Okunmayan karakterler (" Kaya") girdi tamponunda kalır ve
-     * sonraki okuma işleminde okunur. */
+     */
 
     return 0;
 }

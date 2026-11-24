@@ -18,18 +18,13 @@ int main(int argc, char** argv)
      *
      * Diğer dizilerde olduğu gibi süslü parantezle başlangıç değeri
      * verilebilir. Son karakter null karakteri olmalıdır. */
+
     char ad[4] = {'A', 'l', 'i', '\0'};
 
-    for (int i = 0; i < 3; i++)
-    {
-        cout << ad[i];
-    }
-    cout << endl; // Ali
+    // Döngü tamamlandığında ekranda Ali yazar
+    for (int i = 0; i < 3; i++) cout << ad[i];
 
-    cout << static_cast<int>(ad[3]) << endl; // 0
-
-    /* '\0' yerine 0 da yazılabilir: {'A', 'l', 'i', 0}
-     * '0' yazılmamalıdır. '0' rakam karakteridir ve ASCII kodu 48'dir. */
+    cout << endl;
 
     return 0;
 }
