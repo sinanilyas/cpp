@@ -20,13 +20,10 @@ int main(int argc, char** argv)
     // size_t'nin boyutu programın 32 bit ya da 64 bit olarak derlenmesine göre değişir.
     cout << sizeof(size_t) << endl; // 64 bit programlarda 8, 32 bit programlarda 4
 
-    /* Diğer unsigned tiplerde olduğu gibi size_t de negatif sayı saklayamaz.
-     * İşlemin sonucu negatif olursa çok büyük bir sayıya dönüşür. Örneğin
-     * boş bir metinde length() - 1 işleminin sonucu -1 değil, size_t'nin
-     * saklayabileceği en büyük değerdir. */
+    /* Diğer unsigned tiplerde olduğu gibi size_t de negatif sayı saklayamaz. */
 
-    string bos = "";
-    cout << bos.length() - 1 << endl;
+    size_t deger = 0;
+    cout << deger - 1 << endl;
 
     /* 64 bit programlarda 18446744073709551615,
      * 32 bit programlarda 4294967295 yazar. */
