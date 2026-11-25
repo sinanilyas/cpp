@@ -1,0 +1,4 @@
+Ali Kaya,85
+Zeynep Demir,92
+Mehmet Can,47
+Elif Tekin,78
